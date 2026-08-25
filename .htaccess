@@ -3,6 +3,20 @@
 # or whatever folder your domain actually points to).
 
 # ---------------------------------------------------------------------
+# 0. Root -> /en/ redirect, at the HTTP level, before any HTML is sent.
+#    Matches ONLY the bare domain root ("/") — a direct "/index.html"
+#    request is intentionally NOT matched, nor is any other URL
+#    (/en/, /de/, /assets/..., etc.). 301 (permanent) since
+#    English-as-default is a fixed, long-term routing decision, not a
+#    temporary one.
+# ---------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^$ en/ [R=301,L]
+</IfModule>
+
+# ---------------------------------------------------------------------
 # 1. Make sure index.html is recognized as the default document in every
 #    folder (root, /en/, /de/, etc.) — this is usually already the Apache
 #    default, but setting it explicitly removes any doubt.
@@ -39,9 +53,11 @@ DirectoryIndex index.html
   Header set X-Content-Type-Options "nosniff"
 </IfModule>
 
-# NOTE: The root index.html already redirects visitors to /en/ on its own
-# (via <meta http-equiv="refresh"> to the relative path "en/index.html"),
-# so no server-side rewrite rule is needed for that — one less thing that
-# can be misconfigured on hosting I can't directly test against. If you
-# later want language auto-detection (Accept-Language based redirect),
-# that can be added back in as a mod_rewrite block, but it is optional.
+# NOTE: root/index.html still contains its own client-side fallback
+# (<meta http-equiv="refresh"> to "en/index.html") for the rare case a
+# host serves this file without reading .htaccess (e.g. mod_rewrite
+# disabled). On any normal Apache/LiteSpeed setup, the rule in section 0
+# above fires first and that fallback is never seen. If you later want
+# language auto-detection (Accept-Language based redirect to /de/, /fr/,
+# etc. instead of always /en/), that can be added as additional
+# RewriteCond/RewriteRule lines in section 0.
