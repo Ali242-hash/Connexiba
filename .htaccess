@@ -1,0 +1,47 @@
+# Connexiba — Apache config for static multilingual hosting (Namecheap shared hosting)
+# This file must sit in the SAME folder as index.html (the public_html root,
+# or whatever folder your domain actually points to).
+
+# ---------------------------------------------------------------------
+# 1. Make sure index.html is recognized as the default document in every
+#    folder (root, /en/, /de/, etc.) — this is usually already the Apache
+#    default, but setting it explicitly removes any doubt.
+# ---------------------------------------------------------------------
+DirectoryIndex index.html
+
+# ---------------------------------------------------------------------
+# 2. Compression (fixes the "Enable text compression" Lighthouse finding)
+# ---------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ---------------------------------------------------------------------
+# 3. Caching (fixes the "Uses efficient cache policy" Lighthouse finding)
+# ---------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp        "access plus 1 year"
+  ExpiresByType image/png         "access plus 1 year"
+  ExpiresByType image/jpeg        "access plus 1 year"
+  ExpiresByType image/svg+xml     "access plus 1 year"
+  ExpiresByType text/css          "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/html         "access plus 1 hour"
+</IfModule>
+
+# ---------------------------------------------------------------------
+# 4. Security headers (low-risk, standard hardening)
+# ---------------------------------------------------------------------
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# NOTE: The root index.html already redirects visitors to /en/ on its own
+# (via <meta http-equiv="refresh"> to the relative path "en/index.html"),
+# so no server-side rewrite rule is needed for that — one less thing that
+# can be misconfigured on hosting I can't directly test against. If you
+# later want language auto-detection (Accept-Language based redirect),
+# that can be added back in as a mod_rewrite block, but it is optional.

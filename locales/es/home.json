@@ -1,0 +1,441 @@
+{
+  "meta": {
+    "htmlLang": "es",
+    "title": "Connexiba: Business Intelligence. Conectividad Ejecutiva. Oportunidad Comercial.",
+    "description": "Connexiba conecta a proveedores de soluciones con los responsables de decisión que importan (desde ejecutivos de nivel C y altos líderes empresariales hasta delegados específicos en mercados B2B y B2C de todo el mundo) a través de Business Intelligence, desarrollo de audiencias, eventos ejecutivos y campañas digitales.",
+    "ogTitle": "Connexiba — Business Intelligence. Conectividad Ejecutiva. Oportunidad Comercial.",
+    "ogDescription": "Conectamos a proveedores de soluciones con los responsables de decisión que importan, en mercados B2B y B2C de todo el mundo.",
+    "skipLink": "Ir al contenido"
+  },
+  "nav": {
+    "about": "Quiénes Somos",
+    "solutions": "Soluciones",
+    "events": "Eventos",
+    "process": "Nuestro Trabajo",
+    "partners": "Partners",
+    "contact": "Contáctanos",
+    "openMenu": "Abrir menú de navegación"
+  },
+  "hero": {
+    "eyebrow": "Business Intelligence. Conectividad Ejecutiva. Oportunidad Comercial.",
+    "h1Before": "Conectamos a las personas correctas",
+    "h1Em": "oportunidades",
+    "h1After": "con las {em} correctas.",
+    "heroImgAlt": "Una reunión virtual moderna en pantalla, mostrando una cuadrícula de asistentes profesionales conversando",
+    "lead": "Connexiba combina Business Intelligence, desarrollo de audiencias específicas, experiencias ejecutivas y participación comercial para conectar a proveedores de soluciones con ejecutivos de nivel C, responsables de decisión y delegados relevantes en mercados B2B y B2C de todo el mundo.",
+    "tagline": "Nosotros llenamos la sala. Usted cierra el trato.",
+    "ctaDemo": "Reservar una Demo",
+    "ctaSolutions": "Explorar Soluciones",
+    "scroll": "Desplázate",
+    "leadflowLabels": [
+      "EVENTO",
+      "ASISTENTES",
+      "LEADS CALIFICADOS",
+      "REUNIONES",
+      "OPORTUNIDADES",
+      "PIPELINE"
+    ]
+  },
+  "dashboard": {
+    "titleStrong": "INFORMES DE CONNEXIBA",
+    "titleRest": ": así se ve la visibilidad de campaña en tiempo real",
+    "badge": "Ejemplo Ilustrativo",
+    "registrations": "Registros",
+    "qualifiedLeads": "Leads Calificados",
+    "meetings": "Reuniones",
+    "pipelineVisibility": "Visibilidad del Pipeline",
+    "chartTitle": "Leads Generados: 90 Días",
+    "months": [
+      "MAY",
+      "JUN",
+      "JUL",
+      "AGO",
+      "SEP",
+      "OCT"
+    ],
+    "legendLeads": "Leads",
+    "legendRate": "Tasa de calificación",
+    "showUpRate": "Tasa de asistencia",
+    "leadToMeetingRate": "Tasa de lead a reunión",
+    "leadToCloseRate": "Tasa de lead a cierre",
+    "note": "Ejemplo ilustrativo. No son datos reales ni históricos de Connexiba."
+  },
+  "approach": {
+    "eyebrow": "El Enfoque Connexiba",
+    "h2": "De la audiencia a la oportunidad.",
+    "intro": "Connexiba integra desarrollo de audiencias, experiencias ejecutivas, campañas digitales e inteligencia comercial para ayudar a las organizaciones a llegar a las personas correctas y convertir la participación en conversaciones de negocio significativas.",
+    "stages": [
+      {
+        "num": "Identificar",
+        "desc": "Encuentre las audiencias, empresas y responsables de decisión que importan."
+      },
+      {
+        "num": "Involucrar",
+        "desc": "Cree campañas y experiencias específicas que den a las personas correctas un motivo para participar."
+      },
+      {
+        "num": "Conectar",
+        "desc": "Convierta la participación en conversaciones, presentaciones y reuniones relevantes."
+      },
+      {
+        "num": "Calificar",
+        "desc": "Separe el interés comercial genuino del ruido y concéntrese en las oportunidades que importan."
+      },
+      {
+        "num": "Activar",
+        "desc": "Ponga las oportunidades calificadas directamente en manos de los equipos que pueden actuar sobre ellas."
+      },
+      {
+        "num": "Medir",
+        "desc": "Haga seguimiento de la participación, las conversaciones, las reuniones y los resultados para entender qué generó realmente la actividad."
+      }
+    ],
+    "progression": "Audiencia → Participación → Conversaciones → Oportunidades",
+    "closing": "Específico. Conectado. Medible."
+  },
+  "about": {
+    "eyebrow": "Quiénes Somos",
+    "h2": "No perseguimos leads.<br>Diseñamos conversaciones.",
+    "p1": "Connexiba se sitúa en la intersección de Business Intelligence, desarrollo de audiencias, participación ejecutiva y crecimiento comercial.",
+    "p2": "Ayudamos a los proveedores de soluciones a identificar los mercados, empresas, ejecutivos y delegados relevantes para sus objetivos, y luego creamos las campañas, experiencias y conexiones que los reúnen.",
+    "p3": "Desde campañas digitales específicas y eventos ejecutivos hasta investigación de audiencias, calificación e informes en tiempo real, conectamos los objetivos comerciales con las personas que pueden influir y actuar sobre ellos.",
+    "cta": "Vea lo que hacemos →",
+    "photoAlt": "Equipo de Connexiba revisando juntos un pipeline de leads en una oficina moderna",
+    "chipNum": "15+ años",
+    "chipLbl": "De experiencia en desarrollo comercial &amp; de negocio detrás de Connexiba",
+    "mascotGreeting": "Hola, somos Connexiba 👋"
+  },
+  "experience": {
+    "eyebrow": "Trayectoria",
+    "h2": "La experiencia detrás de Connexiba.",
+    "intro": "Connexiba se construye sobre experiencia comercial práctica en tecnología, SaaS, IA, eventos ejecutivos y mercados B2B internacionales.",
+    "areas": [
+      {
+        "title": "Tecnología &amp; SaaS",
+        "desc": "Desarrollo de negocio, ventas empresariales, alianzas, prospección y desarrollo de mercado."
+      },
+      {
+        "title": "Eventos Ejecutivos",
+        "desc": "Desarrollo de audiencias, captación de delegados, participación ejecutiva y seguimiento comercial."
+      },
+      {
+        "title": "Business Intelligence",
+        "desc": "Investigación de mercado, identificación de empresas, inteligencia de audiencias y mapeo de responsables de decisión."
+      },
+      {
+        "title": "Mercados Comerciales Globales",
+        "desc": "Desarrollo de compradores y proveedores, sourcing, análisis de precios, negociación y relaciones comerciales internacionales."
+      },
+      {
+        "title": "Participación B2B &amp; B2C",
+        "desc": "Desarrollo de audiencias específicas, campañas, calificación y conectividad comercial."
+      }
+    ]
+  },
+  "model": {
+    "eyebrow": "El Modelo Connexiba",
+    "h2": "Business Intelligence. Conectividad Ejecutiva. Oportunidad Comercial.",
+    "items": [
+      {
+        "title": "Inteligencia",
+        "desc": "Identifique los mercados, empresas, responsables de decisión y audiencias que se alinean con sus objetivos comerciales."
+      },
+      {
+        "title": "Conexión",
+        "desc": "Conecte a los proveedores de soluciones con ejecutivos de nivel C, responsables de decisión senior y delegados relevantes a través de campañas específicas, eventos ejecutivos y experiencias diseñadas a medida."
+      },
+      {
+        "title": "Oportunidad",
+        "desc": "Califique la participación, desarrolle conversaciones significativas y brinde a los equipos comerciales la información y las conexiones que necesitan para actuar."
+      }
+    ]
+  },
+  "solutions": {
+    "eyebrow": "Soluciones",
+    "h2": "Un modelo conectado: de la inteligencia a la oportunidad.",
+    "intro": "Algunos tratos se cierran durante una cena. Otros se cierran tras un webinar de veinte minutos. Trabajamos ambos escenarios, y reportamos sobre ambos, bajo un mismo modelo conectado.",
+    "cards": [
+      {
+        "title": "Business Intelligence",
+        "desc": "Comprenda los mercados, empresas, audiencias y responsables de decisión antes de involucrarse."
+      },
+      {
+        "title": "Desarrollo de Audiencias",
+        "desc": "Identifique y construya audiencias específicas en torno a objetivos comerciales concretos."
+      },
+      {
+        "title": "Eventos &amp; Experiencias Ejecutivas",
+        "desc": "Cree entornos enfocados donde los proveedores de soluciones puedan interactuar con ejecutivos de nivel C, responsables de decisión y delegados relevantes."
+      },
+      {
+        "title": "Campañas Digitales &amp; Participación Comercial",
+        "desc": "Llegue a audiencias específicas mediante campañas digitales, calificación, seguimiento y participación medible."
+      },
+      {
+        "title": "Informes Comerciales en Tiempo Real",
+        "desc": "Brinde a los equipos visibilidad sobre la participación, las conversaciones, las reuniones y las oportunidades a medida que avanzan las campañas."
+      }
+    ]
+  },
+  "objective": {
+    "eyebrow": "Su Objetivo",
+    "h2": "¿Qué está tratando de lograr?",
+    "intro": "Elija un objetivo y vea cómo se construye una colaboración típica con Connexiba para alcanzarlo.",
+    "ariaLabel": "Elegir un objetivo",
+    "journeys": [
+      {
+        "label": "Generar Demanda",
+        "steps": [
+          "Investigación de Audiencia",
+          "Diseño de Campaña",
+          "Alcance Multicanal",
+          "Participación",
+          "Leads Calificados",
+          "Traspaso a Ventas"
+        ]
+      },
+      {
+        "label": "Llenar un Evento Ejecutivo",
+        "steps": [
+          "Cuentas Objetivo",
+          "Responsables de Decisión",
+          "Alcance Personalizado",
+          "Registros",
+          "Asistencia",
+          "Conversaciones Calificadas"
+        ]
+      },
+      {
+        "label": "Llegar a los Responsables de Decisión",
+        "steps": [
+          "Definición de ICP",
+          "Mapeo de Contactos",
+          "Alcance Ejecutivo",
+          "Conversaciones 1:1",
+          "Reuniones Calificadas",
+          "Pipeline"
+        ]
+      },
+      {
+        "label": "Construir un Pipeline",
+        "steps": [
+          "Audiencia",
+          "Evento / Campaña",
+          "Leads Calificados",
+          "Reuniones",
+          "Oportunidades",
+          "Pipeline"
+        ]
+      },
+      {
+        "label": "Entrar en un Nuevo Mercado",
+        "steps": [
+          "Investigación de Mercado",
+          "Audiencia Local",
+          "Evento de Lanzamiento",
+          "Primeras Conversaciones",
+          "Leads Calificados",
+          "Primer Pipeline"
+        ]
+      }
+    ]
+  },
+  "virtual": {
+    "eyebrow": "Programas Virtuales",
+    "h2": "Su audiencia no necesita estar en la misma sala.",
+    "p": "Desde mesas redondas virtuales hasta webinars globales, Connexiba crea experiencias digitales que mantienen a las audiencias comprometidas y medibles.",
+    "photoAlt": "Pantalla de un portátil mostrando una cuadrícula de reunión virtual con asistentes profesionales en una videollamada"
+  },
+  "process": {
+    "eyebrow": "Nuestro Proceso de Trabajo",
+    "h2": "Un camino claro desde la primera llamada hasta una sala llena.",
+    "intro": "Trabajamos como socio a largo plazo, no como proveedor puntual. Así se desarrolla una colaboración típica.",
+    "steps": [
+      {
+        "title": "Descubrimiento",
+        "desc": "Comprender el mercado, la audiencia y el objetivo comercial."
+      },
+      {
+        "title": "Estrategia",
+        "desc": "Definir la audiencia, el posicionamiento y la arquitectura de campaña."
+      },
+      {
+        "title": "Segmentación",
+        "desc": "Identificar y llegar a las personas correctas, cuenta por cuenta."
+      },
+      {
+        "title": "Activación",
+        "desc": "Crear el evento, campaña o experiencia, y ejecutarlo."
+      },
+      {
+        "title": "Optimización",
+        "desc": "Mejorar continuamente la participación y la conversión en tiempo real."
+      },
+      {
+        "title": "Medición",
+        "desc": "Convertir la actividad en información comercial medible, en tiempo real."
+      }
+    ]
+  },
+  "events": {
+    "eyebrow": "Experiencias Ejecutivas",
+    "h2": "Formatos diseñados para crear conversaciones reales.",
+    "intro": "Cada evento de Connexiba (presencial o virtual) está diseñado para generar pipeline calificado, no solo asistencia.",
+    "cards": [
+      {
+        "imgAlt": "Ejecutivos en una sala de juntas moderna conversando alrededor de una mesa",
+        "tag": "Mesa Redonda Ejecutiva",
+        "title": "Mesa Redonda Ejecutiva de IA",
+        "desc": "Un entorno enfocado para que líderes senior de tecnología y negocio intercambien perspectivas y se conecten en torno a un tema comercial específico.",
+        "cta": "Reservar un lugar →"
+      },
+      {
+        "imgAlt": "Una elegante mesa larga preparada para un evento ejecutivo",
+        "tag": "Foro",
+        "title": "Foro de Transformación Digital",
+        "desc": "Una experiencia ejecutiva específica que conecta a proveedores de soluciones con responsables de decisión en torno a prioridades de transformación.",
+        "cta": "Reserve su lugar →"
+      },
+      {
+        "imgAlt": "Un denso horizonte urbano al atardecer, símbolo de una audiencia virtual global",
+        "tag": "Foro Virtual",
+        "title": "Foro Ejecutivo Virtual",
+        "desc": "Un formato digital global diseñado para conectar audiencias específicas en distintos mercados.",
+        "cta": "Únase al foro →"
+      }
+    ]
+  },
+  "roi": {
+    "eyebrow": "Calculadora de Planificación de Campañas",
+    "h2": "Modele un posible escenario de campaña.",
+    "intro": "Modele un posible escenario de campaña utilizando sus propios supuestos.",
+    "targetAccounts": "Cuentas Objetivo",
+    "eventRegistrations": "Registros al Evento",
+    "conversionRate": "Tasa de Conversión",
+    "averageDealValue": "Valor Promedio del Trato",
+    "modeledOutcome": "Resultado Modelado",
+    "modeledOpportunities": "Oportunidades Modeladas",
+    "modeledPipeline": "Pipeline Modelado",
+    "scenarioValue": "Valor del Escenario: estimado con una tasa de cierre combinada del 30%",
+    "note": "Escenario ilustrativo basado en los supuestos ingresados.",
+    "cta": "Vea lo que Connexiba podría construir para usted →"
+  },
+  "testimonials": {
+    "eyebrow": "Lo Que Valoran los Clientes",
+    "h2": "Lo que más valoran los clientes.",
+    "items": [
+      {
+        "title": "Audiencias Relevantes",
+        "desc": "Llegue a las personas que importan para su objetivo comercial."
+      },
+      {
+        "title": "Conversaciones Calificadas",
+        "desc": "Convierta la participación en conversaciones que su equipo realmente pueda continuar."
+      },
+      {
+        "title": "Visibilidad Comercial",
+        "desc": "Comprenda lo que realmente están generando sus campañas y experiencias."
+      }
+    ]
+  },
+  "partners": {
+    "eyebrow": "Áreas de Enfoque",
+    "h2": "Construido en torno a sus objetivos comerciales.",
+    "sectors": [
+      "Tecnología &amp; SaaS",
+      "Empresas",
+      "Servicios Profesionales",
+      "Eventos &amp; Experiencias",
+      "B2B &amp; B2C"
+    ]
+  },
+  "cta": {
+    "photoAlt": "Un horizonte urbano moderno al atardecer",
+    "h2": "Construyamos su próxima oportunidad.",
+    "p": "Cuéntenos qué está tratando de lograr, a quién necesita llegar y hacia dónde quiere crecer. Le ayudaremos a construir la audiencia, la experiencia y el camino comercial correctos.",
+    "ctaDemo": "Reservar una Demo"
+  },
+  "contact": {
+    "eyebrow": "Póngase en Contacto",
+    "h2": "Creemos algo medible.",
+    "p": "Cuéntenos qué está tratando de lograr y le responderemos con cómo un programa de Connexiba podría ayudarle a conseguirlo.",
+    "linkedin": "LinkedIn →",
+    "formNameLabel": "Nombre *",
+    "formCompanyLabel": "Empresa",
+    "formEmailLabel": "Correo Laboral *",
+    "formPhoneLabel": "Teléfono",
+    "formGoalLabel": "¿Qué está buscando lograr?",
+    "formGoalOptions": [
+      "Generar demanda",
+      "Llenar un evento ejecutivo",
+      "Llegar a responsables de decisión",
+      "Construir un pipeline",
+      "Entrar en un nuevo mercado",
+      "Algo más"
+    ],
+    "formMessageLabel": "Mensaje *",
+    "formSubmit": "Iniciar la Conversación",
+    "mailtoSubjectPrefix": "Nueva consulta desde connexiba.com: ",
+    "mailtoNameLabel": "Nombre: ",
+    "mailtoCompanyLabel": "Empresa: ",
+    "mailtoEmailLabel": "Correo laboral: ",
+    "mailtoPhoneLabel": "Teléfono: ",
+    "mailtoGoalLabel": "Busca lograr: ",
+    "mailtoMessageLabel": "Mensaje:",
+    "mailtoOpening": "Abriendo su cliente de correo, dirigido a info@connexiba.com…"
+  },
+  "footer": {
+    "tagline": "Nosotros llenamos la sala. Usted cierra el trato.",
+    "companyHeading": "Empresa",
+    "solutionsHeading": "Soluciones",
+    "footAbout": "Quiénes Somos",
+    "footProcess": "Nuestro Trabajo",
+    "footPartners": "Partners",
+    "footContact": "Contacto",
+    "footSol1": "Business Intelligence",
+    "footSol2": "Eventos &amp; Experiencias Ejecutivas",
+    "footSol3": "Informes Comerciales en Tiempo Real",
+    "copyright": "© 2026 Connexiba. Todos los derechos reservados.",
+    "linkedin": "LinkedIn"
+  },
+  "chat": {
+    "closeLabel": "Cerrar",
+    "title": "Connexiba",
+    "greeting": "Hola, bienvenido a Connexiba. ¿Cómo podemos ayudarle?",
+    "prompt": "¿Qué está buscando lograr?",
+    "options": [
+      "Llegar a responsables de decisión de nivel C",
+      "Construir una audiencia específica",
+      "Organizar un evento ejecutivo",
+      "Generar oportunidades comerciales",
+      "Explorar una alianza",
+      "Algo más"
+    ],
+    "back": "← Elegir un objetivo diferente",
+    "followupNote": "Cuéntenos un poco sobre lo que busca y le orientaremos en la dirección correcta.",
+    "emailLabel": "Correo laboral",
+    "emailPlaceholder": "usted@empresa.com",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Un poco sobre lo que está buscando...",
+    "submit": "Enviar a Connexiba",
+    "mailtoSubjectPrefix": "Consulta desde el sitio web: ",
+    "mailtoGeneralEnquiry": "Consulta general",
+    "mailtoGoalLabel": "Busca lograr: ",
+    "mailtoGoalUnspecified": "No especificado",
+    "mailtoEmailLabel": "Correo laboral: ",
+    "mailtoMessageLabel": "Mensaje:",
+    "mailtoOpening": "Abriendo su cliente de correo, dirigido a info@connexiba.com…",
+    "fabLabel": "¿Cómo podemos ayudarle?"
+  },
+  "langSwitcher": {
+    "label": "Idioma",
+    "names": {
+      "en": "English",
+      "de": "Deutsch",
+      "fr": "Français",
+      "es": "Español",
+      "it": "Italiano",
+      "hu": "Magyar"
+    }
+  }
+}
