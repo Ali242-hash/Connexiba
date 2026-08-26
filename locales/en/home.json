@@ -18,9 +18,9 @@
   },
   "hero": {
     "eyebrow": "Business Intelligence. Executive Connectivity. Commercial Opportunity.",
-    "h1Before": "We connect the right people",
-    "h1Em": "opportunities",
-    "h1After": "to the right {em}.",
+    "h1Before": "Connect People. Drive ",
+    "h1Em": "Growth",
+    "h1After": "</em>.",
     "heroImgAlt": "A modern virtual meeting on screen, showing a grid of professional attendees in conversation",
     "lead": "Connexiba combines business intelligence, targeted audience development, executive experiences, and commercial engagement to connect solution providers with C-level executives, decision-makers, and relevant delegates across global B2B and B2C markets.",
     "tagline": "We fill the room. You close the deal.",
@@ -95,10 +95,10 @@
   },
   "about": {
     "eyebrow": "Who We Are",
-    "h2": "We don't chase leads.<br>We engineer conversations.",
-    "p1": "Connexiba sits at the intersection of business intelligence, audience development, executive engagement, and commercial growth.",
-    "p2": "We help solution providers identify the markets, companies, executives, and delegates that matter to their objectives, then create the campaigns, experiences, and connections that bring them together.",
-    "p3": "From targeted digital campaigns and executive events to audience research, qualification, and live reporting, we connect commercial objectives with the people who can influence and act on them.",
+    "h2": "We Connect Solutions with Decision-Makers.",
+    "p1": "Connexiba connects solution providers with the executives and professionals who influence technology, business, and purchasing decisions.",
+    "p2": "We identify and engage the right audiences — from CEOs, CIOs, CTOs, and Heads of IT to CISOs, Heads of Cybersecurity, procurement leaders, and other senior decision-makers — based on the objectives of each campaign.",
+    "p3": "Through targeted audience development, digital campaigns, virtual and physical executive events, qualification, and direct engagement, we bring solution providers together with relevant delegates who have a reason to listen, evaluate, and engage.",
     "cta": "See what we do →",
     "photoAlt": "Connexiba team reviewing a lead pipeline together in a modern office",
     "chipNum": "15+ yrs",
@@ -152,7 +152,7 @@
   },
   "solutions": {
     "eyebrow": "Solutions",
-    "h2": "A connected model: from intelligence to opportunity.",
+    "h2": "Intelligence That Connects",
     "intro": "Some deals close over dinner. Some close after a twenty-minute webinar. We work both, and report on both, under one connected model.",
     "cards": [
       {

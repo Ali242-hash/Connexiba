@@ -18,9 +18,9 @@
   },
   "hero": {
     "eyebrow": "Business Intelligence. Vezetői Kapcsolatépítés. Üzleti Lehetőség.",
-    "h1Before": "A megfelelő embereket kötjük össze",
-    "h1Em": "lehetőségekkel",
-    "h1After": "a megfelelő {em}.",
+    "h1Before": "Embereket összekötni. ",
+    "h1Em": "Növekedést",
+    "h1After": "</em> ösztönözni.",
     "heroImgAlt": "Modern virtuális megbeszélés a képernyőn, amely szakemberek beszélgetését mutatja rácsos elrendezésben",
     "lead": "A Connexiba ötvözi a Business Intelligence-t, a célzott célközönség-fejlesztést, a vezetői élményeket és az üzleti kapcsolatépítést, hogy összekösse a megoldásszállítókat a C-szintű vezetőkkel, a döntéshozókkal és a releváns résztvevőkkel a globális B2B és B2C piacokon.",
     "tagline": "Mi megtöltjük a termet. Ön megköti az üzletet.",
@@ -95,10 +95,10 @@
   },
   "about": {
     "eyebrow": "Kik vagyunk",
-    "h2": "Nem leadekre vadászunk.<br>Beszélgetéseket tervezünk.",
-    "p1": "A Connexiba a Business Intelligence, a célközönség-fejlesztés, a vezetői kapcsolatépítés és az üzleti növekedés metszéspontjában áll.",
-    "p2": "Segítünk a megoldásszállítóknak azonosítani a céljaik szempontjából releváns piacokat, vállalatokat, vezetőket és résztvevőket, majd létrehozzuk azokat a kampányokat, élményeket és kapcsolatokat, amelyek összehozzák őket.",
-    "p3": "A célzott digitális kampányoktól és a vezetői rendezvényektől a célközönség-kutatáson és minősítésen át az élő riportolásig összekötjük az üzleti célokat azokkal az emberekkel, akik képesek befolyásolni és cselekedni ezek érdekében.",
+    "h2": "Megoldásszállítókat kapcsolunk össze döntéshozókkal.",
+    "p1": "A Connexiba megoldásszállítókat kapcsol össze olyan vezetőkkel és szakemberekkel, akik hatással vannak a technológiai, üzleti és beszerzési döntésekre.",
+    "p2": "Azonosítjuk és megszólítjuk a megfelelő célközönséget — a CEO-k, CIO-k és CTO-k mellett IT-vezetőket, CISO-kat, kiberbiztonsági vezetőket, beszerzési vezetőket és más felsővezetői döntéshozókat — az egyes kampányok célkitűzései alapján.",
+    "p3": "Célzott közönségfejlesztéssel, digitális kampányokkal, virtuális és fizikai vezetői eseményekkel, kvalifikációval és közvetlen kapcsolatépítéssel kapcsoljuk össze a megoldásszállítókat olyan releváns delegáltakkal, akiknek valódi okuk van meghallgatni, értékelni és kapcsolatba lépni.",
     "cta": "Nézze meg, mit csinálunk →",
     "photoAlt": "A Connexiba csapata együtt tekinti át a lead pipeline-t egy modern irodában",
     "chipNum": "15+ év",
@@ -152,7 +152,7 @@
   },
   "solutions": {
     "eyebrow": "Megoldások",
-    "h2": "Összekapcsolt modell: az intelligenciától az üzleti lehetőségig.",
+    "h2": "Intelligencia, ami összeköt",
     "intro": "Néhány üzlet vacsora közben zárul. Néhány egy húszperces webinárium után. Mindkettőt végigvisszük, és mindkettőről riportot adunk, egyetlen összekapcsolt modell keretében.",
     "cards": [
       {

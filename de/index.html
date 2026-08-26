@@ -48,7 +48,15 @@
     --indigo:#6366F1;
     --amber:#F2B872;
     --radius:18px;
+    /* How far .float-card pulls up over the bottom of .hero-content.
+       .hero-content's own padding-bottom (96px 0 140px desktop, 64px 0
+       110px mobile, below) is kept comfortably larger than this on every
+       breakpoint so the overlap never reaches the hero text — same
+       relationship as before, just named instead of two disconnected
+       literals. */
+    --hero-overlap:92px;
   }
+  @media(max-width:600px){:root{--hero-overlap:60px;}}
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
@@ -91,15 +99,33 @@
   header{position:sticky;top:0;z-index:60;background:rgba(10,13,20,0.5);border-bottom:1px solid transparent;transition:background .3s, border-color .3s, backdrop-filter .3s;}
   header.scrolled{background:rgba(10,13,20,0.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom-color:var(--line);}
   nav{display:flex;align-items:center;justify-content:space-between;padding:16px 32px;max-width:1200px;margin:0 auto;position:relative;gap:16px;}
-  .nav-right{display:flex;align-items:center;gap:18px;flex-shrink:0;}
   .logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:1.2rem;letter-spacing:-0.01em;color:var(--text);}
   .logo-mark{height:40px;width:auto;flex-shrink:0;}
   .logo-mark img{height:100%;width:auto;display:block;}
-  .navlinks{display:flex;gap:36px;font-size:0.92rem;color:var(--muted);font-weight:500;}
+  /* .nav-right (in the markup: language switcher + .navcta, nested as the
+     last child of .navlinks so the build script's fixed injection point
+     — immediately before the navcta div — still lands the switcher right
+     where we need it) has its own box removed at every width, so its two
+     children become direct items of whichever layout .navlinks is using
+     below. Nothing is duplicated: one switcher, one Kontakt, just
+     repositioned per breakpoint via order/grid-placement. */
+  .nav-right{display:contents;}
+  /* Desktop: two-row grid. Row 1 is the language switcher alone (explicit
+     placement, spanning every column, right-aligned in that row). Row 2
+     is the 5 menu links + Kontakt, auto-placed left-to-right in
+     document order — grid auto-placement skips row 1 since it's already
+     occupied, so they land in row 2 without any explicit placement. */
+  .navlinks{display:grid;grid-template-columns:repeat(6,auto);column-gap:36px;row-gap:10px;align-items:center;font-size:0.92rem;color:var(--muted);font-weight:500;}
   .navlinks a{position:relative;padding-bottom:4px;transition:color .2s;}
   .navlinks a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--cyan);transition:width .25s;box-shadow:0 0 8px var(--cyan);}
   .navlinks a:hover::after{width:100%;}
   .navlinks a:hover{color:var(--text);}
+  /* order:-1 applies at every width: on desktop it's inert for the
+     switcher's own position (explicit grid placement wins) but keeps the
+     auto-placement scan for the other items unaffected; on mobile (no
+     explicit placement there) it's what actually pulls the switcher to
+     the front of the drawer list. */
+  .lang-switcher{order:-1;grid-row:1;grid-column:1/-1;justify-self:end;}
   .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:9px;font-size:0.88rem;font-weight:600;border:1px solid transparent;cursor:pointer;transition:all .2s;}
   .btn-primary{background:var(--cyan);color:#06231F;}
   .btn-primary:hover{background:#7FF0E3;transform:translateY(-1px);box-shadow:0 8px 28px -6px rgba(94,234,212,0.55);}
@@ -120,14 +146,30 @@
   @media(max-width:920px){
     nav{flex-wrap:wrap;row-gap:10px;}
     .navtoggle{display:flex;}
+    /* Top bar shows only the logo + hamburger — .navlinks (the drawer)
+       is absolutely positioned and hidden until opened, so it and
+       everything inside it (including the language switcher and Kontakt
+       Us, both direct items here via .nav-right's display:contents)
+       aren't part of the visible bar at all. */
     .navlinks{position:absolute;top:100%;left:0;right:0;display:flex;flex-direction:column;gap:0;background:rgba(10,13,20,0.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding:6px 32px 18px;max-height:0;overflow:hidden;opacity:0;pointer-events:none;transition:max-height .3s ease, opacity .25s ease;}
     .navlinks.open{max-height:400px;opacity:1;pointer-events:auto;}
     .navlinks a{padding:14px 0;border-bottom:1px solid var(--line);width:100%;}
     .navlinks a:last-child{border-bottom:none;}
-    /* logo + hamburger stay on row 1 (space-between); the language
-       switcher + Kontakt button drop to their own full-width row,
-       right-aligned, so nothing overlaps at narrow widths. */
-    .nav-right{width:100%;justify-content:flex-end;order:3;}
+    /* Sprache switcher: full-width drawer row (same 14px vertical rhythm
+       as the plain links) instead of the compact desktop pill. Its
+       dropdown panel switches from position:absolute to a plain static
+       block — .navlinks has overflow:hidden for its open/close slide
+       animation, which would clip a floating panel; expanding inline
+       (like a native accordion) avoids that entirely. */
+    .lang-switcher{width:100%;padding:14px 0;border-bottom:1px solid var(--line);}
+    .lang-panel{position:static;margin-top:8px;padding:0;background:none;border:none;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;min-width:0;}
+    .lang-panel a{padding:10px 0 10px 16px;}
+    /* Kontakt: last item (plain document order, no explicit order
+       needed), matching the same vertical rhythm; the button's own
+       padding is overridden here (mobile drawer only) so the row isn't
+       double-padded by both .navcta and the button's default padding. */
+    .navcta{width:100%;}
+    .navcta a{display:flex;justify-content:center;width:100%;padding:14px 22px;}
   }
   @media(max-width:600px){.navlinks{padding:6px 20px 18px;}}
   @media (prefers-reduced-motion: reduce){.navlinks{transition:none;}}
@@ -139,19 +181,59 @@
   @media(hover:none), (pointer:coarse){.cx-cursor{display:none;}}
 
   /* ============ HERO ============ */
-  .hero{position:relative;min-height:660px;display:flex;align-items:flex-end;overflow:hidden;z-index:1;}
+  .hero{position:relative;min-height:600px;display:flex;align-items:center;overflow:hidden;z-index:1;}
   .hero-photo{position:absolute;inset:-60px 0 0 0;z-index:0;height:calc(100% + 60px);will-change:transform;}
   .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:saturate(0.85) brightness(0.8);}
   .hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg, rgba(10,13,20,0.6) 0%, rgba(10,13,20,0.4) 30%, rgba(10,13,20,0.88) 80%, var(--bg) 100%),linear-gradient(90deg, rgba(10,13,20,0.7) 0%, rgba(10,13,20,0.05) 58%);}
-  .hero-content{position:relative;z-index:2;padding:120px 0 150px;width:100%;}
-  .hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:20px;align-items:end;}
+  .hero-content{position:relative;z-index:2;padding:30px 0 110px;width:100%;}
+  /* Mobile gets its own vertical rhythm rather than a scaled-down desktop
+     one: shorter floor height (content defines it) and tighter padding,
+     still comfortably clear of --hero-overlap's 60px mobile value. */
+  @media(max-width:600px){.hero{min-height:auto;} .hero-content{padding:64px 0 110px;}}
+  /* Text column widened (2.6fr vs 1fr) so "Verbinden People. Drive
+     Wachstum." has a real chance of fitting on one line at the H1's
+     existing full desktop size (up to 3.5rem) at 1440/1280px, where the
+     column resolves to ~797px vs. ~307px for the leadflow column. This
+     is an unequal split by design, unlike the previous equal-column
+     version — the leadflow graphic is fluid (width:100% up to its own
+     max-width) so it simply renders narrower rather than breaking. At
+     narrower desktop/tablet widths the H1 may still wrap naturally if
+     the real rendered text is wider than estimated. */
+  /* Top-aligned (not centered) so the copy column's top — the eyebrow,
+     immediately followed by the H1 — starts approximately level with the
+     top of the leadflow graphic, reading as two parallel elements of one
+     composition rather than one centered against the other's middle. */
+  .hero-grid{display:grid;grid-template-columns:2.6fr 1fr;gap:32px;align-items:start;}
   @media(max-width:980px){.hero-grid{grid-template-columns:1fr;}}
-  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:'IBM Plex Mono',monospace;font-size:0.78rem;color:var(--cyan);border:1px solid rgba(94,234,212,0.35);background:rgba(94,234,212,0.06);backdrop-filter:blur(6px);padding:7px 14px;border-radius:100px;margin-bottom:26px;}
+
+  /* .hero-copy: the text column (eyebrow, heading, lead, tagline, actions).
+     Vertical rhythm between these five pieces is named here in one place
+     instead of being a scattered, unlabeled margin-bottom on each child. */
+  .hero-copy{
+    --hc-gap-eyebrow:22px;
+    --hc-gap-heading:20px;
+    --hc-gap-lead:28px;
+    --hc-gap-tagline:26px;
+  }
+  @media(max-width:600px){
+    .hero-copy{--hc-gap-eyebrow:16px;--hc-gap-heading:16px;--hc-gap-lead:22px;--hc-gap-tagline:20px;}
+  }
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:'IBM Plex Mono',monospace;font-size:0.78rem;color:var(--cyan);border:1px solid rgba(94,234,212,0.35);background:rgba(94,234,212,0.06);backdrop-filter:blur(6px);padding:7px 14px;border-radius:100px;margin-bottom:var(--hc-gap-eyebrow);}
   .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);animation:pulse 2s infinite;}
   @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
-  .hero h1{font-size:clamp(2.5rem,5.6vw,4.3rem);line-height:1.06;font-weight:500;letter-spacing:-0.01em;color:#fff;margin-bottom:22px;max-width:640px;}
+  /* Ceiling lowered 3.5rem -> 2.8rem and max-width widened 620px -> 780px
+     so "Menschen verbinden. Wachstum." (29 chars) fits one line within
+     the ~797px text column at 1440/1280px (where 5vw already exceeds
+     2.8rem, so the clamp is pinned at its flat 2.8rem ceiling): needed
+     line width is comfortably under both the new max-width and the
+     column. At narrower desktop/tablet widths the column shrinks faster
+     than the now-fixed font size, so it may wrap there — acceptable per
+     spec. Min (2.1rem) and the vw scaling shape are untouched, so mobile
+     sizing is unaffected. */
+  .hero h1{font-size:clamp(2.1rem,5vw,2.8rem);line-height:1.12;font-weight:500;letter-spacing:-0.01em;color:#fff;margin-bottom:var(--hc-gap-heading);max-width:780px;}
   .hero h1 em{font-style:italic;color:var(--cyan);}
-  .hero p.lead{font-size:1.1rem;color:rgba(248,250,252,0.8);max-width:480px;margin-bottom:34px;line-height:1.65;}
+  .hero p.lead{font-size:1.1rem;color:rgba(248,250,252,0.8);max-width:460px;margin-bottom:var(--hc-gap-lead);line-height:1.65;}
+  .hero-tagline{color:rgba(248,250,252,0.55);font-size:0.82rem;margin-bottom:var(--hc-gap-tagline);}
   .hero-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
   .scroll-cue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(248,250,252,0.6);font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;}
   .scroll-cue .stem{width:1px;height:34px;background:linear-gradient(180deg,rgba(248,250,252,0.7),transparent);position:relative;overflow:hidden;}
@@ -159,47 +241,31 @@
   @keyframes scrollDrop{0%{top:-30%;}100%{top:100%;}}
   @media(max-width:760px){.scroll-cue{display:none;}}
 
-  /* HERO lead-flow mini visual */
-  .leadflow{position:relative;display:flex;justify-content:flex-end;padding-bottom:8px;}
-  .leadflow svg{width:100%;max-width:300px;height:auto;overflow:visible;}
+  /* HERO lead-flow mini visual: centered in its (now narrower, ~307px at
+     1440px) column. Fluid width — no fixed left offset — so it simply
+     fills whatever the column resolves to rather than needing pixel
+     tuning against the column width. */
+  .leadflow{position:relative;display:flex;justify-content:center;}
+  .leadflow svg{width:100%;max-width:420px;height:auto;overflow:visible;}
   .lf-node{fill:#0d121c;stroke:rgba(94,234,212,0.5);stroke-width:1.4;}
   .lf-dot{fill:var(--cyan);filter:drop-shadow(0 0 5px rgba(94,234,212,0.8));}
   .lf-line{stroke:rgba(94,234,212,0.3);stroke-width:1.2;}
   .lf-label{font-family:'IBM Plex Mono',monospace;font-size:9.5px;fill:rgba(248,250,252,0.72);letter-spacing:0.04em;}
   .lf-particle{fill:var(--cyan);filter:drop-shadow(0 0 4px rgba(94,234,212,0.9));}
-  @media(max-width:980px){.leadflow{display:none;}}
 
-  /* floating dashboard */
-  .float-card{position:relative;z-index:3;max-width:1200px;margin:-92px auto 0;padding:0 32px;perspective:1300px;}
-  @media(max-width:600px){.float-card{margin-top:-60px;}}
-  .float-card-inner{background:rgba(17,21,31,0.78);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(94,234,212,0.18);border-radius:20px;box-shadow:0 30px 70px -20px rgba(0,0,0,0.6), 0 0 40px -10px rgba(94,234,212,0.12);padding:30px 34px;transform-style:preserve-3d;transition:transform .15s ease-out;}
-  .fc-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px;}
-  .fc-title{font-family:'IBM Plex Mono',monospace;font-size:0.78rem;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase;}
-  .fc-title strong{color:var(--text);}
-  .fc-live{display:inline-flex;align-items:center;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--amber);text-transform:uppercase;letter-spacing:0.08em;border:1px solid rgba(242,184,114,0.35);background:rgba(242,184,114,0.07);padding:5px 12px;border-radius:100px;}
-  .fc-live .dot{width:6px;height:6px;border-radius:50%;background:var(--amber);box-shadow:0 0 8px var(--amber);animation:pulse 1.6s infinite;}
-  .fc-metrics-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:26px;}
-  @media(max-width:700px){.fc-metrics-row{grid-template-columns:1fr 1fr;}}
-  .fc-metric{background:var(--panel-2);padding:18px 20px;}
-  .fc-metric .fm-num{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:600;color:var(--text);}
-  .fc-metric .fm-num.cyan{color:var(--cyan);}
-  .fc-metric .fm-lbl{font-size:0.76rem;color:var(--muted);margin-top:3px;}
-  .fc-body{display:flex;align-items:center;gap:36px;}
-  @media(max-width:800px){.fc-body{flex-direction:column;align-items:stretch;gap:20px;}}
-  .fc-chart-wrap{flex:1;min-width:0;}
-  .fc-chart-title{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;}
-  .fc-chart{width:100%;height:150px;display:block;min-width:280px;}
-  .chart-path{fill:none;stroke:var(--cyan);stroke-width:2.4;stroke-dasharray:900;stroke-dashoffset:900;animation:draw 2s ease forwards .2s;filter:drop-shadow(0 0 6px rgba(94,234,212,0.6));}
-  .chart-area{opacity:0;animation:fadeIn 1s ease forwards 1.4s;}
-  .chart-dot{fill:var(--cyan);opacity:0;animation:fadeIn .4s ease forwards 2.1s;filter:drop-shadow(0 0 6px rgba(94,234,212,0.9));}
-  @keyframes draw{to{stroke-dashoffset:0;}}
-  @keyframes fadeIn{to{opacity:1;}}
-  .fc-divider{width:1px;align-self:stretch;background:var(--line);}
-  @media(max-width:800px){.fc-divider{display:none;}}
-  .fc-rates{display:flex;flex-direction:column;gap:14px;flex-shrink:0;}
-  @media(max-width:800px){.fc-rates{flex-direction:row;justify-content:space-between;flex-wrap:wrap;}}
-  .fc-rate-num{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;color:var(--text);}
-  .fc-rate-lbl{font-size:0.74rem;color:var(--muted);margin-top:1px;}
+  /* Below 980px the SVG timeline (a fixed 280x340 viewBox — a vertical
+     line, not something that can "wrap") is swapped for a plain HTML
+     label list that CAN wrap: real text at a real font-size, laid out
+     with flex-wrap so it reflows into as many rows as the viewport
+     needs, instead of being scaled down inside the SVG to the point of
+     illegibility. Same six stage names as the desktop SVG's JS-rendered
+     labels, kept in sync by both reading from the same source list. */
+  .leadflow-mobile{display:none;}
+  @media(max-width:980px){
+    .leadflow{display:none;}
+    .leadflow-mobile{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;padding-top:6px;}
+    .leadflow-mobile span{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:0.04em;white-space:nowrap;color:rgba(248,250,252,0.82);border:1px solid rgba(94,234,212,0.3);background:rgba(94,234,212,0.07);padding:6px 12px;border-radius:100px;}
+  }
 
   main{position:relative;z-index:1;}
   main section{padding:120px 0 100px;}
@@ -275,6 +341,13 @@
   /* WHO WE ARE */
   #about .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
   @media(max-width:900px){#about .about-grid{grid-template-columns:1fr;}}
+  /* Overrides the grid's align-items:center for this one column only —
+     .about-visual (the image) is untouched and stays centered against
+     the row exactly as before; .about-copy alone moves to the top of
+     the row, which is visibly higher since the text block is shorter
+     than the 4:5 image beside it. No-op at the ≤900px single-column
+     layout, where each item's row already sizes to fit it exactly. */
+  .about-copy{align-self:start;}
   #about h2{font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:500;line-height:1.22;letter-spacing:-0.01em;margin-bottom:20px;color:var(--text);}
   #about p{color:var(--muted);line-height:1.7;margin-bottom:16px;}
   .about-visual{position:relative;}
@@ -283,25 +356,31 @@
   .about-chip{position:absolute;left:20px;bottom:20px;background:rgba(17,21,31,0.82);backdrop-filter:blur(12px);border:1px solid rgba(94,234,212,0.2);border-radius:14px;padding:16px 20px;box-shadow:0 12px 30px -10px rgba(0,0,0,0.5);}
   .about-chip .num{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:600;color:var(--cyan);}
   .about-chip .lbl{font-size:0.78rem;color:var(--muted);margin-top:2px;}
-  .about-sticker{position:absolute;top:-22px;right:-18px;width:104px;height:104px;border-radius:50%;background:var(--panel-2);border:2px solid rgba(94,234,212,0.35);z-index:3;box-shadow:0 14px 30px -10px rgba(0,0,0,0.55), 0 0 30px -6px rgba(94,234,212,0.35);display:flex;align-items:center;justify-content:center;animation:mascotBounce 2.6s ease-in-out infinite;}
-  @keyframes mascotBounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
-  .about-sticker svg{width:82%;height:82%;}
-  .speech-bubble{position:absolute;top:-14px;right:104px;white-space:nowrap;background:rgba(17,21,31,0.92);backdrop-filter:blur(10px);border:1px solid rgba(94,234,212,0.3);border-radius:12px;padding:9px 14px;box-shadow:0 10px 24px -10px rgba(0,0,0,0.5);}
-  .speech-bubble::after{content:'';position:absolute;right:-7px;top:50%;transform:translateY(-50%);width:0;height:0;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:7px solid rgba(94,234,212,0.3);}
-  .speech-bubble::before{content:'';position:absolute;right:-6px;top:50%;transform:translateY(-50%);width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:6px solid #11151F;z-index:1;}
-  .typed-text{display:inline-block;overflow:hidden;white-space:nowrap;width:0;font-family:'IBM Plex Mono',monospace;font-size:0.76rem;color:var(--cyan);border-right:2px solid var(--cyan);animation:typeCycle 9s steps(30,end) infinite;}
-  @keyframes typeCycle{0%{width:0;}18%{width:16ch;}34%{width:16ch;}40%{width:0;}40.5%{width:0;}58%{width:19ch;}74%{width:19ch;}80%{width:0;}100%{width:0;}}
-  @media(max-width:760px){.speech-bubble{display:none;}}
-  @media(max-width:520px){.about-sticker{width:80px;height:80px;top:-14px;right:-10px;}}
-  @media (prefers-reduced-motion: reduce){.about-sticker{animation:none;}.about-sticker svg *{animation:none !important;}.typed-text{animation:none;width:16ch;border-right:none;}}
 
   /* STATS STRIP */
   section#stats{padding:80px 0;}
   .stat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;}
   @media(max-width:760px){.stat-grid{grid-template-columns:repeat(2,1fr);}}
+  /* Mobile/tablet default: each experience stays one grouped card (title
+     stacked above its own description) — unchanged from before. */
   .stat-box{background:var(--panel);padding:32px 22px;text-align:center;}
   .stat-num{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;color:var(--cyan);}
   .stat-label{font-size:0.85rem;color:var(--muted);margin-top:8px;line-height:1.4;}
+  /* Desktop (>760px, matching the breakpoint above): true two-row grid —
+     all 5 titles in row 1, all 5 descriptions in row 2, so every
+     description starts at the same y position regardless of title
+     height. .stat-box becomes display:contents so its two children
+     (.stat-num/.stat-label) join .stat-grid directly as grid items;
+     grid-auto-flow:column + two explicit rows then places them
+     title-then-description down each column before moving to the next
+     column — i.e. exactly a row of titles followed by a row of
+     descriptions, with no markup change needed. */
+  @media(min-width:761px){
+    .stat-grid{grid-auto-flow:column;grid-template-rows:auto auto;}
+    .stat-box{display:contents;}
+    .stat-num{background:var(--panel);padding:32px 22px 14px;}
+    .stat-label{background:var(--panel);padding:0 22px 32px;margin-top:0;}
+  }
 
   /* HOW WE THINK */
   .think-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;}
@@ -328,18 +407,20 @@
   section#solutions{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
   .solutions{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;perspective:1000px;}
   @media(max-width:900px){.solutions{grid-template-columns:1fr;}}
-  .scard{position:relative;background:var(--panel-2);border:1px solid var(--line);border-radius:var(--radius);padding:38px 32px;transition:transform .12s ease-out, box-shadow .25s, border-color .25s;transform-style:preserve-3d;will-change:transform;overflow:hidden;}
+  /* No static border — cards read as distinct via their own panel-2 fill
+     against the page background, the grid gap, and their icon/heading/
+     spark-chart content; the conic-gradient ring below still appears on
+     hover (an existing accent, not a persistent divider line). */
+  .scard{position:relative;background:var(--panel-2);border-radius:var(--radius);padding:38px 32px;transition:transform .12s ease-out, box-shadow .25s;transform-style:preserve-3d;will-change:transform;overflow:hidden;}
   .scard::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1px;background:conic-gradient(from var(--ang,0deg),transparent 0 70%,var(--cyan) 85%,transparent 100%);-webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .3s;pointer-events:none;}
   .scard:hover::before{opacity:0.6;}
-  .scard:hover{box-shadow:0 24px 50px -24px rgba(0,0,0,0.6), 0 0 30px -12px rgba(94,234,212,0.25);border-color:rgba(94,234,212,0.4);}
+  .scard:hover{box-shadow:0 24px 50px -24px rgba(0,0,0,0.6), 0 0 30px -12px rgba(94,234,212,0.25);}
   .scard-icon{width:48px;height:48px;border-radius:12px;background:rgba(94,234,212,0.08);border:1px solid rgba(94,234,212,0.18);display:flex;align-items:center;justify-content:center;margin-bottom:22px;}
   .scard-icon svg{width:24px;height:24px;}
   .scard h3{font-size:1.2rem;font-weight:600;font-family:'Inter',sans-serif;margin-bottom:12px;color:var(--text);}
   .scard ul{list-style:none;color:var(--muted);font-size:0.92rem;line-height:2;margin-bottom:20px;}
   .scard ul li{padding-left:18px;position:relative;}
   .scard ul li::before{content:'-';position:absolute;left:0;color:var(--cyan);}
-  .scard-spark{height:36px;}
-  .scard-spark path{fill:none;stroke:var(--cyan);stroke-width:1.6;opacity:0.7;}
 
   /* OBJECTIVE SELECTOR */
   .obj-chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:48px;}
@@ -486,8 +567,6 @@
 
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
-    .chart-path{stroke-dashoffset:0;}
-    .chart-area,.chart-dot{opacity:1;}
   }
 
   /* VISITOR ASSISTANCE WIDGET */
@@ -543,10 +622,10 @@
       <a href="#events">Events</a>
       <a href="#process">Unsere Arbeit</a>
       <a href="#partners">Partner</a>
-    </div>
-    <div class="nav-right">
-      <details class="lang-switcher" id="langSwitcher"><summary aria-label="Language: Deutsch. Change language">Deutsch</summary><div class="lang-panel" role="menu"><a href="../en/index.html"  hreflang="en" lang="en">English</a><a href="../de/index.html" aria-current="true" hreflang="de" lang="de">Deutsch</a><a href="../fr/index.html"  hreflang="fr" lang="fr">Français</a><a href="../es/index.html"  hreflang="es" lang="es">Español</a><a href="../it/index.html"  hreflang="it" lang="it">Italiano</a><a href="../hu/index.html"  hreflang="hu" lang="hu">Magyar</a></div></details>
+      <div class="nav-right">
+        <details class="lang-switcher" id="langSwitcher"><summary aria-label="Language: Deutsch. Change language">Deutsch</summary><div class="lang-panel" role="menu"><a href="../en/index.html"  hreflang="en" lang="en">English</a><a href="../de/index.html" aria-current="true" hreflang="de" lang="de">Deutsch</a><a href="../fr/index.html"  hreflang="fr" lang="fr">Français</a><a href="../es/index.html"  hreflang="es" lang="es">Español</a><a href="../it/index.html"  hreflang="it" lang="it">Italiano</a><a href="../hu/index.html"  hreflang="hu" lang="hu">Magyar</a></div></details>
       <div class="navcta"><a href="#contact" class="btn btn-primary">Kontakt</a></div>
+      </div>
     </div>
   </nav>
 </header>
@@ -561,11 +640,11 @@
     <div class="hero-scrim"></div>
     <div class="hero-content">
       <div class="wrap hero-grid">
-        <div>
+        <div class="hero-copy">
           <div class="eyebrow"><span class="dot"></span> Business Intelligence. Executive-Vernetzung. Kommerzielle Chance.</div>
-          <h1>Wir verbinden die richtigen Menschen<br>mit den richtigen <em>Chancen</em>.</h1>
+          <h1>Menschen verbinden. <em>Wachstum</em> vorantreiben.</h1>
           <p class="lead">Connexiba vereint Business Intelligence, gezielte Zielgruppenentwicklung, Executive-Erlebnisse und kommerzielles Engagement, um Lösungsanbieter mit C-Level-Führungskräften, Entscheidungsträgern und relevanten Teilnehmern in globalen B2B- und B2C-Märkten zu verbinden.</p>
-          <p class="mono" style="color:rgba(248,250,252,0.55);font-size:0.82rem;margin-bottom:30px;">Wir füllen den Raum. Sie schließen den Deal.</p>
+          <p class="mono hero-tagline">Wir füllen den Raum. Sie schließen den Deal.</p>
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">Demo buchen</a>
             <a href="#solutions" class="btn btn-ghost btn-on-photo">Lösungen entdecken</a>
@@ -580,73 +659,18 @@
             <g class="lf-nodes"></g>
           </svg>
         </div>
+        <div class="leadflow-mobile">
+          <span>EVENT</span>
+          <span>TEILNEHMER</span>
+          <span>QUALIFIZIERTE LEADS</span>
+          <span>MEETINGS</span>
+          <span>CHANCEN</span>
+          <span>PIPELINE</span>
+        </div>
       </div>
     </div>
     <a href="#universe" class="scroll-cue"><span>Scrollen</span><span class="stem"></span></a>
   </section>
-
-  <!-- FLOATING LIVE PIPELINE DASHBOARD -->
-  <div class="float-card">
-    <div class="float-card-inner tilt" id="dashCard">
-      <div class="fc-head">
-        <div class="fc-title"><strong>CONNEXIBA REPORTING</strong>: So sieht Live-Kampagnentransparenz aus</div>
-        <div class="fc-live"><span class="dot"></span>Illustratives Beispiel</div>
-      </div>
-      <div class="fc-metrics-row">
-        <div class="fc-metric"><div class="fm-num">-</div><div class="fm-lbl">Registrierungen</div></div>
-        <div class="fc-metric"><div class="fm-num cyan">-</div><div class="fm-lbl">Qualifizierte Leads</div></div>
-        <div class="fc-metric"><div class="fm-num">-</div><div class="fm-lbl">Meetings</div></div>
-        <div class="fc-metric"><div class="fm-num cyan">-</div><div class="fm-lbl">Pipeline-Transparenz</div></div>
-      </div>
-      <div class="fc-body">
-        <div class="fc-chart-wrap">
-          <div class="fc-chart-title">Generierte Leads: 90 Tage</div>
-          <svg class="fc-chart" viewBox="0 0 560 150" preserveAspectRatio="xMidYMid meet">
-            <defs>
-              <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#5EEAD4" stop-opacity="0.9"/>
-                <stop offset="100%" stop-color="#5EEAD4" stop-opacity="0.25"/>
-              </linearGradient>
-            </defs>
-            <g stroke="#232A3B" stroke-width="1">
-              <line x1="16" y1="18" x2="544" y2="18"/><line x1="16" y1="56" x2="544" y2="56"/>
-              <line x1="16" y1="94" x2="544" y2="94"/><line x1="16" y1="118" x2="544" y2="118"/>
-            </g>
-            <g class="fc-bars">
-              <rect x="40" y="70" width="30" height="48" rx="4" fill="url(#barGrad)"/>
-              <rect x="128" y="58" width="30" height="60" rx="4" fill="url(#barGrad)"/>
-              <rect x="216" y="48" width="30" height="70" rx="4" fill="url(#barGrad)"/>
-              <rect x="304" y="38" width="30" height="80" rx="4" fill="url(#barGrad)"/>
-              <rect x="392" y="26" width="30" height="92" rx="4" fill="url(#barGrad)"/>
-              <rect x="480" y="18" width="30" height="100" rx="4" fill="url(#barGrad)"/>
-            </g>
-            <polyline class="chart-path" points="55,96 143,88 231,74 319,62 407,44 495,30" fill="none" />
-            <polyline class="chart-area" points="55,96 143,88 231,74 319,62 407,44 495,30" fill="none" stroke="#F2B872" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <g class="chart-dot" fill="#F2B872">
-              <circle cx="55" cy="96" r="3.5"/><circle cx="143" cy="88" r="3.5"/><circle cx="231" cy="74" r="3.5"/>
-              <circle cx="319" cy="62" r="3.5"/><circle cx="407" cy="44" r="3.5"/><circle cx="495" cy="30" r="4.5"/>
-            </g>
-            <g fill="#8B93A7" font-family="IBM Plex Mono, monospace" font-size="10">
-              <text x="55" y="134" text-anchor="middle">MAI</text><text x="143" y="134" text-anchor="middle">JUN</text>
-              <text x="231" y="134" text-anchor="middle">JUL</text><text x="319" y="134" text-anchor="middle">AUG</text>
-              <text x="407" y="134" text-anchor="middle">SEP</text><text x="495" y="134" text-anchor="middle">OKT</text>
-            </g>
-            <g font-family="IBM Plex Mono, monospace" font-size="10" fill="#8B93A7">
-              <rect x="16" y="0" width="9" height="9" rx="2" fill="#5EEAD4" opacity="0.7"/><text x="30" y="8">Leads</text>
-              <line x1="90" y1="4" x2="104" y2="4" stroke="#F2B872" stroke-width="2.5" stroke-linecap="round"/><text x="110" y="8">Qualifizierungsrate</text>
-            </g>
-          </svg>
-        </div>
-        <div class="fc-divider"></div>
-        <div class="fc-rates">
-          <div><div class="fc-rate-num">-</div><div class="fc-rate-lbl">Teilnahmequote</div></div>
-          <div><div class="fc-rate-num">-</div><div class="fc-rate-lbl">Lead-zu-Meeting-Rate</div></div>
-          <div><div class="fc-rate-num">-</div><div class="fc-rate-lbl">Lead-zu-Abschluss-Rate</div></div>
-        </div>
-      </div>
-      <div class="roi-note" style="margin:20px 0 0;">Illustratives Beispiel. Keine Live- oder historischen Connexiba-Daten.</div>
-    </div>
-  </div>
 
   <!-- THE CONNEXIBA APPROACH -->
   <section id="universe">
@@ -705,45 +729,16 @@
     <div class="wrap about-grid">
       <div class="about-copy reveal">
         <span class="sec-eyebrow">Über uns</span>
-        <h2>Wir jagen keine Leads.<br>Wir entwickeln Gespräche.</h2>
-        <p>Connexiba steht an der Schnittstelle von Business Intelligence, Zielgruppenentwicklung, Executive-Engagement und kommerziellem Wachstum.</p>
-        <p>Wir helfen Lösungsanbietern, die Märkte, Unternehmen, Führungskräfte und Teilnehmer zu identifizieren, die für ihre Ziele entscheidend sind, und schaffen dann die Kampagnen, Erlebnisse und Verbindungen, die sie zusammenbringen.</p>
-        <p>Von gezielten digitalen Kampagnen und Executive Events bis hin zu Zielgruppenrecherche, Qualifizierung und Live-Reporting verbinden wir kommerzielle Ziele mit den Menschen, die sie beeinflussen und umsetzen können.</p>
+        <h2>Wir verbinden Lösungsanbieter mit Entscheidungsträgern.</h2>
+        <p>Connexiba verbindet Lösungsanbieter mit Führungskräften und Fachleuten, die Technologie-, Geschäfts- und Einkaufsentscheidungen beeinflussen.</p>
+        <p>Wir identifizieren und erreichen die richtigen Zielgruppen — von CEOs, CIOs und CTOs über IT-Leiter und CISOs bis hin zu Leitern der Cybersicherheit, Beschaffungsverantwortlichen und anderen Führungskräften — abgestimmt auf die Ziele jeder Kampagne.</p>
+        <p>Durch gezielte Zielgruppenentwicklung, digitale Kampagnen, virtuelle und physische Executive-Events, Qualifizierung und direkte Ansprache bringen wir Lösungsanbieter mit relevanten Delegierten zusammen, die einen konkreten Grund haben zuzuhören, zu bewerten und in den Austausch zu gehen.</p>
         <a href="#solutions" class="btn btn-ghost" style="margin-top:8px;">Entdecken Sie, was wir tun →</a>
       </div>
       <div class="about-visual reveal">
         <div class="about-photo">
-          <img src="https://images.unsplash.com/photo-1758518731706-be5d5230e5a5?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="Connexiba-Team bespricht gemeinsam eine Lead-Pipeline in einem modernen Büro" loading="lazy" decoding="async">
+          <img src="../assets/gathering.jpg" alt="Connexiba-Team bespricht gemeinsam eine Lead-Pipeline in einem modernen Büro" loading="lazy" decoding="async">
           <div class="about-chip"><div class="num">15+ Jahre</div><div class="lbl">Kommerzielle &amp; Business-Development-Erfahrung hinter Connexiba</div></div>
-        </div>
-        <div class="about-sticker" aria-hidden="true">
-          <div class="speech-bubble"><span class="typed-text" id="mascotText">Hallo, wir sind Connexiba 👋</span></div>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="46" fill="#161B28"/>
-            <path d="M50 92 C28 92 14 78 14 60 C14 42 30 30 50 30 C70 30 86 42 86 60 C86 78 72 92 50 92 Z" fill="#5EEAD4" opacity="0.08"/>
-            <path d="M32 90 C32 70 40 62 50 62 C60 62 68 70 68 90 Z" fill="#243049"/>
-            <path d="M40 68 C44 74 56 74 60 68" stroke="#5EEAD4" stroke-width="3" fill="none" stroke-linecap="round"/>
-            <g>
-              <animateTransform attributeName="transform" type="rotate" values="-8 60 72; 18 60 72; -8 60 72" keyTimes="0;0.5;1" dur="1.4s" repeatCount="indefinite"/>
-              <path d="M60 72 C70 70 76 62 78 52" stroke="#F2CBA0" stroke-width="8" stroke-linecap="round" fill="none"/>
-              <circle cx="78" cy="50" r="7.5" fill="#F2CBA0"/>
-              <g stroke="#F2CBA0" stroke-width="3.5" stroke-linecap="round">
-                <line x1="78" y1="50" x2="78" y2="41"/><line x1="75" y1="50" x2="74" y2="42"/><line x1="81" y1="50" x2="82" y2="42"/>
-              </g>
-            </g>
-            <circle cx="46" cy="42" r="21" fill="#F2CBA0"/>
-            <path d="M25 40 C25 22 42 16 48 16 C64 16 68 30 66 40 C60 32 52 30 46 32 C38 34 30 34 25 40 Z" fill="#182031"/>
-            <g>
-              <animateTransform attributeName="transform" type="scale" values="1 1;1 1;1 0.1;1 1;1 1" keyTimes="0;0.82;0.87;0.92;1" dur="3.6s" repeatCount="indefinite" additive="sum"/>
-              <ellipse cx="40" cy="42" rx="3.6" ry="4.4" fill="#182031"/><ellipse cx="52" cy="42" rx="3.6" ry="4.4" fill="#182031"/>
-              <circle cx="41.2" cy="40.3" r="1.1" fill="#F6F1E6"/><circle cx="53.2" cy="40.3" r="1.1" fill="#F6F1E6"/>
-            </g>
-            <circle cx="36" cy="49" r="3" fill="#F2B872" opacity="0.55"/><circle cx="56" cy="49" r="3" fill="#F2B872" opacity="0.55"/>
-            <path d="M42 51 Q46 55 50 51" stroke="#182031" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <g stroke="#F2B872" stroke-width="2" stroke-linecap="round" opacity="0.9">
-              <line x1="18" y1="22" x2="18" y2="30"/><line x1="14" y1="26" x2="22" y2="26"/>
-            </g>
-          </svg>
         </div>
       </div>
     </div>
@@ -802,7 +797,7 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="sec-eyebrow">Lösungen</span>
-        <h2>Ein vernetztes Modell: von Intelligence zu Chance.</h2>
+        <h2>Intelligenz, die verbindet</h2>
         <p>Manche Deals werden beim Abendessen abgeschlossen. Manche nach einem zwanzigminütigen Webinar. Wir bedienen beides – und berichten über beides – innerhalb eines vernetzten Modells.</p>
       </div>
       <div class="solutions">
@@ -810,31 +805,21 @@
           <div class="scard-icon"><svg viewBox="0 0 40 40" fill="none"><rect x="4" y="20" width="6" height="16" rx="1.5" stroke="#5EEAD4" stroke-width="1.8"/><rect x="17" y="10" width="6" height="26" rx="1.5" stroke="#5EEAD4" stroke-width="1.8"/><rect x="30" y="4" width="6" height="32" rx="1.5" stroke="#5EEAD4" stroke-width="1.8"/></svg></div>
           <h3>Business Intelligence</h3>
           <p style="color:var(--muted);font-size:0.92rem;line-height:1.6;margin-bottom:20px;">Verstehen Sie Märkte, Unternehmen, Zielgruppen und Entscheidungsträger, bevor Sie aktiv werden.</p>
-          <svg class="scard-spark" viewBox="0 0 200 36" preserveAspectRatio="none"><path d="M0,28 20,24 40,26 60,16 80,18 100,8 120,12 140,4 160,10 180,2 200,6"/></svg>
         </div>
         <div class="scard reveal tilt" tabindex="0">
           <div class="scard-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 6 L20 34 M6 20 L34 20" stroke="#5EEAD4" stroke-width="1.8"/><circle cx="20" cy="20" r="15" stroke="#5EEAD4" stroke-width="1.8"/><circle cx="20" cy="20" r="4" fill="#5EEAD4"/></svg></div>
           <h3>Zielgruppenentwicklung</h3>
           <p style="color:var(--muted);font-size:0.92rem;line-height:1.6;margin-bottom:20px;">Identifizieren und entwickeln Sie gezielte Zielgruppen rund um konkrete kommerzielle Ziele.</p>
-          <svg class="scard-spark" viewBox="0 0 200 36" preserveAspectRatio="none"><path d="M0,20 20,22 40,14 60,18 80,10 100,14 120,6 140,10 160,4 180,8 200,2"/></svg>
         </div>
         <div class="scard reveal tilt" tabindex="0">
           <div class="scard-icon"><svg viewBox="0 0 40 40" fill="none"><rect x="6" y="6" width="28" height="20" rx="2" stroke="#5EEAD4" stroke-width="1.8"/><path d="M13 32h14M20 26v6" stroke="#5EEAD4" stroke-width="1.8"/><circle cx="14" cy="16" r="2.5" stroke="#5EEAD4" stroke-width="1.6"/><circle cx="26" cy="16" r="2.5" stroke="#5EEAD4" stroke-width="1.6"/></svg></div>
           <h3>Executive Events &amp; Erlebnisse</h3>
           <p style="color:var(--muted);font-size:0.92rem;line-height:1.6;margin-bottom:20px;">Schaffen Sie fokussierte Umgebungen, in denen Lösungsanbieter mit C-Level-Führungskräften, Entscheidungsträgern und relevanten Teilnehmern in Kontakt treten können.</p>
-          <svg class="scard-spark" viewBox="0 0 200 36" preserveAspectRatio="none"><path d="M0,30 20,26 40,28 60,18 80,20 100,10 120,14 140,6 160,10 180,4 200,8"/></svg>
         </div>
         <div class="scard reveal tilt" tabindex="0">
           <div class="scard-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 6 L20 34 M6 20 L34 20" stroke="#5EEAD4" stroke-width="1.8"/><circle cx="20" cy="20" r="15" stroke="#5EEAD4" stroke-width="1.8"/><circle cx="20" cy="20" r="4" fill="#5EEAD4"/></svg></div>
           <h3>Digitale Kampagnen &amp; kommerzielles Engagement</h3>
           <p style="color:var(--muted);font-size:0.92rem;line-height:1.6;margin-bottom:20px;">Erreichen Sie gezielte Zielgruppen durch digitale Kampagnen, Qualifizierung, Follow-up und messbares Engagement.</p>
-          <svg class="scard-spark" viewBox="0 0 200 36" preserveAspectRatio="none"><path d="M0,28 20,24 40,26 60,16 80,18 100,8 120,12 140,4 160,10 180,2 200,6"/></svg>
-        </div>
-        <div class="scard reveal tilt" tabindex="0">
-          <div class="scard-icon"><svg viewBox="0 0 40 40" fill="none"><rect x="4" y="20" width="6" height="16" rx="1.5" stroke="#5EEAD4" stroke-width="1.8"/><rect x="17" y="10" width="6" height="26" rx="1.5" stroke="#5EEAD4" stroke-width="1.8"/><rect x="30" y="4" width="6" height="32" rx="1.5" stroke="#5EEAD4" stroke-width="1.8"/></svg></div>
-          <h3>Kommerzielles Live-Reporting</h3>
-          <p style="color:var(--muted);font-size:0.92rem;line-height:1.6;margin-bottom:20px;">Geben Sie Teams Einblick in Engagement, Gespräche, Meetings und Chancen im Verlauf der Kampagne.</p>
-          <svg class="scard-spark" viewBox="0 0 200 36" preserveAspectRatio="none"><path d="M0,20 20,22 40,14 60,18 80,10 100,14 120,6 140,10 160,4 180,8 200,2"/></svg>
         </div>
       </div>
     </div>
@@ -1269,7 +1254,7 @@
       var dot = document.createElementNS(ns,'circle');
       dot.setAttribute('class','lf-dot'); dot.setAttribute('cx',40); dot.setAttribute('cy',ys[i]); dot.setAttribute('r', i===5?6:4.5);
       var txt = document.createElementNS(ns,'text');
-      txt.setAttribute('class','lf-label'); txt.setAttribute('x',58); txt.setAttribute('y', ys[i]+4);
+      txt.setAttribute('class','lf-label'); txt.setAttribute('x',72); txt.setAttribute('y', ys[i]+4);
       txt.textContent = lab;
       frag.appendChild(dot); frag.appendChild(txt);
     });

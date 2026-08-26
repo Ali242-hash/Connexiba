@@ -18,9 +18,9 @@
   },
   "hero": {
     "eyebrow": "Business Intelligence. Connettività Executive. Opportunità Commerciale.",
-    "h1Before": "Connettiamo le persone giuste",
-    "h1Em": "opportunità",
-    "h1After": "alle giuste {em}.",
+    "h1Before": "Connettere persone. Guidare la ",
+    "h1Em": "crescita",
+    "h1After": "</em>.",
     "heroImgAlt": "Una moderna riunione virtuale su schermo, che mostra una griglia di partecipanti professionisti in conversazione",
     "lead": "Connexiba unisce business intelligence, audience development mirato, esperienze executive e coinvolgimento commerciale per mettere in contatto i fornitori di soluzioni con dirigenti C-level, decisori e delegati rilevanti nei mercati B2B e B2C globali.",
     "tagline": "Riempiamo la sala. Voi chiudete l'affare.",
@@ -95,10 +95,10 @@
   },
   "about": {
     "eyebrow": "Chi Siamo",
-    "h2": "Non inseguiamo lead.<br>Progettiamo conversazioni.",
-    "p1": "Connexiba si colloca all'intersezione tra business intelligence, audience development, coinvolgimento executive e crescita commerciale.",
-    "p2": "Aiutiamo i fornitori di soluzioni a identificare i mercati, le aziende, i dirigenti e i delegati rilevanti per i loro obiettivi, per poi creare le campagne, le esperienze e le connessioni che li mettono in contatto.",
-    "p3": "Dalle campagne digitali mirate agli eventi executive, dalla ricerca sul pubblico alla qualificazione e al reporting live, mettiamo in contatto gli obiettivi commerciali con le persone in grado di influenzarli e agire su di essi.",
+    "h2": "Colleghiamo i fornitori di soluzioni con i decision-maker.",
+    "p1": "Connexiba mette in contatto i fornitori di soluzioni con dirigenti e professionisti che influenzano le decisioni tecnologiche, aziendali e di acquisto.",
+    "p2": "Identifichiamo e coinvolgiamo le audience più rilevanti — da CEO, CIO e CTO a responsabili IT, CISO, responsabili della cybersecurity, responsabili degli acquisti e altri decision-maker senior — in base agli obiettivi di ogni campagna.",
+    "p3": "Attraverso lo sviluppo mirato delle audience, campagne digitali, eventi executive virtuali e fisici, qualificazione e coinvolgimento diretto, mettiamo in contatto i fornitori di soluzioni con delegati rilevanti che hanno una concreta ragione per ascoltare, valutare e interagire.",
     "cta": "Scopri cosa facciamo →",
     "photoAlt": "Il team Connexiba che esamina insieme una pipeline di lead in un ufficio moderno",
     "chipNum": "15+ anni",
@@ -152,7 +152,7 @@
   },
   "solutions": {
     "eyebrow": "Soluzioni",
-    "h2": "Un modello connesso: dall'intelligence all'opportunità.",
+    "h2": "Intelligenza che connette",
     "intro": "Alcuni accordi si chiudono a cena. Altri dopo un webinar di venti minuti. Ci occupiamo di entrambi, e su entrambi produciamo report, all'interno di un unico modello connesso.",
     "cards": [
       {

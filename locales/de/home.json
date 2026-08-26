@@ -18,9 +18,9 @@
   },
   "hero": {
     "eyebrow": "Business Intelligence. Executive-Vernetzung. Kommerzielle Chance.",
-    "h1Before": "Wir verbinden die richtigen Menschen",
-    "h1Em": "Chancen",
-    "h1After": "mit den richtigen {em}.",
+    "h1Before": "Menschen verbinden. ",
+    "h1Em": "Wachstum",
+    "h1After": "</em> vorantreiben.",
     "heroImgAlt": "Ein modernes virtuelles Meeting auf einem Bildschirm mit einem Raster professioneller Teilnehmer im Gespräch",
     "lead": "Connexiba vereint Business Intelligence, gezielte Zielgruppenentwicklung, Executive-Erlebnisse und kommerzielles Engagement, um Lösungsanbieter mit C-Level-Führungskräften, Entscheidungsträgern und relevanten Teilnehmern in globalen B2B- und B2C-Märkten zu verbinden.",
     "tagline": "Wir füllen den Raum. Sie schließen den Deal.",
@@ -95,10 +95,10 @@
   },
   "about": {
     "eyebrow": "Über uns",
-    "h2": "Wir jagen keine Leads.<br>Wir entwickeln Gespräche.",
-    "p1": "Connexiba steht an der Schnittstelle von Business Intelligence, Zielgruppenentwicklung, Executive-Engagement und kommerziellem Wachstum.",
-    "p2": "Wir helfen Lösungsanbietern, die Märkte, Unternehmen, Führungskräfte und Teilnehmer zu identifizieren, die für ihre Ziele entscheidend sind, und schaffen dann die Kampagnen, Erlebnisse und Verbindungen, die sie zusammenbringen.",
-    "p3": "Von gezielten digitalen Kampagnen und Executive Events bis hin zu Zielgruppenrecherche, Qualifizierung und Live-Reporting verbinden wir kommerzielle Ziele mit den Menschen, die sie beeinflussen und umsetzen können.",
+    "h2": "Wir verbinden Lösungsanbieter mit Entscheidungsträgern.",
+    "p1": "Connexiba verbindet Lösungsanbieter mit Führungskräften und Fachleuten, die Technologie-, Geschäfts- und Einkaufsentscheidungen beeinflussen.",
+    "p2": "Wir identifizieren und erreichen die richtigen Zielgruppen — von CEOs, CIOs und CTOs über IT-Leiter und CISOs bis hin zu Leitern der Cybersicherheit, Beschaffungsverantwortlichen und anderen Führungskräften — abgestimmt auf die Ziele jeder Kampagne.",
+    "p3": "Durch gezielte Zielgruppenentwicklung, digitale Kampagnen, virtuelle und physische Executive-Events, Qualifizierung und direkte Ansprache bringen wir Lösungsanbieter mit relevanten Delegierten zusammen, die einen konkreten Grund haben zuzuhören, zu bewerten und in den Austausch zu gehen.",
     "cta": "Entdecken Sie, was wir tun →",
     "photoAlt": "Connexiba-Team bespricht gemeinsam eine Lead-Pipeline in einem modernen Büro",
     "chipNum": "15+ Jahre",
@@ -152,7 +152,7 @@
   },
   "solutions": {
     "eyebrow": "Lösungen",
-    "h2": "Ein vernetztes Modell: von Intelligence zu Chance.",
+    "h2": "Intelligenz, die verbindet",
     "intro": "Manche Deals werden beim Abendessen abgeschlossen. Manche nach einem zwanzigminütigen Webinar. Wir bedienen beides – und berichten über beides – innerhalb eines vernetzten Modells.",
     "cards": [
       {

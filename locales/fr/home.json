@@ -18,9 +18,9 @@
   },
   "hero": {
     "eyebrow": "Business Intelligence. Connectivité Executive. Opportunité Commerciale.",
-    "h1Before": "Nous connectons les bonnes personnes",
-    "h1Em": "opportunités",
-    "h1After": "aux bonnes {em}.",
+    "h1Before": "Connecter les personnes. Stimuler la ",
+    "h1Em": "croissance",
+    "h1After": "</em>.",
     "heroImgAlt": "Une réunion virtuelle moderne à l'écran, montrant une grille de participants professionnels en conversation",
     "lead": "Connexiba combine Business Intelligence, développement d'audience ciblé, expériences executive et engagement commercial pour mettre en relation les fournisseurs de solutions avec des dirigeants de niveau C, des décideurs et des délégués pertinents à travers les marchés B2B et B2C mondiaux.",
     "tagline": "Nous remplissons la salle. Vous concluez l'affaire.",
@@ -95,10 +95,10 @@
   },
   "about": {
     "eyebrow": "Qui Nous Sommes",
-    "h2": "Nous ne chassons pas les leads.<br>Nous concevons des conversations.",
-    "p1": "Connexiba se situe à l'intersection de la Business Intelligence, du développement d'audience, de l'engagement executive et de la croissance commerciale.",
-    "p2": "Nous aidons les fournisseurs de solutions à identifier les marchés, entreprises, dirigeants et délégués qui comptent pour leurs objectifs, puis nous créons les campagnes, expériences et connexions qui les réunissent.",
-    "p3": "Des campagnes digitales ciblées et événements executive à la recherche d'audience, la qualification et le reporting en direct, nous connectons les objectifs commerciaux aux personnes capables de les influencer et d'agir sur eux.",
+    "h2": "Nous connectons les fournisseurs de solutions aux décideurs.",
+    "p1": "Connexiba met en relation les fournisseurs de solutions avec les dirigeants et professionnels qui influencent les décisions technologiques, commerciales et d’achat.",
+    "p2": "Nous identifions et engageons les bonnes audiences — des CEO, CIO et CTO aux responsables IT, CISO, responsables de la cybersécurité, responsables des achats et autres décideurs — en fonction des objectifs de chaque campagne.",
+    "p3": "Grâce au développement ciblé des audiences, aux campagnes digitales, aux événements executive virtuels et physiques, à la qualification et à l’engagement direct, nous mettons les fournisseurs de solutions en relation avec des participants pertinents qui ont une réelle raison d’écouter, d’évaluer et d’échanger.",
     "cta": "Découvrez ce que nous faisons →",
     "photoAlt": "L'équipe Connexiba examinant ensemble un pipeline de leads dans un bureau moderne",
     "chipNum": "15+ ans",
@@ -152,7 +152,7 @@
   },
   "solutions": {
     "eyebrow": "Solutions",
-    "h2": "Un modèle connecté : de l'intelligence à l'opportunité.",
+    "h2": "L’intelligence qui connecte",
     "intro": "Certaines affaires se concluent autour d'un dîner. D'autres après un webinaire de vingt minutes. Nous travaillons sur les deux, et en rendons compte pour les deux, au sein d'un modèle connecté unique.",
     "cards": [
       {
