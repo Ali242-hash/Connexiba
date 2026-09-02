@@ -1,1 +1,12 @@
 build-report.json
+
+# Local backup snapshot taken before the prototype-design migration.
+# Not a production website file — must never be committed/deployed.
+/_production-backup-before-prototype-migration/
+
+# Prototype/design-reference files — not part of the production site.
+/motionsites-connexiba-preview.html
+/motionsites-cta-preview.html
+
+# Stray local temp file from an unrelated Claude Code session.
+/UsersalexwAppDataLocalTempclaudeC--Users-alexw9a5875b0-f89c-4258-b732-495512834fabscratchpad_check.js

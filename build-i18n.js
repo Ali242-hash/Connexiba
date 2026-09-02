@@ -129,15 +129,13 @@ function buildLanguage(lang, rawSource) {
   const pairs = [];
   collectPairs(enData, t, pairs);
 
-  // hero.h1Before / h1Em / h1After compose the hero <h1>, which in the
-  // template reads: "{h1Before}<br>{h1After with {em} replaced by <em>h1Em</em>}"
-  // The literal template text for the second half is "to the right
-  // <em>opportunities</em>." (real tags, not a "{em}" token), so it needs
-  // one synthetic pair built from the three translated fragments rather
-  // than a direct literal match.
-  const enH1Rest = 'to the right <em>' + enData.hero.h1Em + '</em>.';
-  const trH1Rest = t.hero.h1After.replace('{em}', '<em>' + t.hero.h1Em + '</em>');
-  pairs.push([enH1Rest, trH1Rest]);
+  // (The current template's hero <h1> is one plain sentence — no <em>
+  // split — so collectPairs()'s generic string walk above handles it
+  // with no special-casing needed. An earlier template version composed
+  // the <h1> from separate h1Before/h1Em/h1After fragments and needed a
+  // synthetic pair built here for that; if a future redesign reintroduces
+  // an <em>-split headline, rebuild that composition here rather than
+  // assuming hero.h1Em/h1After exist.)
   // De-dupe identical EN source strings (same phrase used in multiple
   // places must map to the same translation everywhere).
   const seen = new Map();
