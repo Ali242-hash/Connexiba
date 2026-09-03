@@ -58,6 +58,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Each language page is already the intentional, complete translation of
+     the site (see build-i18n.js / locales/<lang>/home.json) — not English
+     text needing Chrome/Google Translate's help. This is the standard,
+     documented opt-out: it stops Chrome from offering its own "Translate
+     this page?" prompt (which, if accepted, replaces our own EN/DE/FR/ES/
+     IT/HU language-switcher labels with full translated language names,
+     making the nav look broken). Static and identical on every language
+     build; <html lang> below still correctly declares each page's actual
+     language for browsers/search engines regardless. -->
+<meta name="google" content="notranslate">
 <title>Connexiba: Llegue a los responsables de decisión que importan para su crecimiento</title>
 <meta name="description" content="Connexiba ayuda a los proveedores de soluciones a construir audiencias ejecutivas específicas, crear conversaciones significativas y convertir las conexiones adecuadas en oportunidades comerciales, en mercados B2B y B2C globales.">
 <link rel="canonical" href="https://connexiba.com/es/">
@@ -229,10 +239,30 @@
      source art — genuine alpha transparency, no white box, no
      checkerboard — sized by height only so "ConneXiba" always reads
      as one connected word on a single line. */
-  .logo-mark{display:inline-flex;align-items:center;flex-shrink:0;transition:transform .25s ease, filter .25s ease;}
+  .logo-mark{position:relative;display:inline-flex;align-items:center;flex-shrink:0;isolation:isolate;transition:transform .25s ease, filter .25s ease;}
   a.logo-mark:hover,a.logo-mark:focus-visible{transform:translateY(-1px);filter:drop-shadow(0 0 14px rgba(34,211,238,0.3));}
   .logo-mark img{height:34px;width:auto;display:block;}
   @media(max-width:600px){.logo-mark img{height:27px;}}
+  /* Recolor just the "C" onto the X's own cyan->blue palette, without
+     touching the source PNG or the X itself. The wordmark is one flat
+     image (C + "onneXiba" baked into a single crop), so there's no
+     separate "C" layer to restyle directly. Instead: a second copy of
+     that same image is used purely as a CSS mask (its alpha channel,
+     nothing else) on an absolutely-positioned overlay sized to exactly
+     cover the base <img>; clip-path then keeps only the leftmost ~35.6%
+     of that mask visible, which is the measured pixel span of the C
+     glyph (incl. its ring/orbit swoosh) before the gap that precedes
+     "onne" — verified against the source PNG's alpha channel, not
+     guessed from the crop width of assets/newlogo1-mark.png (that crop
+     truncates the swoosh short of where it actually ends in this
+     wordmark, so it's the wrong boundary to reuse here). The overlay
+     paints the site's own existing --cyan/--blue brand gradient (the
+     same pair the X already reads as) through that masked shape, then
+     mix-blend-mode:color keeps the base image's real lightness/shading
+     (the C's own bevel and highlight) and only swaps its hue+saturation
+     — so the 3D mark's exact shape, proportions and transparency are
+     untouched; only its color shifts to match the X. */
+  .logo-c-tint{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;mix-blend-mode:color;background:linear-gradient(160deg, var(--cyan) 0%, var(--blue-bright) 60%, var(--blue) 100%);clip-path:inset(0 64.42% 0 0);-webkit-mask-image:url(../assets/newlogo1-wordmark.png);mask-image:url(../assets/newlogo1-wordmark.png);-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:0 0;mask-position:0 0;}
 
   /* -------------------------------------------------------------
      1. HEADER / NAVIGATION
@@ -251,6 +281,17 @@
      everywhere else keeps it visually balanced within that width. */
   nav{position:relative;display:flex;align-items:center;justify-content:space-between;padding:14px 32px;max-width:1280px;margin:0 auto;gap:16px;}
   .navlinks{display:flex;align-items:center;gap:30px;font-size:0.9rem;color:var(--muted);font-weight:500;}
+  /* #navlinks holds two logical groups: the plain links (.nav-links-group)
+     and CTA+language (.nav-right). Both default to display:contents —
+     i.e. no box of their own, so on mobile/base their children flatten
+     straight into #navlinks's own flex row/column exactly as if this
+     extra nesting didn't exist, preserving the pre-existing mobile
+     stacked-menu look untouched. The desktop media query further down
+     turns them back into real flex boxes so they can become independent,
+     separately-aligned items of the centered nav grid (links centered on
+     the page, CTA+language pinned to the right) without disturbing
+     mobile at all. */
+  .nav-links-group,.nav-right{display:contents;}
   /* Symmetric 12px top+bottom (not bottom-only, as this previously
      was) — the hover-underline still sits flush at the link's own
      bottom edge via ::after's bottom:0 either way, but bottom-only
@@ -262,17 +303,34 @@
      arbitrary offset on any one element.
      `> a` (direct child) rather than the bare descendant `a` used
      before this comment's own prior edit — the CTA link isn't a
-     direct child of .navlinks (it's nested one level deeper, inside
-     .navcta), so scoping to the direct child is what keeps this
-     plain-link underline/padding/hover-color treatment from also
-     landing on the "Hable con Connexiba" button: with the bare
+     direct child of .nav-links-group (it lives in the sibling
+     .nav-right group instead), so scoping to the direct child is what
+     keeps this plain-link underline/padding/hover-color treatment from
+     also landing on the "Hable con Connexiba" button: with the bare
      descendant selector, its higher specificity than .btn was
      silently zeroing out the button's own 14px/26px padding down to
      12px/0 and would have overridden its hover text color too. */
-  .navlinks > a{position:relative;padding:12px 0;transition:color .2s;}
-  .navlinks > a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--cyan);transition:width .25s;}
-  .navlinks > a:hover::after{width:100%;}
-  .navlinks > a:hover{color:var(--text);}
+  .nav-links-group > a{position:relative;padding:12px 0;transition:color .2s;}
+  .nav-links-group > a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--cyan);transition:width .25s;}
+  .nav-links-group > a:hover::after{width:100%;}
+  .nav-links-group > a:hover{color:var(--text);}
+  /* build-i18n.js-injected language switcher (native <details>/<summary>,
+     zero JS). Trigger shows only the current page's own 2-letter code
+     (EN, DE, FR, ES, IT, HU); .lang-panel (buildLangSwitcher()) already
+     excludes that code, so the other five are listed once each. The
+     panel is positioned absolutely, as its own floating glass surface
+     (same treatment as the page's other floating tooltips), so opening
+     it never pushes, widens or reflows the surrounding nav — shared by
+     desktop and mobile since both use this same markup. */
+  .lang-switcher{position:relative;}
+  .lang-switcher summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:4px;padding:12px 0;color:var(--muted);font-size:0.9rem;font-weight:500;transition:color .2s;}
+  .lang-switcher summary::-webkit-details-marker{display:none;}
+  .lang-switcher summary::after{content:'▾';font-size:0.6rem;transition:transform .2s;}
+  .lang-switcher[open] summary::after{transform:rotate(180deg);}
+  .lang-switcher summary:hover{color:var(--text);}
+  .lang-panel{position:absolute;top:100%;right:0;z-index:30;display:flex;flex-direction:column;min-width:64px;margin-top:8px;padding:6px;background:rgba(11,23,48,0.96);border:1px solid var(--glass-border);border-radius:12px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 16px 34px -16px rgba(0,0,0,0.6), 0 0 22px -6px rgba(34,211,238,0.28);}
+  .lang-panel a{padding:8px 12px;border-radius:8px;font-size:0.85rem;color:var(--text);transition:background .2s ease, color .2s ease;}
+  .lang-panel a:hover{background:rgba(255,255,255,0.06);color:var(--cyan);}
   .navtoggle{display:none;align-items:center;justify-content:center;flex-direction:column;gap:5px;width:40px;height:40px;border-radius:9px;border:1px solid var(--line);background:transparent;cursor:pointer;flex-shrink:0;}
   .navtoggle-bar{display:block;width:19px;height:2px;border-radius:2px;background:var(--text);transition:transform .25s ease, opacity .2s ease;}
   .navtoggle[aria-expanded="true"] .navtoggle-bar:nth-child(1){transform:translateY(7px) rotate(45deg);}
@@ -282,9 +340,35 @@
     .navtoggle{display:flex;}
     .navlinks{position:absolute;top:100%;left:0;right:0;display:flex;flex-direction:column;align-items:flex-start;gap:0;background:rgba(7,17,31,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding:6px 32px 18px;max-height:0;overflow:hidden;opacity:0;pointer-events:none;transition:max-height .3s ease, opacity .25s ease;}
     .navlinks.open{max-height:420px;opacity:1;pointer-events:auto;}
-    .navlinks > a{padding:14px 0;border-bottom:1px solid var(--line);width:100%;}
+    /* .navlinks otherwise clips (overflow:hidden, used for its own
+       open/close slide animation) — lift that clip only while the
+       language dropdown itself is open, so the floating .lang-panel
+       isn't cut off inside the mobile menu. */
+    .navlinks:has(.lang-switcher[open]){overflow:visible;}
+    .nav-links-group > a{padding:14px 0;border-bottom:1px solid var(--line);width:100%;}
     .navlinks .navcta{width:100%;padding:14px 0 4px;}
     .navlinks .navcta a{width:100%;}
+  }
+
+  /* -------------------------------------------------------------
+     Desktop nav: logo left / links centered on the page / CTA+language
+     right. A 3-column grid (1fr auto 1fr) is what makes the center
+     column sit truly centered on the page regardless of how wide the
+     logo vs. the CTA+language side happens to be — the two flexible
+     side tracks always take equal width (the wider side's real content
+     sets that shared width; the narrower side just gets matching empty
+     space), which is what keeps the middle column mathematically
+     centered rather than merely centered-in-what's-left. #navlinks
+     itself is unwrapped (display:contents) so its two groups become
+     direct grid items; only used above 880px so the mobile hamburger
+     menu (which needs #navlinks as a real flex box to slide open/closed)
+     is completely unaffected. */
+  @media(min-width:881px){
+    nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;column-gap:20px;}
+    .logo-mark{justify-self:start;}
+    .navlinks{display:contents;}
+    .nav-links-group{display:flex;align-items:center;gap:clamp(16px,2.4vw,30px);justify-self:center;white-space:nowrap;}
+    .nav-right{display:flex;align-items:center;gap:18px;justify-self:end;}
   }
 
   /* -------------------------------------------------------------
@@ -976,17 +1060,22 @@
   <nav>
     <a class="logo-mark" href="#top" aria-label="Connexiba — inicio">
       <img src="../assets/newlogo1-wordmark.png" alt="" width="112" height="34">
+      <span class="logo-c-tint" aria-hidden="true"></span>
     </a>
     <button type="button" class="navtoggle" id="navToggle" aria-expanded="false" aria-controls="navlinks" aria-label="Abrir menú de navegación">
       <span class="navtoggle-bar"></span><span class="navtoggle-bar"></span><span class="navtoggle-bar"></span>
     </button>
     <div class="navlinks" id="navlinks">
-      <a href="#does">Qué hacemos</a>
-      <a href="#solutions">Soluciones</a>
-      <a href="#experiences">Experiencias ejecutivas</a>
-      <a href="#approach">Enfoque</a>
-      <details class="lang-switcher" id="langSwitcher"><summary aria-label="Language: Español. Change language">Español</summary><div class="lang-panel" role="menu"><a href="../en/index.html"  hreflang="en" lang="en">English</a><a href="../de/index.html"  hreflang="de" lang="de">Deutsch</a><a href="../fr/index.html"  hreflang="fr" lang="fr">Français</a><a href="../es/index.html" aria-current="true" hreflang="es" lang="es">Español</a><a href="../it/index.html"  hreflang="it" lang="it">Italiano</a><a href="../hu/index.html"  hreflang="hu" lang="hu">Magyar</a></div></details>
-      <div class="navcta"><a href="#contact" class="btn btn-solid">Hable con Connexiba</a></div>
+      <div class="nav-links-group">
+        <a href="#does">Qué hacemos</a>
+        <a href="#solutions">Soluciones</a>
+        <a href="#experiences">Experiencias ejecutivas</a>
+        <a href="#approach">Enfoque</a>
+      </div>
+      <div class="nav-right">
+        <div class="navcta"><a href="#contact" class="btn btn-solid">Hable con Connexiba</a></div>
+        <details class="lang-switcher" id="langSwitcher"><summary aria-label="Language: Español. Change language">ES</summary><div class="lang-panel" role="menu"><a href="../en/index.html" hreflang="en" lang="en">EN</a><a href="../de/index.html" hreflang="de" lang="de">DE</a><a href="../fr/index.html" hreflang="fr" lang="fr">FR</a><a href="../it/index.html" hreflang="it" lang="it">IT</a><a href="../hu/index.html" hreflang="hu" lang="hu">HU</a></div></details>
+      </div>
     </div>
   </nav>
 </header>
@@ -1525,6 +1614,7 @@
       <div class="foot-col">
         <a class="logo-mark" href="#top" aria-label="Connexiba — inicio">
           <img src="../assets/newlogo1-wordmark.png" alt="" width="112" height="34">
+          <span class="logo-c-tint" aria-hidden="true"></span>
         </a>
         <p class="tag">Nosotros llenamos la sala. Usted cierra el trato.</p>
       </div>

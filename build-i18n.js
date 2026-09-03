@@ -105,8 +105,11 @@ function escapeAttr(s) {
 // ---------------------------------------------------------------------
 function buildLangSwitcher(currentCode) {
   const current = LANGS.find((l) => l.code === currentCode);
-  const items = LANGS.map((l) => {
-    const isCurrent = l.code === currentCode;
+  // Exclude the current language from the dropdown entirely — it's
+  // already shown as the trigger itself, so listing it again inside
+  // .lang-panel produced a visible duplicate (e.g. "English" as the
+  // trigger AND again as the first dropdown row).
+  const items = LANGS.filter((l) => l.code !== currentCode).map((l) => {
     // Every language page lives one folder below the site root
     // (e.g. /en/index.html), and all language folders are siblings, so
     // "../{code}/index.html" is the correct relative path FROM any of
@@ -114,9 +117,12 @@ function buildLangSwitcher(currentCode) {
     // correctly both once deployed AND when opening the files directly
     // via file:// (an absolute path would resolve against the local
     // drive root in that case and fail to open).
-    return `<a href="../${l.code}/index.html" ${isCurrent ? 'aria-current="true"' : ''} hreflang="${l.code}" lang="${l.code}">${l.name}</a>`;
+    return `<a href="../${l.code}/index.html" hreflang="${l.code}" lang="${l.code}">${l.code.toUpperCase()}</a>`;
   }).join('');
-  return `<details class="lang-switcher" id="langSwitcher"><summary aria-label="Language: ${current.name}. Change language">${current.name}</summary><div class="lang-panel" role="menu">${items}</div></details>`;
+  // Trigger and dropdown rows show the short two-letter code only
+  // (EN, DE, FR, ES, IT, HU); the full language name is kept as an
+  // aria-label for screen readers, not shown visually.
+  return `<details class="lang-switcher" id="langSwitcher"><summary aria-label="Language: ${current.name}. Change language">${current.code.toUpperCase()}</summary><div class="lang-panel" role="menu">${items}</div></details>`;
 }
 
 // ---------------------------------------------------------------------
@@ -197,6 +203,11 @@ function buildLanguage(lang, rawSource) {
   //     (file:///.../en/index.html) — an absolute "/assets/..." path would
   //     resolve against the local drive root in the file:// case and break.
   html = html.replace(/(?:src|href)="assets\//g, (m) => m.replace('assets/', '../assets/'));
+  // Same rewrite for the one CSS reference to an asset (the .logo-c-tint
+  // mask-image, which reuses the wordmark PNG as a pure alpha mask) —
+  // it's a url(assets/...) inside the <style> block, not a src/href
+  // attribute, so the rule above doesn't touch it.
+  html = html.replace(/url\(assets\//g, 'url(../assets/');
 
   // --- localize the "connexiba.com" homepage link in Contact section ---
   html = html.replace(
@@ -211,11 +222,16 @@ function buildLanguage(lang, rawSource) {
     `$1${seoHead}\n`
   );
 
-  // --- inject language switcher into the nav, right before the Contact Us button ---
+  // --- inject language switcher into the nav, right after the Contact Us
+  //     button (desktop: CTA then language, left to right; the navcta div
+  //     itself is matched by its stable href/class attributes rather than
+  //     its — already-translated by this point — link text, and is left
+  //     completely untouched, per the i18n contract at the top of
+  //     template.html). ---
   const switcherHtml = buildLangSwitcher(lang.code);
   html = html.replace(
-    /(<div class="navcta">)/,
-    `${switcherHtml}\n      $1`
+    /(<div class="navcta"><a href="#contact" class="btn btn-solid">[^<]*<\/a><\/div>)/,
+    `$1\n        ${switcherHtml}`
   );
 
   return html;
