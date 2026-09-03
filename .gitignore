@@ -1,5 +1,12 @@
 build-report.json
 
+# Never committed: if the contact-form endpoint (api/contact.php) is
+# ever upgraded from mail() to authenticated SMTP, its credentials
+# belong in a file at this path, uploaded by hand via the cPanel File
+# Manager — not in git. No such file exists in this repo today; this
+# entry just guarantees one never gets committed by accident later.
+/api/config.php
+
 # Local backup snapshot taken before the prototype-design migration.
 # Not a production website file — must never be committed/deployed.
 /_production-backup-before-prototype-migration/

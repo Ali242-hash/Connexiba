@@ -998,8 +998,37 @@
   .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(34,211,238,0.12);transform:translateY(-1px);}
   .field textarea{resize:vertical;min-height:110px;}
   .form-note{margin-top:14px;font-size:0.82rem;color:var(--muted);text-align:center;}
+  /* Honeypot: a field real visitors never see or reach (off-screen,
+     unreachable by Tab, hidden from screen readers) but that simple
+     form-filling bots tend to fill in anyway. Left non-empty, the
+     server accepts the request but silently drops it — see api/contact.php.
+     Not display:none/visibility:hidden, which some bots skip on purpose. */
+  .hp-field{position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;}
   @media(max-width:880px){.contact-grid{grid-template-columns:1fr;}}
   @media(max-width:560px){.form-grid{grid-template-columns:1fr;}}
+  /* Success/error popup shown after the contact form submits — same
+     floating-glass language as .chat-panel/.hero-inner (glass-bg,
+     glass-border, blur, soft shadow), just centered over a dim,
+     blurred backdrop instead of anchored to a launcher button, since
+     this needs to read as a deliberate, page-level confirmation. */
+  .form-modal{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .25s ease;}
+  .form-modal.open{opacity:1;pointer-events:auto;}
+  .form-modal-overlay{position:absolute;inset:0;background:rgba(7,17,31,0.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
+  .form-modal-card{position:relative;width:100%;max-width:420px;padding:38px 34px 30px;text-align:center;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:24px;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);box-shadow:0 30px 80px -24px rgba(0,0,0,0.65), inset 0 1px 0 rgba(255,255,255,0.07);transform:scale(.94) translateY(10px);transition:transform .3s cubic-bezier(.22,1,.36,1);}
+  .form-modal.open .form-modal-card{transform:scale(1) translateY(0);}
+  .form-modal-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:color .2s ease, background .2s ease;}
+  .form-modal-close:hover,.form-modal-close:focus-visible{color:var(--text);background:rgba(255,255,255,0.06);}
+  .form-modal-close svg{width:15px;height:15px;}
+  .form-modal-icon{display:none;width:56px;height:56px;margin:0 auto 20px;border-radius:50%;align-items:center;justify-content:center;flex-shrink:0;}
+  .form-modal-icon svg{width:26px;height:26px;}
+  .form-modal-icon-success{background:rgba(34,211,238,0.12);color:var(--cyan);box-shadow:0 0 0 1px rgba(34,211,238,0.25), 0 0 28px -6px rgba(34,211,238,0.55);}
+  .form-modal-icon-error{background:rgba(242,184,114,0.12);color:var(--amber);box-shadow:0 0 0 1px rgba(242,184,114,0.25);}
+  .form-modal.is-success .form-modal-icon-success{display:flex;}
+  .form-modal.is-error .form-modal-icon-error{display:flex;}
+  .form-modal-title{font-family:'Fraunces',serif;font-size:1.4rem;margin-bottom:12px;}
+  .form-modal-body{color:var(--muted);font-size:0.94rem;line-height:1.65;margin-bottom:26px;}
+  .form-modal-btn{width:100%;}
+  @media(max-width:480px){.form-modal-card{padding:32px 24px 26px;}}
 
   /* -------------------------------------------------------------
      20. FOOTER
@@ -1579,9 +1608,15 @@
 
   <!-- ============================================================
        19. CONTACT FORM
-       Static site, no backend: submitting composes a mailto: link to
-       info@connexiba.com with the field values, same mechanism as the
-       rest of the static production site. See the script block.
+       Submits in the background via fetch() to /api/contact.php (see
+       the script block), which emails the submission to
+       info@connexiba.com — no mailto:, no email client opens. The
+       endpoint path is root-absolute (works identically from every
+       /xx/ language page without needing a build-time rewrite, the
+       way "assets/..." paths do) and is the one PHP file this
+       otherwise-static site depends on; it must be uploaded to the
+       live host for the form to actually send mail — see
+       api/contact.php's own header comment for what that requires.
        ============================================================ -->
   <section id="contact">
     <div class="wrap contact-grid">
@@ -1594,7 +1629,11 @@
           <a href="https://www.linkedin.com/company/connexiba" target="_blank" rel="noopener">LinkedIn →</a>
         </div>
       </div>
-      <form class="contact-form glass-card reveal" id="contactForm" novalidate>
+      <form class="contact-form glass-card reveal" id="contactForm" method="post">
+        <div class="hp-field" aria-hidden="true">
+          <label for="cWebsite">Leave this field empty</label>
+          <input type="text" id="cWebsite" name="hp_website" tabindex="-1" autocomplete="off">
+        </div>
         <div class="form-grid">
           <div class="field"><label for="cName">Nombre *</label><input type="text" id="cName" name="name" required autocomplete="name"></div>
           <div class="field"><label for="cEmpresa">Empresa</label><input type="text" id="cEmpresa" name="company" autocomplete="organization"></div>
@@ -1615,7 +1654,7 @@
           </div>
           <div class="field full"><label for="cMessage">Cuéntenos más sobre sus necesidades.</label><textarea id="cMessage" name="message"></textarea></div>
         </div>
-        <button type="submit" class="btn btn-solid" style="width:100%;">Iniciar la conversación</button>
+        <button type="submit" class="btn btn-solid" id="contactFormSubmit" style="width:100%;">Iniciar la conversación</button>
         <p class="form-note" id="contactFormNote">Responderemos directamente al correo electrónico que nos indique.</p>
       </form>
     </div>
@@ -1679,7 +1718,7 @@
         <div class="chat-head-title">¿Cómo podemos ayudarle?</div>
         <div class="chat-head-sub"><span class="chat-status-dot" aria-hidden="true"></span>Connexiba · En línea ahora</div>
       </div>
-      <button type="button" class="chat-close" id="chatClose" aria-label="Cerrar chat">
+      <button type="button" class="chat-close" id="chatCerrar" aria-label="Cerrar chat">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
       </button>
     </div>
@@ -1697,6 +1736,31 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
       </button>
     </form>
+  </div>
+</div>
+
+<!-- ============================================================
+     22. CONTACT FORM SUCCESS/ERROR MODAL
+     One shared popup for both outcomes of the contact form submit —
+     see the script block's contact-form handler. Hidden by default
+     (no "open" class); which of the two icon/copy states shows is
+     picked by adding is-success or is-error alongside .open.
+     ============================================================ -->
+<div class="form-modal" id="formModal" role="alertdialog" aria-modal="true" aria-hidden="true" aria-labelledby="formModalTitle" aria-describedby="formModalBody">
+  <div class="form-modal-overlay" id="formModalOverlay"></div>
+  <div class="form-modal-card">
+    <button type="button" class="form-modal-close" id="formModalCerrar" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+    <div class="form-modal-icon form-modal-icon-success" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+    </div>
+    <div class="form-modal-icon form-modal-icon-error" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="13"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    </div>
+    <h3 class="form-modal-title" id="formModalTitle"></h3>
+    <p class="form-modal-body" id="formModalBody"></p>
+    <button type="button" class="btn btn-solid form-modal-btn" id="formModalOk">Cerrar</button>
   </div>
 </div>
 
@@ -2039,31 +2103,87 @@
     revealEls.forEach(function(el){ el.classList.add('is-in'); });
   }
 
-  /* contact form: static site, no backend — submitting composes a
-     mailto: link to info@connexiba.com from the field values, same
-     mechanism used across the rest of this static production site. */
+  /* contact form: submits in the background to /api/contact.php,
+     which emails the submission to info@connexiba.com — no mailto:,
+     the visitor never leaves this page or opens an email client. The
+     endpoint is the one server-side piece this otherwise-static site
+     depends on; see api/contact.php for what it does with the data
+     and what has to be uploaded/configured on the live host for it to
+     actually send mail. Native HTML5 validation (the form's own
+     required/type="email" attributes) runs before this handler ever
+     sees a submit — the browser blocks and reports invalid submissions
+     on its own, so there's nothing to duplicate here. */
   var form = document.getElementById('contactForm');
   if(form){
+    var submitBtn = document.getElementById('contactFormSubmit');
+    var submitBtnDefaultText = submitBtn ? submitBtn.textContent : '';
+    var modal = document.getElementById('formModal');
+    var modalTitle = document.getElementById('formModalTitle');
+    var modalBody = document.getElementById('formModalBody');
+    var modalOk = document.getElementById('formModalOk');
+    var modalCerrar = document.getElementById('formModalCerrar');
+    var modalOverlay = document.getElementById('formModalOverlay');
+    var isSubmitting = false;
+    var lastFocused = null;
+
+    function openModal(state, title, body){
+      if(!modal) return;
+      modal.classList.remove('is-success', 'is-error');
+      modal.classList.add(state === 'success' ? 'is-success' : 'is-error');
+      if(modalTitle) modalTitle.textContent = title;
+      if(modalBody) modalBody.textContent = body;
+      lastFocused = document.activeElement;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      if(modalCerrar) modalCerrar.focus();
+    }
+    function closeModal(){
+      if(!modal) return;
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      if(lastFocused && typeof lastFocused.focus === 'function'){ lastFocused.focus(); }
+    }
+    if(modalOk) modalOk.addEventListener('click', closeModal);
+    if(modalCerrar) modalCerrar.addEventListener('click', closeModal);
+    if(modalOverlay) modalOverlay.addEventListener('click', closeModal);
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && modal && modal.classList.contains('open')){ closeModal(); }
+    });
+
     form.addEventListener('submit', function(e){
       e.preventDefault();
-      var note = document.getElementById('contactFormNote');
-      var name = form.cName.value, company = form.cEmpresa.value, title = form.cTitle.value,
-          email = form.cEmail.value, solution = form.cSolution.value, market = form.cMarket.value,
-          objective = form.cObjective.value, message = form.cMessage.value;
-      var subject = encodeURIComponent('Nueva consulta desde connexiba.com: ' + (name || 'Formulario de contacto del sitio web'));
-      var bodyLines = [
-        'Nombre: ' + name,
-        'Empresa: ' + company,
-        'Cargo: ' + title,
-        'Correo electrónico: ' + email,
-        'Solución: ' + solution,
-        'Mercado/audiencia objetivo: ' + market,
-        'Objetivo principal: ' + objective,
-        '', 'Mensaje:', message
-      ];
-      var body = encodeURIComponent(bodyLines.join('\n'));
-      window.location.href = 'mailto:info@connexiba.com?subject=' + subject + '&body=' + body;
-      if(note){ note.textContent = 'Abriendo su cliente de correo electrónico, dirigido a info@connexiba.com…'; note.style.color = 'var(--cyan)'; }
+      if(isSubmitting) return;
+      isSubmitting = true;
+      if(submitBtn){ submitBtn.disabled = true; submitBtn.textContent = 'Enviando…'; }
+
+      var controller = ('AbortController' in window) ? new AbortController() : null;
+      var timeoutId = controller ? setTimeout(function(){ controller.abort(); }, 15000) : null;
+
+      fetch('/api/contact.php', {
+        method: 'POST',
+        headers: {'Accept': 'application/json'},
+        body: new FormData(form),
+        signal: controller ? controller.signal : undefined
+      }).then(function(res){
+        return res.json().catch(function(){ return {ok:false}; }).then(function(data){
+          return {ok: res.ok && data && data.ok === true, data: data};
+        });
+      }).then(function(result){
+        if(timeoutId) clearTimeout(timeoutId);
+        isSubmitting = false;
+        if(submitBtn){ submitBtn.disabled = false; submitBtn.textContent = submitBtnDefaultText; }
+        if(result.ok){
+          form.reset();
+          openModal('success', 'Mensaje enviado correctamente', "Gracias por contactar con Connexiba. Hemos recibido su mensaje y nuestro equipo se pondrá en contacto con usted en breve.");
+        } else {
+          openModal('error', 'Algo salió mal', "No hemos podido enviar su mensaje en este momento. Inténtelo de nuevo o contáctenos en info@connexiba.com.");
+        }
+      }).catch(function(){
+        if(timeoutId) clearTimeout(timeoutId);
+        isSubmitting = false;
+        if(submitBtn){ submitBtn.disabled = false; submitBtn.textContent = submitBtnDefaultText; }
+        openModal('error', 'Algo salió mal', "No hemos podido enviar su mensaje en este momento. Inténtelo de nuevo o contáctenos en info@connexiba.com.");
+      });
     });
   }
 
@@ -2087,7 +2207,7 @@
   var chatWidget = document.getElementById('chatWidget');
   var chatLauncher = document.getElementById('chatLauncher');
   var chatPanel = document.getElementById('chatPanel');
-  var chatClose = document.getElementById('chatClose');
+  var chatCerrar = document.getElementById('chatCerrar');
   var chatLog = document.getElementById('chatLog');
   var chatForm = document.getElementById('chatForm');
   var chatInput = document.getElementById('chatInput');
@@ -2145,7 +2265,7 @@
     chatLauncher.addEventListener('click', function(){
       chatWidget.classList.contains('open') ? closeChat() : openChat();
     });
-    chatClose && chatClose.addEventListener('click', closeChat);
+    chatCerrar && chatCerrar.addEventListener('click', closeChat);
     document.addEventListener('keydown', function(e){
       if(e.key === 'Escape' && chatWidget.classList.contains('open')) closeChat();
     });
