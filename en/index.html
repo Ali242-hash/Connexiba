@@ -246,23 +246,39 @@
   /* Recolor just the "C" onto the X's own cyan->blue palette, without
      touching the source PNG or the X itself. The wordmark is one flat
      image (C + "onneXiba" baked into a single crop), so there's no
-     separate "C" layer to restyle directly. Instead: a second copy of
-     that same image is used purely as a CSS mask (its alpha channel,
-     nothing else) on an absolutely-positioned overlay sized to exactly
+     separate "C" layer to restyle directly. Instead: two copies of
+     that same image are used purely as CSS masks (their alpha channel,
+     nothing else) on absolutely-positioned overlays sized to exactly
      cover the base <img>; clip-path then keeps only the leftmost ~35.6%
      of that mask visible, which is the measured pixel span of the C
      glyph (incl. its ring/orbit swoosh) before the gap that precedes
      "onne" — verified against the source PNG's alpha channel, not
      guessed from the crop width of assets/newlogo1-mark.png (that crop
      truncates the swoosh short of where it actually ends in this
-     wordmark, so it's the wrong boundary to reuse here). The overlay
-     paints the site's own existing --cyan/--blue brand gradient (the
-     same pair the X already reads as) through that masked shape, then
-     mix-blend-mode:color keeps the base image's real lightness/shading
-     (the C's own bevel and highlight) and only swaps its hue+saturation
-     — so the 3D mark's exact shape, proportions and transparency are
-     untouched; only its color shifts to match the X. */
-  .logo-c-tint{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;mix-blend-mode:color;background:linear-gradient(160deg, var(--cyan) 0%, var(--blue-bright) 60%, var(--blue) 100%);clip-path:inset(0 64.42% 0 0);-webkit-mask-image:url(../assets/newlogo1-wordmark.png);mask-image:url(../assets/newlogo1-wordmark.png);-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:0 0;mask-position:0 0;}
+     wordmark, so it's the wrong boundary to reuse here).
+     Two stacked layers, both restricted to that same masked shape:
+       1. .logo-c-tint — mix-blend-mode:color, weighted toward
+          --cyan-soft/--cyan (--blue-bright only as a small accent at
+          the very tip) so the hue itself reads cyan/teal rather than
+          navy — a first pass at "C ≈ X" fixed this being far too
+          blue: nearly all the C's surface area is shadow/midtone, and
+          the old gradient only turned cyan right at its very top edge.
+          saturate(1.25) richens that hue without touching lightness
+          (mix-blend-mode:color takes hue+saturation from this layer
+          but ALWAYS keeps the base image's own lightness, so no amount
+          of retuning this layer alone can lift how dark the shadow
+          facets read).
+       2. .logo-c-glow — mix-blend-mode:screen (a lightening-only
+          blend, never darkens), a soft cyan-soft bloom placed over the
+          mark's own existing highlight streak. This is what actually
+          answers "luminous/premium": it lifts the shadowed facets
+          toward cyan light instead of leaving them dark navy, while
+          fading out before it reaches full white so the 3D shading/
+          highlight contour underneath still reads through it.
+     Together the mark keeps its exact shape, proportions, transparency
+     and 3D shading — only how lit and how cyan it reads changes. */
+  .logo-c-tint{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;mix-blend-mode:color;filter:saturate(1.25);background:linear-gradient(155deg, var(--cyan-soft) 0%, var(--cyan) 55%, var(--blue-bright) 100%);clip-path:inset(0 64.42% 0 0);-webkit-mask-image:url(../assets/newlogo1-wordmark.png);mask-image:url(../assets/newlogo1-wordmark.png);-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:0 0;mask-position:0 0;}
+  .logo-c-glow{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;mix-blend-mode:screen;opacity:.6;background:radial-gradient(circle at 30% 22%, var(--cyan-soft) 0%, rgba(103,232,249,0.4) 35%, transparent 68%);clip-path:inset(0 64.42% 0 0);-webkit-mask-image:url(../assets/newlogo1-wordmark.png);mask-image:url(../assets/newlogo1-wordmark.png);-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:0 0;mask-position:0 0;}
 
   /* -------------------------------------------------------------
      1. HEADER / NAVIGATION
@@ -450,13 +466,15 @@
      hero-inner glass panel, with real breathing room between the two —
      see the hero's own increased bottom padding above) so it never
      reads as sitting inside the glass content box. */
-  .scroll-indicator{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:10px;text-decoration:none;}
+  /* Visible "Scroll" lettering removed (icon + click/scroll behavior
+     kept) — the link's own aria-label ("Scroll to explore the site",
+     set below) already carries the full accessible name, so dropping
+     the visible text label loses nothing for assistive tech. */
+  .scroll-indicator{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;text-decoration:none;}
   .scroll-indicator-ring{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.04);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;transition:border-color .3s ease, background .3s ease, transform .25s ease;animation:scrollBob 2.6s ease-in-out infinite;}
   .scroll-indicator-ring svg{width:16px;height:16px;color:var(--cyan);transition:transform .25s ease;}
   .scroll-indicator:hover .scroll-indicator-ring,.scroll-indicator:focus-visible .scroll-indicator-ring{border-color:rgba(34,211,238,0.55);background:rgba(34,211,238,0.09);transform:scale(1.07);animation-play-state:paused;}
   .scroll-indicator:hover .scroll-indicator-ring svg,.scroll-indicator:focus-visible .scroll-indicator-ring svg{transform:translateY(2px);}
-  .scroll-indicator-label{font-family:'IBM Plex Mono',monospace;font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);opacity:.8;transition:color .25s ease, opacity .25s ease;}
-  .scroll-indicator:hover .scroll-indicator-label,.scroll-indicator:focus-visible .scroll-indicator-label{color:var(--cyan);opacity:1;}
   @keyframes scrollBob{0%,100%{transform:translateY(0);}50%{transform:translateY(6px);}}
   @media (prefers-reduced-motion: reduce){.scroll-indicator-ring{animation:none;}}
   @media (max-height:640px){.scroll-indicator{display:none;}}
@@ -1061,6 +1079,7 @@
     <a class="logo-mark" href="#top" aria-label="Connexiba — home">
       <img src="../assets/newlogo1-wordmark.png" alt="" width="112" height="34">
       <span class="logo-c-tint" aria-hidden="true"></span>
+      <span class="logo-c-glow" aria-hidden="true"></span>
     </a>
     <button type="button" class="navtoggle" id="navToggle" aria-expanded="false" aria-controls="navlinks" aria-label="Open navigation menu">
       <span class="navtoggle-bar"></span><span class="navtoggle-bar"></span><span class="navtoggle-bar"></span>
@@ -1108,7 +1127,6 @@
       <span class="scroll-indicator-ring" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
       </span>
-      <span class="scroll-indicator-label">Scroll</span>
     </a>
   </section>
 
@@ -1615,6 +1633,7 @@
         <a class="logo-mark" href="#top" aria-label="Connexiba — home">
           <img src="../assets/newlogo1-wordmark.png" alt="" width="112" height="34">
           <span class="logo-c-tint" aria-hidden="true"></span>
+          <span class="logo-c-glow" aria-hidden="true"></span>
         </a>
         <p class="tag">We fill the room. You close the deal.</p>
       </div>
