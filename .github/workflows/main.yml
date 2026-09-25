@@ -22,6 +22,7 @@ jobs:
           protocol: ftps
           port: 21
           server-dir: /public_html/
+          state-name: .ftp-deploy-sync-state-v2.json
           # AI CRM / AI Workforce project (app dir, config/secrets, and
           # governance/spec docs) is excluded below — added Phase 1,
           # Segment 1 (deployment safety). None of it is marketing-site
