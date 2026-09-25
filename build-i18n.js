@@ -6,6 +6,9 @@
  * fully self-contained, pre-translated static HTML files:
  *   /en/index.html  /de/index.html  /fr/index.html
  *   /es/index.html  /it/index.html  /hu/index.html
+ * plus one static Terms & Conditions page per language:
+ *   /en/terms.html  /de/terms.html  /fr/terms.html
+ *   /es/terms.html  /it/terms.html  /hu/terms.html
  * plus a root /index.html that redirects to /en/.
  *
  * Each output file is 100% static HTML/CSS/JS for its language only —
@@ -19,6 +22,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SOURCE_HTML = path.join(ROOT, 'template.html');
+const TERMS_SOURCE_HTML = path.join(ROOT, 'terms.template.html');
 const LOCALES_DIR = path.join(ROOT, 'locales');
 const SITE_URL = 'https://connexiba.com';
 
@@ -35,8 +39,8 @@ const DEFAULT_LANG = 'en';
 // ---------------------------------------------------------------------
 // 1. Load locale data
 // ---------------------------------------------------------------------
-function loadLocale(code) {
-  const p = path.join(LOCALES_DIR, code, 'home.json');
+function loadLocale(code, page) {
+  const p = path.join(LOCALES_DIR, code, (page || 'home') + '.json');
   if (!fs.existsSync(p)) throw new Error('Missing locale file: ' + p);
   return JSON.parse(fs.readFileSync(p, 'utf8'));
 }
@@ -74,12 +78,13 @@ function collectPairs(enNode, targetNode, pairs) {
 // ---------------------------------------------------------------------
 // 3. Build the <head> language-alternate / SEO block for a given lang
 // ---------------------------------------------------------------------
-function buildSeoHead(lang, t) {
-  const canonical = `${SITE_URL}/${lang.code}/`;
+function buildSeoHead(lang, t, page) {
+  const suffix = page || ''; // '' = homepage ("/en/"), or e.g. "terms.html"
+  const canonical = `${SITE_URL}/${lang.code}/${suffix}`;
   const hreflangLinks = LANGS.map(
-    (l) => `<link rel="alternate" hreflang="${l.code}" href="${SITE_URL}/${l.code}/">`
+    (l) => `<link rel="alternate" hreflang="${l.code}" href="${SITE_URL}/${l.code}/${suffix}">`
   ).join('\n');
-  const xDefault = `<link rel="alternate" hreflang="x-default" href="${SITE_URL}/${DEFAULT_LANG}/">`;
+  const xDefault = `<link rel="alternate" hreflang="x-default" href="${SITE_URL}/${DEFAULT_LANG}/${suffix}">`;
   return [
     `<link rel="canonical" href="${canonical}">`,
     hreflangLinks,
@@ -103,7 +108,8 @@ function escapeAttr(s) {
 // ---------------------------------------------------------------------
 // 4. Build the language switcher (zero-JS, native <details>/<summary>)
 // ---------------------------------------------------------------------
-function buildLangSwitcher(currentCode) {
+function buildLangSwitcher(currentCode, targetFile) {
+  const file = targetFile || 'index.html';
   const current = LANGS.find((l) => l.code === currentCode);
   // Exclude the current language from the dropdown entirely — it's
   // already shown as the trigger itself, so listing it again inside
@@ -116,8 +122,10 @@ function buildLangSwitcher(currentCode) {
     // them TO any other. Unlike an absolute "/de/" path, this resolves
     // correctly both once deployed AND when opening the files directly
     // via file:// (an absolute path would resolve against the local
-    // drive root in that case and fail to open).
-    return `<a href="../${l.code}/index.html" hreflang="${l.code}" lang="${l.code}">${l.code.toUpperCase()}</a>`;
+    // drive root in that case and fail to open). targetFile lets the
+    // Terms page switcher land on the other language's terms.html
+    // instead of its index.html.
+    return `<a href="../${l.code}/${file}" hreflang="${l.code}" lang="${l.code}">${l.code.toUpperCase()}</a>`;
   }).join('');
   // Trigger and dropdown rows show the short two-letter code only
   // (EN, DE, FR, ES, IT, HU); the full language name is kept as an
@@ -238,6 +246,69 @@ function buildLanguage(lang, rawSource) {
 }
 
 // ---------------------------------------------------------------------
+// 5b. Generate one language's Terms & Conditions page
+// ---------------------------------------------------------------------
+function buildTermsLanguage(lang, rawTermsSource, termsEnData) {
+  const t = loadLocale(lang.code, 'terms');
+
+  const pairs = [];
+  collectPairs(termsEnData, t, pairs);
+
+  const seen = new Map();
+  pairs.forEach(([en, tr]) => {
+    if (seen.has(en) && seen.get(en) !== tr) {
+      console.warn(`  [warn][terms] "${en}" maps to two different translations; using the first one seen.`);
+      return;
+    }
+    seen.set(en, tr);
+  });
+  const uniquePairs = Array.from(seen.entries()).sort((a, b) => b[0].length - a[0].length);
+
+  // Same script/non-script split + JS-escaping discipline as buildLanguage,
+  // kept for consistency even though the terms page's own script block is
+  // expected to be free of translated string literals.
+  const scriptOpen = rawTermsSource.indexOf('<script>');
+  const scriptClose = rawTermsSource.indexOf('</script>', scriptOpen) + '</script>'.length;
+  if (scriptOpen === -1 || scriptClose === -1) throw new Error('Could not locate <script> block in terms template');
+
+  const before = rawTermsSource.slice(0, scriptOpen);
+  const scriptBlock = rawTermsSource.slice(scriptOpen, scriptClose);
+  const after = rawTermsSource.slice(scriptClose);
+
+  function jsEscape(s) { return s.replace(/\\/g, '\\\\').replace(/'/g, "\\'"); }
+  function reEscape(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+  const lookup = new Map(uniquePairs);
+  const pattern = new RegExp(uniquePairs.map(([en]) => reEscape(en)).join('|'), 'g');
+  function substitute(text, escapeFn) {
+    return text.replace(pattern, (match) => {
+      const tr = lookup.get(match);
+      return escapeFn ? escapeFn(tr) : tr;
+    });
+  }
+
+  let html = substitute(before, null) + substitute(scriptBlock, jsEscape) + substitute(after, null);
+
+  html = html.replace(/<html lang="en">/, `<html lang="${lang.code}">`);
+  html = html.replace(/(?:src|href)="assets\//g, (m) => m.replace('assets/', '../assets/'));
+  html = html.replace(/url\(assets\//g, 'url(../assets/');
+
+  const seoHead = buildSeoHead(lang, t, 'terms.html');
+  html = html.replace(/(<meta name="description"[^>]*>\n)/, `$1${seoHead}\n`);
+
+  // Terms page's CTA links back to the homepage contact section
+  // (index.html#contact), not a same-page anchor, so it needs its own
+  // fixed-anchor match rather than reusing buildLanguage's "#contact" one.
+  const switcherHtml = buildLangSwitcher(lang.code, 'terms.html');
+  html = html.replace(
+    /(<div class="navcta"><a href="index\.html#contact" class="btn btn-solid">[^<]*<\/a><\/div>)/,
+    `$1\n        ${switcherHtml}`
+  );
+
+  return html;
+}
+
+// ---------------------------------------------------------------------
 // 6. Run
 // ---------------------------------------------------------------------
 const rawSource = fs.readFileSync(SOURCE_HTML, 'utf8');
@@ -252,6 +323,21 @@ LANGS.forEach((lang) => {
   report.push({ lang: lang.code, bytes: Buffer.byteLength(html, 'utf8'), file: outFile });
   console.log(`Built /${lang.code}/index.html (${(Buffer.byteLength(html, 'utf8') / 1024).toFixed(1)} KB)`);
 });
+
+// --- Terms & Conditions pages (only if the terms template/locale files exist) ---
+if (fs.existsSync(TERMS_SOURCE_HTML)) {
+  const rawTermsSource = fs.readFileSync(TERMS_SOURCE_HTML, 'utf8');
+  const termsEnData = loadLocale('en', 'terms');
+  LANGS.forEach((lang) => {
+    const outDir = path.join(ROOT, lang.code);
+    fs.mkdirSync(outDir, { recursive: true });
+    const outFile = path.join(outDir, 'terms.html');
+    const html = buildTermsLanguage(lang, rawTermsSource, termsEnData);
+    fs.writeFileSync(outFile, html, 'utf8');
+    report.push({ lang: lang.code, page: 'terms', bytes: Buffer.byteLength(html, 'utf8'), file: outFile });
+    console.log(`Built /${lang.code}/terms.html (${(Buffer.byteLength(html, 'utf8') / 1024).toFixed(1)} KB)`);
+  });
+}
 
 // --- root redirect page (no JS required, works with or without .htaccess) ---
 const rootHtml = `<!DOCTYPE html>

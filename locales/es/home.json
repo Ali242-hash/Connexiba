@@ -13,21 +13,23 @@
     "whatWeDo": "Qué hacemos",
     "solutions": "Soluciones",
     "executiveExperiences": "Experiencias ejecutivas",
-    "approach": "Enfoque",
-    "talkToConnexiba": "Hable con Connexiba"
+    "talkToConnexiba": "Hable con Connexiba",
+    "about": "Acerca de",
+    "experiences": "Experiencias"
   },
   "hero": {
-    "h1": "Llegue a los responsables de decisión que importan para su crecimiento.",
+    "h1": "Llegue a los responsables de decisión que importan para su crecimiento",
+    "h1b": "Llega a las personas adecuadas, no simplemente a más personas",
+    "h1c": "Convierta las conexiones adecuadas en oportunidades reales",
+    "h1d": "Construya el pipeline que impulsa su crecimiento",
     "lead": "Connexiba ayuda a los proveedores de soluciones a construir audiencias ejecutivas específicas, crear conversaciones significativas y convertir las conexiones adecuadas en oportunidades comerciales.",
     "ctaTalk": "Hable con Connexiba",
-    "ctaApproach": "Explore nuestro enfoque",
-    "tagline": "Nosotros llenamos la sala. Usted cierra el trato.",
-    "scrollAria": "Desplácese para explorar el sitio",
-    "scroll": "Desplazar"
+    "tagline": "Nosotros llenamos la sala. Usted cierra el trato",
+    "scrollAria": "Desplácese para explorar el sitio"
   },
   "does": {
     "eyebrow": "Qué hace Connexiba",
-    "h2": "Acceda a las personas adecuadas, no solo a más personas.",
+    "h2": "Audiencias construidas con precisión, no listas más largas",
     "p1": "Su crecimiento depende de llegar a los responsables de decisión adecuados.",
     "p2": "Connexiba combina inteligencia de negocio, desarrollo de audiencias ejecutivas, engagement dirigido y experiencias ejecutivas para ayudar a los proveedores de soluciones a crear oportunidades comerciales relevantes.",
     "p3": "Cada programa se construye en torno a su mercado objetivo, nivel de seniority, geografía, sector y objetivos comerciales.",
@@ -36,168 +38,378 @@
     "statNum": "15+ años",
     "statLbl": "De experiencia en desarrollo comercial y empresarial detrás de Connexiba."
   },
-  "approach": {
-    "eyebrow": "El enfoque de Connexiba",
-    "h2": "De la inteligencia a la oportunidad.",
-    "intro": "Un ciclo comercial continuo, no una campaña puntual. Pase el cursor o enfoque una etapa para ver cómo hace avanzar el proceso.",
-    "cards": [
-      { "title": "Identificar", "desc": "Defina las personas, cuentas, sectores y mercados que importan para su crecimiento." },
-      { "title": "Enganchar", "desc": "Llegue a los responsables de decisión relevantes mediante un engagement dirigido y profesional." },
-      { "title": "Conectar", "desc": "Cree el entorno para conversaciones ejecutivas genuinas." },
-      { "title": "Calificar", "desc": "Centre la participación en la relevancia, la necesidad de negocio y el ajuste." },
-      { "title": "Activar", "desc": "Convierta el engagement en reuniones estructuradas, eventos, mesas redondas y conversaciones comerciales." },
-      { "title": "Medir", "desc": "Haga seguimiento de la participación, el engagement, las reuniones y los indicadores comerciales acordados, alimentando directamente el siguiente ciclo." }
-    ]
-  },
-  "model": {
-    "eyebrow": "El modelo de Connexiba",
-    "h2": "Inteligencia. Conexión. Oportunidad.",
-    "items": [
-      { "title": "Inteligencia", "desc": "Comprenda su mercado, audiencia y prioridades comerciales." },
-      { "title": "Conexión", "desc": "Ponga a las personas adecuadas en la conversación adecuada." },
-      { "title": "Oportunidad", "desc": "Cree las condiciones para relaciones, reuniones y desarrollo de negocio." }
-    ]
-  },
-  "why": {
-    "eyebrow": "Por qué Connexiba",
-    "h2": "Personas relevantes. Conversaciones significativas. Enfoque comercial.",
-    "items": [
-      { "title": "Personas relevantes.", "desc": "Nos centramos en responsables de decisión alineados con su mercado objetivo y sus metas." },
-      { "title": "Conversaciones significativas.", "desc": "Buscamos crear interacciones significativas en lugar de simplemente entregar volumen de asistentes." },
-      { "title": "Enfoque comercial.", "desc": "Comprenda el engagement, las reuniones y las oportunidades creadas por su programa." }
-    ]
-  },
   "connect": {
     "eyebrow": "Con quién conectamos",
-    "h2": "Conecte con responsables de decisión senior.",
+    "h2": "Conecte con responsables de decisión senior",
     "intro": "Los programas de Connexiba pueden construirse en torno a audiencias ejecutivas como estas:",
     "cards": [
-      { "label": "CIO / CTO / CDO", "desc": "Responsable de la estrategia tecnológica, la arquitectura y las prioridades digitales." },
-      { "label": "CISO &amp; liderazgo en ciberseguridad", "desc": "Responsable del riesgo, la postura de seguridad y las decisiones de cumplimiento." },
-      { "label": "TI &amp; transformación digital", "desc": "Lidera programas de modernización, infraestructura y transformación." },
-      { "label": "Liderazgo de marketing &amp; ingresos", "desc": "Responsable del crecimiento, la generación de demanda y la estrategia de ingresos." },
-      { "label": "Liderazgo de compras &amp; comercial", "desc": "Responsable de la selección de proveedores, el presupuesto y las condiciones comerciales." },
-      { "label": "Innovación &amp; estrategia", "desc": "Explora nuevas capacidades y la dirección a largo plazo." }
+      {
+        "label": "CIO / CTO / CDO",
+        "desc": "Responsable de la estrategia tecnológica, la arquitectura y las prioridades digitales."
+      },
+      {
+        "label": "CISO &amp; liderazgo en ciberseguridad",
+        "desc": "Responsable del riesgo, la postura de seguridad y las decisiones de cumplimiento."
+      },
+      {
+        "label": "TI &amp; transformación digital",
+        "desc": "Lidera programas de modernización, infraestructura y transformación."
+      },
+      {
+        "label": "Liderazgo de marketing &amp; ingresos",
+        "desc": "Responsable del crecimiento, la generación de demanda y la estrategia de ingresos."
+      },
+      {
+        "label": "Liderazgo de compras &amp; comercial",
+        "desc": "Responsable de la selección de proveedores, el presupuesto y las condiciones comerciales."
+      },
+      {
+        "label": "Innovación &amp; estrategia",
+        "desc": "Explora nuevas capacidades y la dirección a largo plazo."
+      }
     ],
     "note": "La composición de la audiencia se adapta a su mercado objetivo, su solución y su objetivo comercial."
+  },
+  "people": {
+    "eyebrow": "Liderazgo",
+    "h2": "Las personas detrás de Connexiba",
+    "viewBio": "Ver biografía",
+    "members": [
+      {
+        "role": "Cofundador",
+        "bio": "Raham cofundó Connexiba con una trayectoria en finanzas corporativas, valoración y estrategia comercial para empresas tecnológicas y en fase de crecimiento. Su experiencia abarca la modelización financiera, el análisis de mercado y el acompañamiento de empresas desde las primeras etapas hasta un crecimiento sostenible, trabajando estrechamente con los equipos directivos en estructura de capital, dirección estratégica y construcción de negocio a largo plazo. En Connexiba, Raham aporta esa misma disciplina comercial al crecimiento de la empresa, combinando rigor financiero con un enfoque claro en la expansión de mercado, las alianzas y las decisiones estratégicas que ayudan a las empresas tecnológicas y B2B a escalar con confianza.",
+        "alt": "Raham Madani — Cofundador"
+      },
+      {
+        "role": "Director de Desarrollo de Negocio",
+        "bio": "Ali aporta más de quince años de experiencia internacional en desarrollo de negocio en entornos de tecnología, SaaS y B2B. Su trayectoria abarca todo el ciclo comercial: desde identificar oportunidades de mercado y construir un acercamiento dirigido, hasta desarrollar relaciones con responsables de decisión senior y cerrar nuevos negocios. En Connexiba, Ali se centra en conectar a los proveedores de soluciones con las audiencias ejecutivas y las oportunidades comerciales más relevantes para su crecimiento, apoyándose en años de experiencia construyendo relaciones e impulsando ingresos en mercados tecnológicos y B2B internacionales.",
+        "alt": "Ali Ebtekar — Director de Desarrollo de Negocio"
+      },
+      {
+        "role": "Directora de Marketing",
+        "bio": "Lana dirige el marketing en Connexiba, definiendo cómo la empresa comunica su trabajo a audiencias tecnológicas y B2B. Su enfoque consiste en convertir la experiencia comercial de Connexiba en mensajes claros y relevantes para los directivos, desde el posicionamiento de marca y los contenidos hasta las campañas que respaldan el desarrollo de audiencias y el engagement. Trabajando estrechamente con el resto del equipo, Lana ayuda a garantizar que el marketing de Connexiba refleje siempre su enfoque comercial: llegar a los responsables de decisión adecuados con el mensaje adecuado, y presentar el enfoque de Connexiba de una manera que conecte con las empresas impulsadas por la tecnología y los directivos a los que buscan llegar."
+      }
+    ]
   },
   "experience": {
     "eyebrow": "Experiencia detrás de Connexiba",
     "statNum": "15+",
     "statLbl": "años de experiencia comercial",
-    "p1": "Connexiba se basa en más de quince años de experiencia práctica en desarrollo comercial y de negocio: identificando oportunidades, abriendo conversaciones y llevándolas hacia un resultado comercial en mercados internacionales.",
-    "p2": "Esa experiencia abarca ventas de tecnología y SaaS, engagement a nivel ejecutivo y desarrollo de negocio B2B en entornos comerciales globales, lo que da a Connexiba una comprensión práctica y comercialmente fundamentada de cómo los proveedores de soluciones realmente llegan y ganan negocio con responsables de decisión senior.",
-    "p3": "En lugar de un manual de salida al mercado genérico, el enfoque se construye entendiendo en detalle cada mercado y objetivo comercial, para luego identificar y conectar a los proveedores de soluciones con los responsables de decisión genuinamente relevantes para ese objetivo."
+    "p1": "Connexiba se basa en más de quince años de experiencia práctica en desarrollo comercial y de negocio en ventas de tecnología y SaaS, engagement a nivel ejecutivo y desarrollo de negocio B2B en mercados internacionales: identificando y conectando a los proveedores de soluciones con los responsables de decisión genuinamente relevantes para su objetivo comercial."
   },
   "solutions": {
     "eyebrow": "Soluciones",
-    "h2": "Soluciones diseñadas en torno a la oportunidad comercial.",
+    "h2": "Soluciones diseñadas en torno a la oportunidad comercial",
     "nodes": [
-      { "title": "Desarrollo de audiencias", "desc": "Construya una audiencia ejecutiva dirigida en torno a su perfil de cliente ideal, mercado y objetivos comerciales." },
-      { "title": "Inteligencia de negocio", "desc": "Información de mercado y audiencia que agudiza el targeting, el mensaje y el engagement." },
-      { "title": "Eventos ejecutivos", "desc": "Mesas redondas enfocadas, foros y experiencias ejecutivas curadas diseñadas para una interacción significativa." },
-      { "title": "Engagement digital", "desc": "Campañas dirigidas y seguimiento estructurado que amplían su programa ejecutivo." }
+      {
+        "title": "Desarrollo de audiencias",
+        "desc": "Construya una audiencia ejecutiva dirigida en torno a su perfil de cliente ideal, mercado y objetivos comerciales."
+      },
+      {
+        "title": "Inteligencia de negocio",
+        "desc": "Información de mercado y audiencia que agudiza el targeting, el mensaje y el engagement."
+      },
+      {
+        "title": "Eventos ejecutivos",
+        "desc": "Mesas redondas enfocadas, foros y experiencias ejecutivas curadas diseñadas para una interacción significativa."
+      },
+      {
+        "title": "Engagement digital",
+        "desc": "Campañas dirigidas y seguimiento estructurado que amplían su programa ejecutivo."
+      }
     ]
   },
   "experiences": {
     "eyebrow": "Experiencias ejecutivas",
-    "h2": "Experiencias ejecutivas creadas para conversaciones significativas.",
+    "h2": "Experiencias ejecutivas creadas para conversaciones significativas",
+    "featuresLabel": "Características",
+    "benefitsLabel": "Beneficios",
     "cards": [
-      { "alt": "Ejecutivos debatiendo alrededor de una mesa en una sala de juntas moderna", "tag": "Mesa redonda ejecutiva", "title": "Mesa redonda ejecutiva de IA", "desc": "Un entorno enfocado para que líderes senior exploren prioridades, retos y oportunidades prácticas de IA." },
-      { "alt": "Una larga mesa elegantemente dispuesta, preparada para un evento ejecutivo", "tag": "Foro", "title": "Foro de transformación digital", "desc": "Un foro de alto nivel para que los responsables de decisión debatan sobre transformación, tecnología e impacto en el negocio." },
-      { "alt": "Un denso perfil urbano al atardecer, símbolo de una audiencia virtual global", "tag": "Foro virtual", "title": "Foro ejecutivo virtual", "desc": "Un entorno digital curado para el debate enfocado y el engagement ejecutivo." }
+      {
+        "alt": "Ejecutivos debatiendo alrededor de una mesa en una sala de juntas moderna",
+        "tag": "Mesa redonda ejecutiva",
+        "title": "Mesa redonda ejecutiva de IA",
+        "desc": "Un entorno enfocado para que líderes senior exploren prioridades, retos y oportunidades prácticas de IA.",
+        "features": [
+          "Debate ejecutivo en grupo reducido",
+          "Casos de uso prácticos de IA",
+          "Intercambio entre pares",
+          "Líderes senior de tecnología y negocio"
+        ],
+        "benefits": [
+          "Posicione su experiencia en torno a la IA práctica",
+          "Cree conversaciones significativas con directivos",
+          "Comprenda las prioridades y retos actuales de la IA",
+          "Identifique oportunidades comerciales relevantes"
+        ]
+      },
+      {
+        "alt": "Una larga mesa elegantemente dispuesta, preparada para un evento ejecutivo",
+        "tag": "Foro",
+        "title": "Foro de transformación digital",
+        "desc": "Un foro de alto nivel para que los responsables de decisión debatan sobre transformación, tecnología e impacto en el negocio.",
+        "features": [
+          "Debate sobre transformación a nivel senior",
+          "Perspectivas tecnológicas y de negocio",
+          "Conversación guiada por expertos",
+          "Intercambio entre pares sobre los retos de la transformación"
+        ],
+        "benefits": [
+          "Conecte con responsables de decisión en transformación",
+          "Demuestre su experiencia en transformación digital",
+          "Debata prioridades reales de negocio y tecnología",
+          "Desarrolle relaciones ejecutivas relevantes"
+        ]
+      },
+      {
+        "alt": "Un denso perfil urbano al atardecer, símbolo de una audiencia virtual global",
+        "tag": "Foro virtual",
+        "title": "Foro ejecutivo virtual",
+        "desc": "Un entorno digital curado para el debate enfocado y el engagement ejecutivo.",
+        "features": [
+          "Debate ejecutivo online curado",
+          "Sesiones enfocadas guiadas por expertos",
+          "Engagement digital a nivel senior",
+          "Preguntas y respuestas interactivas y debate"
+        ],
+        "benefits": [
+          "Llegue a audiencias ejecutivas más allá de los eventos presenciales",
+          "Comparta su experiencia con responsables de decisión relevantes",
+          "Genere conversaciones enfocadas",
+          "Amplíe el engagement a varios mercados"
+        ]
+      }
     ],
     "cta": "Explore las experiencias ejecutivas"
   },
+  "sponsorship": {
+    "eyebrow": "Oportunidades de patrocinio",
+    "h2": "Vea exactamente dónde puede aparecer su marca",
+    "introP1": "A diferencia de los patrocinios de eventos tradicionales, donde la visibilidad puede no estar clara, Connexiba le ofrece una visión clara de las oportunidades de patrocinio disponibles, incluidos los beneficios de cada una.",
+    "exploreLabel": "Explorar",
+    "cards": [
+      {
+        "title": "Cena",
+        "desc": "Visibilidad ejecutiva alrededor de la mesa.",
+        "alt": "Patrocinio de cena Connexiba",
+        "modalIntro": "Sitúe su marca en la mesa donde ocurren las conversaciones que importan.",
+        "benefits": [
+          "Visibilidad de marca durante toda la cena",
+          "Oportunidad de dar la bienvenida o dirigirse a los invitados",
+          "Interacción directa con ejecutivos seleccionados",
+          "Presencia de marca en puntos de contacto clave del evento",
+          "Oportunidad de conversaciones significativas uno a uno"
+        ]
+      },
+      {
+        "title": "Cordón",
+        "desc": "Su marca viaja con cada asistente.",
+        "alt": "Patrocinio de cordón Connexiba",
+        "benefits": [
+          "Branding de alta visibilidad",
+          "Exposición durante todo el evento",
+          "Recuerdo de marca entre los asistentes",
+          "Asociación con un evento premium"
+        ]
+      },
+      {
+        "title": "Almuerzo",
+        "desc": "Forme parte de la conversación.",
+        "alt": "Patrocinio de almuerzo Connexiba",
+        "benefits": [
+          "Visibilidad de marca",
+          "Interacción con directivos",
+          "Oportunidad de bienvenida",
+          "Entorno de networking"
+        ]
+      },
+      {
+        "title": "Masterclass",
+        "desc": "Lidere la conversación a través de su experiencia.",
+        "alt": "Patrocinio de masterclass Connexiba",
+        "benefits": [
+          "Posicionamiento como experto",
+          "Audiencia ejecutiva dirigida",
+          "Sesión formativa",
+          "Conversaciones de alta intención"
+        ]
+      },
+      {
+        "title": "Virtual",
+        "desc": "Lleve su marca a la experiencia ejecutiva.",
+        "alt": "Patrocinio virtual Connexiba",
+        "benefits": [
+          "Visibilidad de marca digital",
+          "Alcance ante una audiencia virtual",
+          "Oportunidad de presentación",
+          "Información sobre el engagement"
+        ]
+      },
+      {
+        "title": "Workshop",
+        "desc": "Convierta la experiencia en interacción.",
+        "alt": "Patrocinio de workshop Connexiba",
+        "benefits": [
+          "Sesión ejecutiva interactiva",
+          "Debate sobre retos de negocio",
+          "Posicionamiento de la solución",
+          "Conversaciones calificadas"
+        ]
+      },
+      {
+        "title": "Cóctel",
+        "desc": "Cree conexiones antes de que comience la conversación.",
+        "alt": "Patrocinio de cóctel Connexiba",
+        "benefits": [
+          "Networking informal con directivos",
+          "Visibilidad de marca",
+          "Conversaciones directas",
+          "Experiencia de evento memorable"
+        ]
+      },
+      {
+        "title": "Exposición",
+        "desc": "Muestre su solución y genere conversaciones directas con directivos relevantes a través de un espacio dedicado de exposición o demostración.",
+        "alt": "Patrocinio de exposición Connexiba",
+        "benefits": []
+      }
+    ],
+    "modalNote": "Se pueden acordar oportunidades de patrocinio y entregables adicionales en función de sus objetivos y su evento.",
+    "applyTitle": "Solicitar detalles del patrocinio",
+    "applyForPrefix": "Solicitar: ",
+    "sponsorshipSuffix": " - Patrocinio",
+    "workEmailLabel": "Correo electrónico laboral *",
+    "typeLabel": "Patrocinio *",
+    "eventLocationLabel": "Evento / Ubicación (opcional)",
+    "confirmPrefix": "Gracias — su interés en el patrocinio de ",
+    "confirmSuffix": " ha sido enviado a nuestro equipo. Nos pondremos en contacto con usted directamente."
+  },
   "how": {
     "eyebrow": "Cómo funciona",
-    "h2": "De la estrategia al engagement.",
+    "h2": "De la estrategia al engagement",
     "steps": [
-      { "title": "Descubrimiento", "desc": "Comprenda su solución, perfil de cliente ideal, cuentas objetivo, mercado y objetivo comercial." },
-      { "title": "Estrategia", "desc": "Diseñe la audiencia, el mensaje, el formato y el modelo de engagement." },
-      { "title": "Targeting", "desc": "Construya y active la audiencia ejecutiva relevante." },
-      { "title": "Activación", "desc": "Entregue el evento, la campaña, las reuniones o el programa de engagement acordado." },
-      { "title": "Optimización", "desc": "Supervise la participación y el engagement y ajuste el programa cuando sea necesario." },
-      { "title": "Medición", "desc": "Informe sobre los objetivos de campaña acordados." }
+      {
+        "title": "Descubrir",
+        "desc": "Comprenda su solución, perfil de cliente ideal, cuentas objetivo, mercado y objetivo comercial."
+      },
+      {
+        "title": "Definir cuentas objetivo",
+        "desc": "Diseñe la audiencia, el mensaje y el modelo de engagement, y a continuación construya y active la audiencia ejecutiva relevante."
+      },
+      {
+        "title": "Involucrar a los ejecutivos",
+        "desc": "Entregue el evento, la campaña, las reuniones o el programa de engagement acordado."
+      },
+      {
+        "title": "Crear oportunidades",
+        "desc": "Supervise el engagement, ajuste el programa cuando sea necesario e informe sobre los objetivos de campaña acordados."
+      }
     ]
   },
   "proof": {
     "eyebrow": "Conectividad comercial",
-    "h2": "Pruebas reales. Resultados reales.",
-    "subhead": "Acceso ejecutivo. Conversaciones calificadas. Oportunidad comercial.",
-    "intro": "Connexiba se construye en torno al engagement comercial medible, conectando a los proveedores de soluciones con los responsables de decisión adecuados, generando conversaciones ejecutivas calificadas y creando oportunidades comerciales en mercados impulsados por la tecnología: desde ciberseguridad e IA hasta SaaS, la nube, IoT, datos, automatización y fintech.",
+    "h2": "Donde la experiencia se encuentra con la audiencia ejecutiva adecuada",
+    "subhead": "Acceso ejecutivo. Conversaciones calificadas. Oportunidad comercial",
     "industries": [
-      { "title": "Ciberseguridad", "desc": "Seguridad empresarial, identidad, seguridad en la nube, protección de infraestructuras y resiliencia cibernética." },
-      { "title": "IA &amp; machine learning", "desc": "IA empresarial, aplicaciones inteligentes, automatización, copilotos, plataformas de IA y soluciones de machine learning." },
-      { "title": "SaaS &amp; software empresarial", "desc": "Aplicaciones en la nube, plataformas de negocio, ERP, CRM, productividad y soluciones de software empresarial." },
-      { "title": "TI &amp; tecnología en la nube", "desc": "Infraestructura en la nube, redes, servicios de TI, modernización de infraestructuras y transformación digital." },
-      { "title": "IoT &amp; tecnologías conectadas", "desc": "IoT industrial, dispositivos conectados, tecnologías inteligentes, edge computing y operaciones conectadas." },
-      { "title": "Datos &amp; inteligencia de negocio", "desc": "Analítica, plataformas de datos, inteligencia de negocio, decision intelligence y soluciones basadas en datos." },
-      { "title": "Transformación digital &amp; automatización", "desc": "Automatización empresarial, tecnología de flujos de trabajo, Industria 4.0 y transformación operativa." },
-      { "title": "FinTech &amp; tecnología empresarial", "desc": "Tecnología financiera, plataformas de pago, banca digital, plataformas empresariales y soluciones financieras impulsadas por la tecnología." }
-    ],
-    "diffH3": "Cómo crea Connexiba oportunidad comercial",
-    "diffLead": "Combinamos inteligencia de mercado, desarrollo de audiencias y conectividad ejecutiva para ayudar a las empresas a llegar a las personas que más importan para sus objetivos comerciales.",
-    "diffCards": [
-      { "title": "Inteligencia de negocio", "desc": "Identifique mercados relevantes, cuentas objetivo y responsables de decisión." },
-      { "title": "Conectividad ejecutiva", "desc": "Construya un acceso significativo a stakeholders y líderes empresariales senior." },
-      { "title": "Engagement dirigido", "desc": "Cree campañas, conversaciones y experiencias relevantes en torno a la audiencia." },
-      { "title": "Oportunidad comercial", "desc": "Convierta el engagement calificado en conversaciones de negocio y oportunidades significativas." }
-    ],
-    "journeyEyebrow": "Para proveedores de soluciones",
-    "journeyH3": "De la inteligencia a la oportunidad.",
-    "journeyLead": "Un recorrido comercial enfocado, desde identificar la audiencia adecuada hasta crear engagement significativo y oportunidad calificada.",
-    "journeyNodes": [
-      { "label": "Inteligencia de cuentas objetivo", "tip": "Identifique y priorice las cuentas y responsables de decisión que se ajustan al objetivo comercial." },
-      { "label": "Desarrollo de audiencias ejecutivas", "tip": "Construya una audiencia relevante en torno al mercado objetivo, la solución y el objetivo comercial." },
-      { "label": "Engagement ejecutivo", "tip": "Cree oportunidades significativas para que los responsables de decisión senior se conecten, interactúen y participen." },
-      { "label": "Conversaciones calificadas", "tip": "Centre el engagement en la relevancia genuina, el interés y el potencial comercial." },
-      { "label": "Oportunidad de venta", "tip": "Convierta las conversaciones calificadas en oportunidades comerciales claramente definidas." },
-      { "label": "Impacto comercial", "tip": "Haga seguimiento del engagement a lo largo del recorrido comercial y céntrese en resultados medibles." }
+      {
+        "title": "Ciberseguridad"
+      },
+      {
+        "title": "IA &amp; machine learning"
+      },
+      {
+        "title": "SaaS &amp; software empresarial"
+      },
+      {
+        "title": "TI &amp; tecnología en la nube"
+      },
+      {
+        "title": "IoT &amp; tecnologías conectadas"
+      },
+      {
+        "title": "Datos &amp; inteligencia de negocio"
+      },
+      {
+        "title": "Transformación digital &amp; automatización"
+      },
+      {
+        "title": "FinTech &amp; tecnología empresarial"
+      }
     ]
   },
   "contact": {
     "eyebrow": "Hable con Connexiba",
-    "h2": "Hablemos de sus objetivos comerciales.",
+    "h2": "Hablemos de sus objetivos comerciales",
     "linkedin": "LinkedIn →",
+    "formHoneypotLabel": "Deje este campo vacío",
     "formNameLabel": "Nombre *",
-    "formCompanyLabel": "Empresa",
-    "formTitleLabel": "Cargo",
     "formEmailLabel": "Correo electrónico *",
-    "formSolutionLabel": "¿Qué solución ofrece?",
-    "formMarketLabel": "¿Qué mercado o audiencia busca alcanzar?",
-    "formObjectiveLabel": "¿Cuál es su objetivo principal?",
-    "formObjectiveOptions": [
-      "Llegar a responsables de decisión",
-      "Construir una audiencia ejecutiva dirigida",
-      "Llenar un evento ejecutivo",
-      "Construir una pipeline",
-      "Entrar en un nuevo mercado",
-      "Otra cosa"
+    "formCompanyLabel": "Empresa *",
+    "formPhoneLabel": "Número de teléfono",
+    "formEmployeesLabel": "Número de empleados",
+    "formSelectPlaceholder": "Seleccione una opción",
+    "formEmployeesPreferNotToSay": "Prefiero no decirlo",
+    "formInterestLabel": "¿Qué le interesa? *",
+    "formInterestOptions": [
+      "Generación de leads",
+      "Ventas B2B",
+      "Ventas B2C",
+      "Concertación de citas",
+      "Contacto con directivos / responsables de decisión",
+      "Captación de asistentes / delegados para eventos",
+      "Patrocinio de eventos y alianzas comerciales",
+      "Business Intelligence / estudios de mercado",
+      "Externalización de ventas",
+      "Desarrollo de alianzas",
+      "Otro (especifique)"
     ],
-    "formMessageLabel": "Cuéntenos más sobre sus necesidades.",
+    "formInterestOtherLabel": "Cuéntenos qué está buscando.",
+    "formGoalLabel": "¿Qué le gustaría conseguir?",
+    "formGoalOptions": [
+      "Generar más leads cualificados",
+      "Concertar más reuniones",
+      "Llegar a responsables de decisión",
+      "Entrar en un nuevo mercado",
+      "Aumentar las ventas",
+      "Construir alianzas estratégicas",
+      "Promocionar un evento",
+      "Encontrar patrocinadores / socios",
+      "Otro (especifique)"
+    ],
+    "formGoalOtherLabel": "Cuéntenos qué le gustaría conseguir.",
+    "formSourceLabel": "¿Cómo conoció Connexiba?",
+    "formSourceOptions": [
+      "Google",
+      "LinkedIn",
+      "Conferencia / evento",
+      "Recomendación",
+      "Boletín por correo electrónico",
+      "Redes sociales",
+      "Otro (especifique)"
+    ],
+    "formSourceOtherLabel": "Cuéntenos cómo supo de nosotros.",
+    "formMessageLabel": "Información adicional",
+    "formMessagePlaceholder": "Cuéntenos más sobre su proyecto, evento, mercado objetivo o necesidades.",
     "formSubmit": "Iniciar la conversación",
     "formNote": "Responderemos directamente al correo electrónico que nos indique.",
     "formSending": "Enviando…",
     "formSuccessTitle": "Mensaje enviado correctamente",
     "formSuccessBody": "Gracias por contactar con Connexiba. Hemos recibido su mensaje y nuestro equipo se pondrá en contacto con usted en breve.",
+    "formScheduleQuestion": "¿Le gustaría programar un horario conveniente para hablar con nosotros?",
+    "formScheduleBtn": "Programar una conversación",
+    "formNotNowBtn": "Ahora no",
+    "formAlreadyReceivedTitle": "Ya hemos recibido su solicitud.",
+    "formAlreadyReceivedBody": "Gracias por contactar con Connexiba. Hemos recibido su mensaje y nos pondremos en contacto con usted en breve.",
+    "formRateLimitTitle": "Un momento, por favor",
+    "formRateLimitBody": "Está enviando solicitudes demasiado rápido. Espere un momento y vuelva a intentarlo.",
+    "formValidationTitle": "Revise el formulario",
+    "formValidationBody": "Faltan algunos campos obligatorios o no son válidos. Revise sus datos e inténtelo de nuevo.",
     "formErrorTitle": "Algo salió mal",
     "formErrorBody": "No hemos podido enviar su mensaje en este momento. Inténtelo de nuevo o contáctenos en info@connexiba.com.",
-    "formCloseButton": "Cerrar",
-    "mailtoUnnamed": "Formulario de contacto del sitio web",
-    "mailtoSubjectPrefix": "Nueva consulta desde connexiba.com: ",
-    "mailtoNameLabel": "Nombre: ",
-    "mailtoCompanyLabel": "Empresa: ",
-    "mailtoTitleLabel": "Cargo: ",
-    "mailtoEmailLabel": "Correo electrónico: ",
-    "mailtoSolutionLabel": "Solución: ",
-    "mailtoMarketLabel": "Mercado/audiencia objetivo: ",
-    "mailtoObjectiveLabel": "Objetivo principal: ",
-    "mailtoMessageLabel": "Mensaje:",
-    "mailtoOpening": "Abriendo su cliente de correo electrónico, dirigido a info@connexiba.com…"
+    "formCloseButton": "Cerrar"
   },
   "footer": {
-    "tagline": "Nosotros llenamos la sala. Usted cierra el trato.",
+    "tagline": "Nosotros llenamos la sala. Usted cierra el trato",
     "solutionsHeading": "Soluciones",
     "solutionsLinks": [
       "Desarrollo de audiencias ejecutivas",
@@ -207,13 +419,14 @@
     ],
     "companyHeading": "Empresa",
     "companyLinks": [
-      "Cómo funciona",
-      "Experiencias ejecutivas",
-      "Pruebas reales. Resultados reales.",
+      "Qué hacemos",
+      "Acerca de",
+      "Experiencias",
       "Contacto"
     ],
     "copyright": "© Connexiba. Todos los derechos reservados.",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "termsLink": "Términos y Condiciones"
   },
   "chat": {
     "launcherAria": "Abrir chat con Connexiba",
@@ -231,78 +444,114 @@
     "inputAria": "Escriba un mensaje",
     "sendAria": "Enviar mensaje",
     "intents": [
-      { "replies": [
-        "Por supuesto. Primero nos centramos en las cuentas y responsables de decisión adecuados, y luego construimos el engagement en torno a la relevancia comercial genuina, no al volumen. ¿Qué mercado o solución busca hacer crecer?",
-        "Entendido. Una vez definida esa audiencia, las conversaciones calificadas suelen surgir de forma natural. ¿Cómo es normalmente su cliente ideal?"
-      ]},
-      { "replies": [
-        "Tiene sentido. ¿Busca llegar a ellos dentro de un sector específico o en un mercado tecnológico más amplio?",
-        "Entendido: construimos audiencias ejecutivas dirigidas en torno a un perfil de cliente ideal definido. ¿Qué nivel de seniority y función necesita en la sala?"
-      ]},
-      { "replies": [
-        "Buen punto de partida: un universo definido de cuentas nominadas suele ser lo que hace funcionar el resto de un programa. ¿Aproximadamente cuántas cuentas está considerando?",
-        "¿Ya tiene una lista de cuentas objetivo, o es algo con lo que le gustaría ayuda para construir primero?"
-      ]},
-      { "replies": [
-        "Esa es la base de la mayoría de nuestros programas: entender el mercado y a los responsables de decisión adecuados antes de iniciar cualquier acercamiento. ¿Qué está intentando conocer sobre su mercado ahora mismo?",
-        "Tiene sentido. Ese tipo de inteligencia suele moldear a quién invitamos y cómo enmarcamos la conversación. ¿En qué mercado está el foco?"
-      ]},
-      { "replies": [
-        "En eso nos especializamos exactamente. ¿Cómo es su audiencia ideal: sector, seniority, tamaño de empresa?",
-        "Bien. El desarrollo de audiencias funciona mejor con un perfil bien definido. ¿A quién busca llegar específicamente?"
-      ]},
-      { "replies": [
-        "El engagement es donde la mayoría de los programas triunfan o fracasan: tiene que sentirse relevante para la persona, no solo otro contacto de acercamiento. ¿En qué contexto los abordaría?",
-        "Correcto: un engagement significativo suele venir de un motivo de conversación específico y relevante. ¿Qué impulsa la conversación que quiere iniciar?"
-      ]},
-      { "replies": [
-        "Ese es el objetivo final de la mayoría de nuestros programas: engagement que realmente se convierte en pipeline. ¿Qué impulsa esa necesidad de crecimiento: una nueva solución, un nuevo mercado u otra cosa?",
-        "Entendido. Convertir conversaciones en oportunidad real suele depender de llegar a la persona adecuada con la relevancia adecuada. ¿Quién es el comprador en el que se centra?"
-      ]},
-      { "replies": [
-        "Diseñamos y llenamos mesas redondas y foros ejecutivos en torno a prioridades de negocio reales, no solo número de asientos. ¿Qué tipo de formato tenía en mente?",
-        "¿Es un evento puntual el que busca llenar, o algo que le gustaría convertir en un programa continuo?"
-      ]},
-      { "replies": [
-        "Bien; trabajamos en la mayoría de los sectores impulsados por la tecnología, desde SaaS y la nube hasta IA, ciberseguridad y transformación digital. ¿Qué hace su solución?",
-        "¿En qué parte del mercado se enfoca: compradores enterprise, midmarket o un vertical específico?"
-      ]},
-      { "replies": [
-        "La IA es hoy uno de los sectores en los que estamos más activos; hay mucha demanda de llegar a los compradores técnicos y de negocio adecuados. ¿Su solución es más de plataforma, aplicación o a nivel de infraestructura?",
-        "Los comités de compra de IA suelen ser amplios. ¿Se dirige a líderes técnicos, líderes de negocio o a ambos?"
-      ]},
-      { "replies": [
-        "La ciberseguridad es uno de nuestros mercados clave: los CISO y los responsables de seguridad son exactamente el tipo de audiencia en torno a la que construimos programas. ¿Cuál es el caso de uso o área de riesgo específica?",
-        "¿Busca llegar a responsables de seguridad a nivel enterprise, o también a una audiencia técnica más amplia?"
-      ]},
-      { "replies": [
-        "Ese es un tema fuerte en muchos de nuestros programas ahora mismo. ¿Va dirigido al liderazgo de TI, a operaciones o a ambos?",
-        "¿Cuál es el enfoque específico: automatización, modernización de infraestructuras o transformación de procesos?"
-      ]},
-      { "replies": [
-        "Entrar en un nuevo mercado suele empezar por entender quiénes son realmente los compradores adecuados allí. ¿Qué mercado está considerando?",
-        "Ahí es donde más suele importar la inteligencia de cuentas y de mercado. ¿Es una nueva región, un nuevo sector o ambos?"
-      ]},
-      { "replies": [
-        "Esa suele ser la primera pregunta que vale la pena responder bien. Cuénteme un poco sobre su solución y puedo ayudarle a averiguar quién es realmente la audiencia adecuada.",
-        "¿Cómo es típicamente su cliente ideal: tamaño de empresa, sector, rol?"
-      ]},
-      { "replies": [
-        "El precio depende realmente de la audiencia, el formato y el alcance del programa, así que vale la pena hablarlo con detalle. ¿Qué busca lograr primero?",
-        "Eso varía según el tamaño del programa y la audiencia, y se discute mejor directamente en función de su objetivo. ¿Qué resultado busca?"
-      ]},
-      { "replies": [
-        "Por supuesto: el formulario de contacto justo debajo de este chat es la forma más rápida de iniciar una conversación real con el equipo.",
-        "Con gusto le indico dónde. Deje sus datos en el formulario de contacto de abajo y alguien del equipo le hará seguimiento directamente."
-      ]},
-      { "replies": [
-        "Cuando quiera. ¿Hay algo más que le gustaría profundizar?",
-        "Me alegra que ayude. ¿Hay algo más sobre su audiencia u objetivo con lo que pueda ayudar?"
-      ]},
-      { "replies": [
-        "¡Hola! ¿Qué busca lograr: llegar a un grupo específico de responsables de decisión, generar conversaciones calificadas o explorar un nuevo mercado?",
-        "Hola. ¿Qué tiene en mente: audiencia, engagement u otra cosa?"
-      ]}
+      {
+        "replies": [
+          "Por supuesto. Primero nos centramos en las cuentas y responsables de decisión adecuados, y luego construimos el engagement en torno a la relevancia comercial genuina, no al volumen. ¿Qué mercado o solución busca hacer crecer?",
+          "Entendido. Una vez definida esa audiencia, las conversaciones calificadas suelen surgir de forma natural. ¿Cómo es normalmente su cliente ideal?"
+        ]
+      },
+      {
+        "replies": [
+          "Tiene sentido. ¿Busca llegar a ellos dentro de un sector específico o en un mercado tecnológico más amplio?",
+          "Entendido: construimos audiencias ejecutivas dirigidas en torno a un perfil de cliente ideal definido. ¿Qué nivel de seniority y función necesita en la sala?"
+        ]
+      },
+      {
+        "replies": [
+          "Buen punto de partida: un universo definido de cuentas nominadas suele ser lo que hace funcionar el resto de un programa. ¿Aproximadamente cuántas cuentas está considerando?",
+          "¿Ya tiene una lista de cuentas objetivo, o es algo con lo que le gustaría ayuda para construir primero?"
+        ]
+      },
+      {
+        "replies": [
+          "Esa es la base de la mayoría de nuestros programas: entender el mercado y a los responsables de decisión adecuados antes de iniciar cualquier acercamiento. ¿Qué está intentando conocer sobre su mercado ahora mismo?",
+          "Tiene sentido. Ese tipo de inteligencia suele moldear a quién invitamos y cómo enmarcamos la conversación. ¿En qué mercado está el foco?"
+        ]
+      },
+      {
+        "replies": [
+          "En eso nos especializamos exactamente. ¿Cómo es su audiencia ideal: sector, seniority, tamaño de empresa?",
+          "Bien. El desarrollo de audiencias funciona mejor con un perfil bien definido. ¿A quién busca llegar específicamente?"
+        ]
+      },
+      {
+        "replies": [
+          "El engagement es donde la mayoría de los programas triunfan o fracasan: tiene que sentirse relevante para la persona, no solo otro contacto de acercamiento. ¿En qué contexto los abordaría?",
+          "Correcto: un engagement significativo suele venir de un motivo de conversación específico y relevante. ¿Qué impulsa la conversación que quiere iniciar?"
+        ]
+      },
+      {
+        "replies": [
+          "Ese es el objetivo final de la mayoría de nuestros programas: engagement que realmente se convierte en pipeline. ¿Qué impulsa esa necesidad de crecimiento: una nueva solución, un nuevo mercado u otra cosa?",
+          "Entendido. Convertir conversaciones en oportunidad real suele depender de llegar a la persona adecuada con la relevancia adecuada. ¿Quién es el comprador en el que se centra?"
+        ]
+      },
+      {
+        "replies": [
+          "Diseñamos y llenamos mesas redondas y foros ejecutivos en torno a prioridades de negocio reales, no solo número de asientos. ¿Qué tipo de formato tenía en mente?",
+          "¿Es un evento puntual el que busca llenar, o algo que le gustaría convertir en un programa continuo?"
+        ]
+      },
+      {
+        "replies": [
+          "Bien; trabajamos en la mayoría de los sectores impulsados por la tecnología, desde SaaS y la nube hasta IA, ciberseguridad y transformación digital. ¿Qué hace su solución?",
+          "¿En qué parte del mercado se enfoca: compradores enterprise, midmarket o un vertical específico?"
+        ]
+      },
+      {
+        "replies": [
+          "La IA es hoy uno de los sectores en los que estamos más activos; hay mucha demanda de llegar a los compradores técnicos y de negocio adecuados. ¿Su solución es más de plataforma, aplicación o a nivel de infraestructura?",
+          "Los comités de compra de IA suelen ser amplios. ¿Se dirige a líderes técnicos, líderes de negocio o a ambos?"
+        ]
+      },
+      {
+        "replies": [
+          "La ciberseguridad es uno de nuestros mercados clave: los CISO y los responsables de seguridad son exactamente el tipo de audiencia en torno a la que construimos programas. ¿Cuál es el caso de uso o área de riesgo específica?",
+          "¿Busca llegar a responsables de seguridad a nivel enterprise, o también a una audiencia técnica más amplia?"
+        ]
+      },
+      {
+        "replies": [
+          "Ese es un tema fuerte en muchos de nuestros programas ahora mismo. ¿Va dirigido al liderazgo de TI, a operaciones o a ambos?",
+          "¿Cuál es el enfoque específico: automatización, modernización de infraestructuras o transformación de procesos?"
+        ]
+      },
+      {
+        "replies": [
+          "Entrar en un nuevo mercado suele empezar por entender quiénes son realmente los compradores adecuados allí. ¿Qué mercado está considerando?",
+          "Ahí es donde más suele importar la inteligencia de cuentas y de mercado. ¿Es una nueva región, un nuevo sector o ambos?"
+        ]
+      },
+      {
+        "replies": [
+          "Esa suele ser la primera pregunta que vale la pena responder bien. Cuénteme un poco sobre su solución y puedo ayudarle a averiguar quién es realmente la audiencia adecuada.",
+          "¿Cómo es típicamente su cliente ideal: tamaño de empresa, sector, rol?"
+        ]
+      },
+      {
+        "replies": [
+          "El precio depende realmente de la audiencia, el formato y el alcance del programa, así que vale la pena hablarlo con detalle. ¿Qué busca lograr primero?",
+          "Eso varía según el tamaño del programa y la audiencia, y se discute mejor directamente en función de su objetivo. ¿Qué resultado busca?"
+        ]
+      },
+      {
+        "replies": [
+          "Por supuesto: el formulario de contacto justo debajo de este chat es la forma más rápida de iniciar una conversación real con el equipo.",
+          "Con gusto le indico dónde. Deje sus datos en el formulario de contacto de abajo y alguien del equipo le hará seguimiento directamente."
+        ]
+      },
+      {
+        "replies": [
+          "Cuando quiera. ¿Hay algo más que le gustaría profundizar?",
+          "Me alegra que ayude. ¿Hay algo más sobre su audiencia u objetivo con lo que pueda ayudar?"
+        ]
+      },
+      {
+        "replies": [
+          "¡Hola! ¿Qué busca lograr: llegar a un grupo específico de responsables de decisión, generar conversaciones calificadas o explorar un nuevo mercado?",
+          "Hola. ¿Qué tiene en mente: audiencia, engagement u otra cosa?"
+        ]
+      }
     ],
     "continuations": [
       "Bien: el siguiente paso más rápido desde aquí es compartir un poco más de detalle a través del formulario de contacto de abajo, y el equipo podrá retomarlo directamente con usted.",

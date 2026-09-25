@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "htmlLang": "hu",
+    "title": "Általános Szerződési Feltételek | Connexiba",
+    "description": "A Connexiba weboldal Általános Szerződési Feltételei: a weboldal használata, tartalom, felelősség, adatvédelem, sütik és az alkalmazandó jog.",
+    "ogTitle": "Általános Szerződési Feltételek | Connexiba",
+    "ogDescription": "A Connexiba weboldal Általános Szerződési Feltételei.",
+    "skipLink": "Ugrás a tartalomra"
+  },
+  "nav": {
+    "homeAria": "Connexiba — kezdőlap",
+    "openMenu": "Navigációs menü megnyitása",
+    "whatWeDo": "Amit csinálunk",
+    "solutions": "Megoldások",
+    "executiveExperiences": "Vezetői élmények",
+    "approach": "Megközelítés",
+    "talkToConnexiba": "Beszéljen a Connexibával"
+  },
+  "legal": {
+    "pageTitle": "Általános Szerződési Feltételek",
+    "lastUpdated": "Utolsó frissítés: 2026. szeptember",
+    "s1": {
+      "heading": "1. A Connexibáról",
+      "p1": "Ezt a weboldalt a Connexiba üzemelteti. A Connexiba B2B és B2C lead generálást, értékesítést, üzletfejlesztést, időpont-egyeztetést, vezetői kapcsolatépítést, piackutatást, eseményekhez kapcsolódó kereskedelmi szolgáltatásokat és egyéb kapcsolódó üzletfejlesztési szolgáltatásokat nyújt.",
+      "p2": "A Connexibával vagy ezzel a weboldallal kapcsolatos kérdéseivel forduljon hozzánk:"
+    },
+    "s2": {
+      "heading": "2. A weboldal használata",
+      "p1": "Ezt a weboldalt jogszerű célokra és a jelen Általános Szerződési Feltételeknek megfelelően használhatja.",
+      "p2": "Tilos a weboldalt csalárd, jogellenes vagy visszaélésszerű tevékenységre használni, jogosulatlan hozzáférést kísérelni meg a weboldalhoz vagy annak rendszereihez, a weboldal működését vagy biztonságát zavarni, kártékony szoftvert vagy káros kódot bejuttatni, illetve tudatosan valótlan vagy félrevezető információt megadni a weboldalon keresztül.",
+      "p3": "A Connexiba korlátozhatja vagy felfüggesztheti a weboldalhoz való hozzáférést, amennyiben ez a weboldal, felhasználói vagy jogos érdekei védelme érdekében észszerűen szükséges."
+    },
+    "s3": {
+      "heading": "3. A weboldal tartalma",
+      "p1": "A weboldalon közölt információk általános tájékoztatási célt szolgálnak.",
+      "p2": "A Connexiba észszerű erőfeszítéseket tesz annak érdekében, hogy a weboldalon szereplő információk pontosak és hasznosak legyenek, de nem garantálja, hogy minden információ teljes, naprakész, pontos vagy hibamentes.",
+      "p3": "A weboldal tartalma, szolgáltatásai és funkciói előzetes értesítés nélkül frissíthetők, módosíthatók vagy eltávolíthatók."
+    },
+    "s4": {
+      "heading": "4. Az üzleti eredmények garanciájának hiánya",
+      "p1": "A Connexiba szolgáltatásaira és képességeire vonatkozó információk nem jelentenek garanciát konkrét üzleti eredményekre.",
+      "p2": "A tényleges kereskedelmi eredmények olyan tényezőktől függően változhatnak, mint a piaci viszonyok, a célközönség, az ügyfelek tevékenysége és más, a Connexiba befolyásán kívül eső körülmények.",
+      "p3": "Amennyiben a Connexiba egy adott kereskedelmi megbízás vagy megállapodás keretében nyújt szolgáltatásokat, az érintett szolgáltatásokra az adott megbízásra vonatkozó feltételek irányadók."
+    },
+    "s5": {
+      "heading": "5. Kapcsolatfelvételi és érdeklődési űrlapok",
+      "p1": "A weboldalon keresztül történő érdeklődés esetén pontos és észszerűen teljes körű információt kell megadnia.",
+      "p2": "Egy kapcsolatfelvételi vagy érdeklődési űrlap elküldése önmagában nem hoz létre szerződést vagy üzleti kapcsolatot Ön és a Connexiba között.",
+      "p3": "A Connexiba az űrlapon keresztül megadott információkat felhasználhatja az Ön érdeklődésére való válaszadáshoz, valamint a kért információkkal vagy szolgáltatásokkal kapcsolatos kommunikációhoz."
+    },
+    "s6": {
+      "heading": "6. Időpont-egyeztetés",
+      "p1": "Amennyiben elérhető időpont-egyeztetési lehetőség, azt harmadik fél időpontfoglalási szolgáltatásán keresztül biztosíthatjuk.",
+      "p2": "Az elérhetőség, a foglalás visszaigazolása és a kapcsolódó funkciók az adott időpontfoglalási szolgáltató feltételeitől és elérhetőségétől függhetnek.",
+      "p3": "Egy találkozó mindaddig nem tekinthető megerősítettnek, amíg a vonatkozó időpont-egyeztetési folyamat le nem zárul, és a visszaigazolás meg nem történik."
+    },
+    "s7": {
+      "heading": "7. Szellemi tulajdon",
+      "p1": "Eltérő rendelkezés hiányában a weboldalon található tartalom és anyagok — beleértve a szövegeket, a márkajelzést, a grafikákat, a dizájnelemeket, a szoftvert és az egyéb weboldali anyagokat — a Connexiba tulajdonát képezik vagy a Connexiba számára licencelt anyagok, és az alkalmazandó szellemi tulajdonjogi jogszabályok védelme alatt állhatnak.",
+      "p2": "A weboldalt a tervezett tájékoztatási céljának megfelelően tekintheti meg és használhatja.",
+      "p3": "A weboldal tartalmát vagy a Connexiba márkajelzését megfelelő engedély nélkül tilos sokszorosítani, újra közzétenni, módosítani, terjeszteni, kereskedelmi célra hasznosítani vagy egyéb módon felhasználni, kivéve, ha az alkalmazandó jog ezt megengedi."
+    },
+    "s8": {
+      "heading": "8. Harmadik felek weboldalai és szolgáltatásai",
+      "p1": "A weboldal harmadik felek weboldalaira vagy szolgáltatásaira mutató linkeket, illetve azok által biztosított funkciókat tartalmazhat.",
+      "p2": "A harmadik felek weboldalait és szolgáltatásait a Connexibától függetlenül üzemeltetik.",
+      "p3": "A Connexiba nem felelős harmadik felek weboldalainak vagy szolgáltatásainak tartalmáért, elérhetőségéért, biztonságáért, adatvédelmi gyakorlatáért vagy feltételeiért.",
+      "p4": "Amennyiben harmadik fél szolgáltatását veszi igénybe, az adott harmadik fél feltételei és irányelvei is alkalmazandók lehetnek."
+    },
+    "s9": {
+      "heading": "9. A weboldal elérhetősége és biztonsága",
+      "p1": "A Connexiba törekszik arra, hogy a weboldal elérhető és megfelelően működő maradjon, de nem garantálja, hogy a weboldal mindig elérhető, folyamatos vagy hibamentes lesz.",
+      "p2": "A weboldal alkalmanként karbantartás, technikai problémák, frissítések vagy a Connexiba észszerű ellenőrzésén kívül eső körülmények miatt elérhetetlenné válhat.",
+      "p3": "Egyetlen internetalapú szolgáltatás sem garantálható teljes mértékben biztonságosnak. A weboldal használata és az online információmegadás során észszerű óvintézkedéseket kell tennie."
+    },
+    "s10": {
+      "heading": "10. Felelősség korlátozása",
+      "p1": "Az alkalmazandó jog által megengedett legteljesebb mértékben a Connexiba nem felel a weboldal használatából eredő vagy azzal összefüggő közvetett, véletlen, különleges, következményes vagy hasonló károkért.",
+      "p2": "A jelen Általános Szerződési Feltételek egyetlen rendelkezése sem zárja ki vagy korlátozza a felelősséget olyan esetekben, amikor az ilyen kizárás vagy korlátozás az alkalmazandó jog szerint nem megengedett."
+    },
+    "s11": {
+      "heading": "11. Adatvédelem",
+      "p1": "A weboldalon keresztül megadott személyes adatokat a Connexiba Adatvédelmi Szabályzatával összhangban kezeljük.",
+      "p2": "A weboldal használatával vagy az űrlapjain keresztül történő információmegadással tekintse át a vonatkozó adatvédelmi tájékoztatót, amely bemutatja a személyes adatok kezelésének módját."
+    },
+    "s12": {
+      "heading": "12. Sütik",
+      "p1": "A weboldal sütiket és hasonló technológiákat használhat.",
+      "p2": "A sütik és hasonló technológiák használatáról a Connexiba Süti Szabályzata nyújt tájékoztatást."
+    },
+    "s13": {
+      "heading": "13. A jelen feltételek módosítása",
+      "p1": "A Connexiba időről időre frissítheti a jelen Általános Szerződési Feltételeket.",
+      "p2": "Módosítás esetén a frissített változatot a weboldalon tesszük közzé, egy frissített dátummal együtt.",
+      "p3": "Amennyiben a frissített Általános Szerződési Feltételek közzétételét követően is folytatja a weboldal használatát, ez azt jelenti, hogy — az alkalmazandó jog figyelembevételével — a módosított feltételek vonatkoznak a weboldal további használatára."
+    },
+    "s14": {
+      "heading": "14. Elválaszthatóság",
+      "p1": "Amennyiben a jelen Általános Szerződési Feltételek valamely rendelkezése érvénytelennek vagy végrehajthatatlannak bizonyul, a fennmaradó rendelkezések az alkalmazandó jog által megengedett mértékben továbbra is alkalmazandók maradnak."
+    },
+    "s15": {
+      "heading": "15. Alkalmazandó jog",
+      "p1": "A jelen Általános Szerződési Feltételeket a Connexibára alkalmazandó joggal és a Connexiba, valamint a weboldal felhasználója közötti kapcsolattal összhangban kell értelmezni, az alkalmazandó kötelező jogi védelmi rendelkezések sérelme nélkül.",
+      "p2": "Amennyiben egy külön írásbeli megállapodás egy adott szolgáltatásra vagy kereskedelmi megbízásra vonatkozik, az adott megállapodás az érintett megbízásra alkalmazandó eltérő feltételeket is tartalmazhat."
+    },
+    "s16": {
+      "heading": "16. Kapcsolat",
+      "p1": "Amennyiben kérdése van a jelen Általános Szerződési Feltételekkel vagy a weboldallal kapcsolatban, forduljon hozzánk:"
+    }
+  },
+  "footer": {
+    "tagline": "Mi megtöltjük a termet. Ön megköti az üzletet.",
+    "solutionsHeading": "Megoldások",
+    "solutionsLinks": [
+      "Vezetői célközönség-fejlesztés",
+      "Vezetői események &amp; élmények",
+      "Üzleti intelligencia",
+      "Digitális &amp; üzleti elköteleződés"
+    ],
+    "companyHeading": "Cég",
+    "companyLinks": [
+      "Így működik",
+      "Vezetői élmények",
+      "Valódi bizonyíték. Valódi eredmények.",
+      "Kapcsolat"
+    ],
+    "copyright": "© Connexiba. Minden jog fenntartva.",
+    "linkedin": "LinkedIn",
+    "termsLink": "Általános Szerződési Feltételek"
+  }
+}

@@ -22,8 +22,24 @@ jobs:
           protocol: ftps
           port: 21
           server-dir: /public_html/
+          # AI CRM / AI Workforce project (app dir, config/secrets, and
+          # governance/spec docs) is excluded below — added Phase 1,
+          # Segment 1 (deployment safety). None of it is marketing-site
+          # content. NOTE: this is a YAML literal block scalar (`|`) — every
+          # line below is taken as a literal exclude pattern; `#` does NOT
+          # start a comment inside it, so no inline comments belong in it.
           exclude: |
             **/.git*
             **/.git*/**
             **/.github/**
             **/node_modules/**
+            **/ai-crm-prototype/**
+            **/AI_CRM_CLAUDE.md
+            **/CRM_SPECIFICATION.md
+            **/AI_AGENT_SPECIFICATION.md
+            **/AUTOMATION_SPECIFICATION.md
+            **/PROJECT_INVESTIGATION.md
+            **/.env
+            **/.env.*
+            **/config.php
+            **/vendor/**

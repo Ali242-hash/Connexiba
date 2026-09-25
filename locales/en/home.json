@@ -13,21 +13,23 @@
     "whatWeDo": "What We Do",
     "solutions": "Solutions",
     "executiveExperiences": "Executive Experiences",
-    "approach": "Approach",
-    "talkToConnexiba": "Talk to Connexiba"
+    "talkToConnexiba": "Talk to Connexiba",
+    "about": "About",
+    "experiences": "Experiences"
   },
   "hero": {
-    "h1": "Reach the decision-makers who matter to your growth.",
+    "h1": "Reach the decision-makers who matter to your growth",
+    "h1b": "Access the right people, not just more people",
+    "h1c": "Turn the right connections into real opportunities",
+    "h1d": "Build the pipeline that drives your growth",
     "lead": "Connexiba helps solution providers build targeted executive audiences, create meaningful conversations and turn the right connections into commercial opportunities.",
     "ctaTalk": "Talk to Connexiba",
-    "ctaApproach": "Explore Our Approach",
-    "tagline": "We fill the room. You close the deal.",
-    "scrollAria": "Scroll to explore the site",
-    "scroll": "Scroll"
+    "tagline": "We fill the room. You close the deal",
+    "scrollAria": "Scroll to explore the site"
   },
   "does": {
     "eyebrow": "What Connexiba Does",
-    "h2": "Access the right people — not just more people.",
+    "h2": "Precision-built audiences, not bigger lists",
     "p1": "Your growth depends on reaching the right decision-makers.",
     "p2": "Connexiba combines business intelligence, executive audience development, targeted engagement and executive experiences to help solution providers create relevant commercial opportunities.",
     "p3": "Every program is built around your target market, seniority, geography, industry and commercial objectives.",
@@ -36,168 +38,378 @@
     "statNum": "15+ yrs",
     "statLbl": "Of commercial &amp; business development experience behind Connexiba."
   },
-  "approach": {
-    "eyebrow": "The Connexiba Approach",
-    "h2": "From intelligence to opportunity.",
-    "intro": "A continuous commercial cycle, not a one-off campaign. Hover or focus a stage to see how it moves the process forward.",
-    "cards": [
-      { "title": "Identify", "desc": "Define the people, accounts, industries and markets that matter to your growth." },
-      { "title": "Engage", "desc": "Reach relevant decision-makers through targeted and professional engagement." },
-      { "title": "Connect", "desc": "Create the environment for genuine executive conversations." },
-      { "title": "Qualify", "desc": "Focus participation around relevance, business need and fit." },
-      { "title": "Activate", "desc": "Turn engagement into structured meetings, events, roundtables and commercial conversations." },
-      { "title": "Measure", "desc": "Track participation, engagement, meetings and agreed commercial indicators — feeding straight back into the next cycle." }
-    ]
-  },
-  "model": {
-    "eyebrow": "The Connexiba Model",
-    "h2": "Intelligence. Connection. Opportunity.",
-    "items": [
-      { "title": "Intelligence", "desc": "Understand your market, audience and commercial priorities." },
-      { "title": "Connection", "desc": "Bring the right people into the right conversation." },
-      { "title": "Opportunity", "desc": "Create the conditions for relationships, meetings and business development." }
-    ]
-  },
-  "why": {
-    "eyebrow": "Why Connexiba",
-    "h2": "Relevant people. Meaningful conversations. Commercial focus.",
-    "items": [
-      { "title": "Relevant people.", "desc": "We focus on decision-makers aligned with your target market and objectives." },
-      { "title": "Meaningful conversations.", "desc": "We aim to create meaningful interactions rather than simply deliver attendee volume." },
-      { "title": "Commercial focus.", "desc": "Understand engagement, meetings and the opportunities created through your program." }
-    ]
-  },
   "connect": {
     "eyebrow": "Who We Connect",
-    "h2": "Connect with senior decision-makers.",
+    "h2": "Connect with senior decision-makers",
     "intro": "Connexiba programs can be built around executive audiences such as:",
     "cards": [
-      { "label": "CIO / CTO / CDO", "desc": "Owns technology strategy, architecture and digital priorities." },
-      { "label": "CISO &amp; Cybersecurity Leadership", "desc": "Owns risk, security posture and compliance decisions." },
-      { "label": "IT &amp; Digital Transformation", "desc": "Leads modernization, infrastructure and transformation programs." },
-      { "label": "Marketing &amp; Revenue Leadership", "desc": "Owns growth, demand generation and revenue strategy." },
-      { "label": "Procurement &amp; Commercial Leadership", "desc": "Owns vendor selection, budget and commercial terms." },
-      { "label": "Innovation &amp; Strategy", "desc": "Explores new capabilities and long-term direction." }
+      {
+        "label": "CIO / CTO / CDO",
+        "desc": "Owns technology strategy, architecture and digital priorities."
+      },
+      {
+        "label": "CISO &amp; Cybersecurity Leadership",
+        "desc": "Owns risk, security posture and compliance decisions."
+      },
+      {
+        "label": "IT &amp; Digital Transformation",
+        "desc": "Leads modernization, infrastructure and transformation programs."
+      },
+      {
+        "label": "Marketing &amp; Revenue Leadership",
+        "desc": "Owns growth, demand generation and revenue strategy."
+      },
+      {
+        "label": "Procurement &amp; Commercial Leadership",
+        "desc": "Owns vendor selection, budget and commercial terms."
+      },
+      {
+        "label": "Innovation &amp; Strategy",
+        "desc": "Explores new capabilities and long-term direction."
+      }
     ],
     "note": "Audience composition is tailored to your target market, solution and commercial objective."
+  },
+  "people": {
+    "eyebrow": "Leadership",
+    "h2": "The People Behind Connexiba",
+    "viewBio": "View Bio",
+    "members": [
+      {
+        "role": "Co-Founder",
+        "bio": "Raham co-founded Connexiba with a background in corporate finance, valuation and commercial strategy for technology and growth-stage businesses. His experience spans financial modelling, market analysis and guiding companies from early-stage through to sustainable growth, working closely with executive teams on capital structure, strategic direction and long-term business building. At Connexiba, Raham brings that same commercial discipline to how the company grows — combining financial rigor with a clear focus on market expansion, partnerships and the strategic decisions that help technology and B2B businesses scale with confidence.",
+        "alt": "Raham Madani — Co-Founder"
+      },
+      {
+        "role": "Head of Business Development",
+        "bio": "Ali brings more than fifteen years of international business development experience across technology, SaaS and B2B commercial environments. His background spans the full commercial cycle — from identifying market opportunities and building targeted outreach, to developing relationships with senior decision-makers and closing new business. At Connexiba, Ali focuses on connecting solution providers with the executive audiences and commercial opportunities that matter most to their growth, drawing on years of experience building relationships and driving revenue across international technology and B2B markets.",
+        "alt": "Ali Ebtekar — Head of Business Development"
+      },
+      {
+        "role": "Marketing Manager",
+        "bio": "Lana leads marketing at Connexiba, shaping how the company communicates its work to technology and B2B audiences. Her focus is on turning Connexiba's commercial expertise into clear, executive-relevant messaging — from brand positioning and content to the campaigns that support audience development and engagement. Working closely with the wider team, Lana helps ensure that Connexiba's marketing consistently reflects its commercial focus: reaching the right decision-makers with the right message, and presenting Connexiba's approach in a way that resonates with technology-driven businesses and the executives they're trying to reach."
+      }
+    ]
   },
   "experience": {
     "eyebrow": "Experience Behind Connexiba",
     "statNum": "15+",
     "statLbl": "years of commercial experience",
-    "p1": "Connexiba is built on more than fifteen years of hands-on commercial and business-development experience — identifying opportunities, opening conversations and moving them toward a commercial outcome across international markets.",
-    "p2": "That experience spans technology and SaaS sales, executive-level engagement and B2B business development across global commercial environments, giving Connexiba a practical, commercially grounded understanding of how solution providers actually reach and win business with senior decision-makers.",
-    "p3": "Rather than a generic go-to-market playbook, the approach is built around understanding each market and commercial objective in detail, then identifying and connecting solution providers with the decision-makers genuinely relevant to that objective."
+    "p1": "Connexiba is built on more than fifteen years of hands-on commercial and business-development experience across technology and SaaS sales, executive-level engagement and B2B business development in international markets — identifying and connecting solution providers with the decision-makers genuinely relevant to their commercial objective."
   },
   "solutions": {
     "eyebrow": "Solutions",
-    "h2": "Solutions designed around commercial opportunity.",
+    "h2": "Solutions designed around commercial opportunity",
     "nodes": [
-      { "title": "Audience Development", "desc": "Build a targeted executive audience around your ideal customer profile, market and commercial goals." },
-      { "title": "Business Intelligence", "desc": "Market and audience insight that sharpens targeting, messaging and engagement." },
-      { "title": "Executive Events", "desc": "Focused roundtables, forums and curated executive experiences designed for meaningful interaction." },
-      { "title": "Digital Engagement", "desc": "Targeted campaigns and structured follow-up that extend your executive program." }
+      {
+        "title": "Audience Development",
+        "desc": "Build a targeted executive audience around your ideal customer profile, market and commercial goals."
+      },
+      {
+        "title": "Business Intelligence",
+        "desc": "Market and audience insight that sharpens targeting, messaging and engagement."
+      },
+      {
+        "title": "Executive Events",
+        "desc": "Focused roundtables, forums and curated executive experiences designed for meaningful interaction."
+      },
+      {
+        "title": "Digital Engagement",
+        "desc": "Targeted campaigns and structured follow-up that extend your executive program."
+      }
     ]
   },
   "experiences": {
     "eyebrow": "Executive Experiences",
-    "h2": "Executive experiences built for meaningful conversations.",
+    "h2": "Executive experiences built for meaningful conversations",
+    "featuresLabel": "Features",
+    "benefitsLabel": "Benefits",
     "cards": [
-      { "alt": "Executives in a modern boardroom discussing around a table", "tag": "Executive Roundtable", "title": "Executive AI Roundtable", "desc": "A focused environment for senior leaders exploring practical AI priorities, challenges and opportunities." },
-      { "alt": "An elegantly set long dinner table prepared for an executive event", "tag": "Forum", "title": "Digital Transformation Forum", "desc": "A senior-level forum for decision-makers discussing transformation, technology and business impact." },
-      { "alt": "A dense city skyline at dusk, symbolic of a global virtual audience", "tag": "Virtual Forum", "title": "Virtual Executive Forum", "desc": "A curated digital environment for focused discussion and executive engagement." }
+      {
+        "alt": "Executives in a modern boardroom discussing around a table",
+        "tag": "Executive Roundtable",
+        "title": "Executive AI Roundtable",
+        "desc": "A focused environment for senior leaders exploring practical AI priorities, challenges and opportunities.",
+        "features": [
+          "Small-group executive discussion",
+          "Practical AI use cases",
+          "Peer-to-peer exchange",
+          "Senior technology and business leaders"
+        ],
+        "benefits": [
+          "Position your expertise around practical AI",
+          "Create meaningful executive conversations",
+          "Understand current AI priorities and challenges",
+          "Identify relevant commercial opportunities"
+        ]
+      },
+      {
+        "alt": "An elegantly set long dinner table prepared for an executive event",
+        "tag": "Forum",
+        "title": "Digital Transformation Forum",
+        "desc": "A senior-level forum for decision-makers discussing transformation, technology and business impact.",
+        "features": [
+          "Senior-level transformation discussion",
+          "Technology and business perspectives",
+          "Expert-led conversation",
+          "Peer exchange around transformation challenges"
+        ],
+        "benefits": [
+          "Connect with transformation decision-makers",
+          "Demonstrate expertise in digital transformation",
+          "Discuss real business and technology priorities",
+          "Develop relevant executive relationships"
+        ]
+      },
+      {
+        "alt": "A dense city skyline at dusk, symbolic of a global virtual audience",
+        "tag": "Virtual Forum",
+        "title": "Virtual Executive Forum",
+        "desc": "A curated digital environment for focused discussion and executive engagement.",
+        "features": [
+          "Curated online executive discussion",
+          "Focused expert-led sessions",
+          "Senior-level digital engagement",
+          "Interactive Q&amp;A and discussion"
+        ],
+        "benefits": [
+          "Reach executive audiences beyond physical events",
+          "Share expertise with relevant decision-makers",
+          "Generate focused conversations",
+          "Extend engagement across multiple markets"
+        ]
+      }
     ],
     "cta": "Explore Executive Experiences"
   },
+  "sponsorship": {
+    "eyebrow": "Sponsorship Opportunities",
+    "h2": "See exactly where your brand can show up",
+    "introP1": "Unlike traditional event sponsorships where visibility can be unclear, Connexiba gives you a clear view of the sponsorship opportunities available — including the benefits that come with each.",
+    "exploreLabel": "Explore",
+    "cards": [
+      {
+        "title": "Dinner",
+        "desc": "Executive visibility around the table.",
+        "alt": "Connexiba dinner sponsorship",
+        "modalIntro": "Put your brand at the table where meaningful conversations happen.",
+        "benefits": [
+          "Brand visibility throughout the dinner experience",
+          "Opportunity to welcome or address guests",
+          "Direct interaction with selected executives",
+          "Branding across selected event touchpoints",
+          "Opportunity for meaningful one-to-one conversations"
+        ]
+      },
+      {
+        "title": "Lanyard",
+        "desc": "Your brand travels with every attendee.",
+        "alt": "Connexiba lanyard sponsorship",
+        "benefits": [
+          "High-visibility branding",
+          "Event-wide exposure",
+          "Attendee brand recall",
+          "Premium event association"
+        ]
+      },
+      {
+        "title": "Lunch",
+        "desc": "Be part of the conversation.",
+        "alt": "Connexiba lunch sponsorship",
+        "benefits": [
+          "Brand visibility",
+          "Executive interaction",
+          "Welcome opportunity",
+          "Networking environment"
+        ]
+      },
+      {
+        "title": "Masterclass",
+        "desc": "Lead the conversation through expertise.",
+        "alt": "Connexiba masterclass sponsorship",
+        "benefits": [
+          "Expert positioning",
+          "Targeted executive audience",
+          "Educational session",
+          "High-intent conversations"
+        ]
+      },
+      {
+        "title": "Virtual",
+        "desc": "Bring your brand into the executive experience.",
+        "alt": "Connexiba virtual sponsorship",
+        "benefits": [
+          "Digital brand visibility",
+          "Virtual audience reach",
+          "Presentation opportunity",
+          "Engagement insights"
+        ]
+      },
+      {
+        "title": "Workshop",
+        "desc": "Turn expertise into interaction.",
+        "alt": "Connexiba workshop sponsorship",
+        "benefits": [
+          "Interactive executive session",
+          "Business challenge discussion",
+          "Solution positioning",
+          "Qualified conversations"
+        ]
+      },
+      {
+        "title": "Cocktail",
+        "desc": "Create connections before the conversation begins.",
+        "alt": "Connexiba cocktail sponsorship",
+        "benefits": [
+          "Informal executive networking",
+          "Brand visibility",
+          "Direct conversations",
+          "Memorable event experience"
+        ]
+      },
+      {
+        "title": "Exhibition",
+        "desc": "Showcase your solution and create direct conversations with relevant executives through a dedicated exhibition or demonstration space.",
+        "alt": "Connexiba exhibition sponsorship",
+        "benefits": []
+      }
+    ],
+    "modalNote": "Additional sponsorship opportunities and deliverables are discussed based on your objectives and event.",
+    "applyTitle": "Request Sponsorship Details",
+    "applyForPrefix": "Apply for ",
+    "sponsorshipSuffix": " Sponsorship",
+    "workEmailLabel": "Work Email *",
+    "typeLabel": "Sponsorship *",
+    "eventLocationLabel": "Event / Location (optional)",
+    "confirmPrefix": "Thank you — your interest in ",
+    "confirmSuffix": " sponsorship has been sent to our team. We'll follow up directly."
+  },
   "how": {
     "eyebrow": "How It Works",
-    "h2": "Strategy to engagement.",
+    "h2": "Strategy to engagement",
     "steps": [
-      { "title": "Discovery", "desc": "Understand your solution, ideal customer profile, target accounts, market and commercial objective." },
-      { "title": "Strategy", "desc": "Design the audience, message, format and engagement model." },
-      { "title": "Targeting", "desc": "Build and activate the relevant executive audience." },
-      { "title": "Activation", "desc": "Deliver the agreed event, campaign, meetings or engagement program." },
-      { "title": "Optimization", "desc": "Monitor participation and engagement and refine the program where appropriate." },
-      { "title": "Measurement", "desc": "Report against agreed campaign objectives." }
+      {
+        "title": "Discover",
+        "desc": "Understand your solution, ideal customer profile, target accounts, market and commercial objective."
+      },
+      {
+        "title": "Target Accounts",
+        "desc": "Design the audience, message and engagement model, then build and activate the relevant executive audience."
+      },
+      {
+        "title": "Engage Executives",
+        "desc": "Deliver the agreed event, campaign, meetings or engagement program."
+      },
+      {
+        "title": "Create Opportunities",
+        "desc": "Monitor engagement, refine the program where appropriate and report against agreed campaign objectives."
+      }
     ]
   },
   "proof": {
     "eyebrow": "Commercial Connectivity",
-    "h2": "Real Proof. Real Results.",
-    "subhead": "Executive access. Qualified conversations. Commercial opportunity.",
-    "intro": "Connexiba is built around measurable commercial engagement, connecting solution providers with the right decision-makers, generating qualified executive conversations and creating commercial opportunities across technology-driven markets: from cybersecurity and AI to SaaS, cloud, IoT, data, automation and fintech.",
+    "h2": "Where expertise meets the right executive audience",
+    "subhead": "Executive access. Qualified conversations. Commercial opportunity",
     "industries": [
-      { "title": "Cybersecurity", "desc": "Enterprise security, identity, cloud security, infrastructure protection and cyber resilience." },
-      { "title": "AI &amp; Machine Learning", "desc": "Enterprise AI, intelligent applications, automation, copilots, AI platforms and machine learning solutions." },
-      { "title": "SaaS &amp; Enterprise Software", "desc": "Cloud applications, business platforms, ERP, CRM, productivity and enterprise software solutions." },
-      { "title": "IT &amp; Cloud Technology", "desc": "Cloud infrastructure, networking, IT services, infrastructure modernization and digital transformation." },
-      { "title": "IoT &amp; Connected Technologies", "desc": "Industrial IoT, connected devices, smart technologies, edge computing and connected operations." },
-      { "title": "Data &amp; Business Intelligence", "desc": "Analytics, data platforms, business intelligence, decision intelligence and data-driven solutions." },
-      { "title": "Digital Transformation &amp; Automation", "desc": "Enterprise automation, workflow technology, Industry 4.0 and operational transformation." },
-      { "title": "FinTech &amp; Enterprise Technology", "desc": "Financial technology, payment platforms, digital banking, enterprise platforms and technology-driven financial solutions." }
-    ],
-    "diffH3": "How Connexiba Creates Commercial Opportunity",
-    "diffLead": "We combine market intelligence, audience development and executive connectivity to help businesses engage the people who matter most to their commercial objectives.",
-    "diffCards": [
-      { "title": "Business Intelligence", "desc": "Identify relevant markets, target accounts and decision-makers." },
-      { "title": "Executive Connectivity", "desc": "Build meaningful access to senior stakeholders and business leaders." },
-      { "title": "Targeted Engagement", "desc": "Create relevant campaigns, conversations and experiences around the audience." },
-      { "title": "Commercial Opportunity", "desc": "Turn qualified engagement into meaningful business conversations and opportunities." }
-    ],
-    "journeyEyebrow": "For Solution Providers",
-    "journeyH3": "From intelligence to opportunity.",
-    "journeyLead": "A focused commercial journey from identifying the right audience to creating meaningful engagement and qualified opportunity.",
-    "journeyNodes": [
-      { "label": "Target Account Intelligence", "tip": "Identify and prioritise the accounts and decision-makers that match the commercial objective." },
-      { "label": "Executive Audience Development", "tip": "Build a relevant audience around the target market, solution and commercial objective." },
-      { "label": "Executive Engagement", "tip": "Create meaningful opportunities for senior decision-makers to connect, interact and engage." },
-      { "label": "Qualified Conversations", "tip": "Focus engagement on genuine relevance, interest and commercial potential." },
-      { "label": "Sales Opportunity", "tip": "Turn qualified conversations into clearly defined commercial opportunities." },
-      { "label": "Commercial Impact", "tip": "Track engagement through the commercial journey and focus on measurable outcomes." }
+      {
+        "title": "Cybersecurity"
+      },
+      {
+        "title": "AI &amp; Machine Learning"
+      },
+      {
+        "title": "SaaS &amp; Enterprise Software"
+      },
+      {
+        "title": "IT &amp; Cloud Technology"
+      },
+      {
+        "title": "IoT &amp; Connected Technologies"
+      },
+      {
+        "title": "Data &amp; Business Intelligence"
+      },
+      {
+        "title": "Digital Transformation &amp; Automation"
+      },
+      {
+        "title": "FinTech &amp; Enterprise Technology"
+      }
     ]
   },
   "contact": {
     "eyebrow": "Talk to Connexiba",
-    "h2": "Let's discuss your commercial objectives.",
+    "h2": "Let's discuss your commercial objectives",
     "linkedin": "LinkedIn →",
+    "formHoneypotLabel": "Leave this field empty",
     "formNameLabel": "Name *",
-    "formCompanyLabel": "Company",
-    "formTitleLabel": "Job Title",
     "formEmailLabel": "Email *",
-    "formSolutionLabel": "What solution do you provide?",
-    "formMarketLabel": "Which market or audience are you looking to reach?",
-    "formObjectiveLabel": "What is your primary objective?",
-    "formObjectiveOptions": [
-      "Reach decision-makers",
-      "Build a targeted executive audience",
-      "Fill an executive event",
-      "Build pipeline",
-      "Enter a new market",
-      "Something else"
+    "formCompanyLabel": "Company *",
+    "formPhoneLabel": "Phone Number",
+    "formEmployeesLabel": "Number of Employees",
+    "formSelectPlaceholder": "Select an option",
+    "formEmployeesPreferNotToSay": "Prefer not to say",
+    "formInterestLabel": "What are you interested in? *",
+    "formInterestOptions": [
+      "Lead Generation",
+      "B2B Sales",
+      "B2C Sales",
+      "Appointment Setting",
+      "Executive / Decision-Maker Connections",
+      "Event Attendee / Delegate Acquisition",
+      "Event Sponsorship &amp; Commercial Partnerships",
+      "Business Intelligence / Market Research",
+      "Sales Outsourcing",
+      "Partnership Development",
+      "Other (please specify)"
     ],
-    "formMessageLabel": "Tell us more about your requirements.",
+    "formInterestOtherLabel": "Please tell us what you are looking for.",
+    "formGoalLabel": "What would you like to achieve?",
+    "formGoalOptions": [
+      "Generate more qualified leads",
+      "Book more meetings",
+      "Reach decision makers",
+      "Enter a new market",
+      "Increase sales",
+      "Build strategic partnerships",
+      "Promote an event",
+      "Find sponsors / partners",
+      "Other (please specify)"
+    ],
+    "formGoalOtherLabel": "Please tell us what you would like to achieve.",
+    "formSourceLabel": "How did you hear about Connexiba?",
+    "formSourceOptions": [
+      "Google",
+      "LinkedIn",
+      "Conference / Event",
+      "Referral",
+      "Email Newsletter",
+      "Social Media",
+      "Other (please specify)"
+    ],
+    "formSourceOtherLabel": "Please tell us how you heard about us.",
+    "formMessageLabel": "Additional Information",
+    "formMessagePlaceholder": "Tell us more about your project, event, target market or requirements.",
     "formSubmit": "Start the Conversation",
     "formNote": "We'll reply directly to the email you provide.",
     "formSending": "Sending…",
     "formSuccessTitle": "Message sent successfully",
     "formSuccessBody": "Thank you for contacting Connexiba. Your message has been received and our team will get back to you shortly.",
+    "formScheduleQuestion": "Would you like to schedule a convenient time to speak with us?",
+    "formScheduleBtn": "Schedule a conversation",
+    "formNotNowBtn": "Not now",
+    "formAlreadyReceivedTitle": "We've already received your request.",
+    "formAlreadyReceivedBody": "Thank you for contacting Connexiba. We've received your message and will get back to you soon.",
+    "formRateLimitTitle": "Please wait a moment",
+    "formRateLimitBody": "You're submitting a bit too quickly. Please wait a moment and try again.",
+    "formValidationTitle": "Please check the form",
+    "formValidationBody": "Some required fields are missing or invalid. Please check your details and try again.",
     "formErrorTitle": "Something went wrong",
     "formErrorBody": "We couldn't send your message right now. Please try again or contact us at info@connexiba.com.",
-    "formCloseButton": "Close",
-    "mailtoUnnamed": "Website contact form",
-    "mailtoSubjectPrefix": "New inquiry from connexiba.com: ",
-    "mailtoNameLabel": "Name: ",
-    "mailtoCompanyLabel": "Company: ",
-    "mailtoTitleLabel": "Job title: ",
-    "mailtoEmailLabel": "Email: ",
-    "mailtoSolutionLabel": "Solution: ",
-    "mailtoMarketLabel": "Target market/audience: ",
-    "mailtoObjectiveLabel": "Primary objective: ",
-    "mailtoMessageLabel": "Message:",
-    "mailtoOpening": "Opening your email client, addressed to info@connexiba.com…"
+    "formCloseButton": "Close"
   },
   "footer": {
-    "tagline": "We fill the room. You close the deal.",
+    "tagline": "We fill the room. You close the deal",
     "solutionsHeading": "Solutions",
     "solutionsLinks": [
       "Executive Audience Development",
@@ -207,13 +419,14 @@
     ],
     "companyHeading": "Company",
     "companyLinks": [
-      "How It Works",
-      "Executive Experiences",
-      "Real Proof. Real Results.",
+      "What We Do",
+      "About",
+      "Experiences",
       "Contact"
     ],
     "copyright": "© Connexiba. All rights reserved.",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "termsLink": "Terms &amp; Conditions"
   },
   "chat": {
     "launcherAria": "Open chat with Connexiba",
@@ -231,78 +444,114 @@
     "inputAria": "Type a message",
     "sendAria": "Send message",
     "intents": [
-      { "replies": [
-        "Absolutely. We focus on the right accounts and decision-makers first, then build engagement around genuine commercial relevance rather than volume. Which market or solution are you looking to grow?",
-        "Got it — once that audience is defined, qualified conversations tend to follow naturally. What does your ideal customer normally look like?"
-      ]},
-      { "replies": [
-        "That makes sense. Are you looking to reach them within a specific industry, or across a broader technology market?",
-        "Understood — we build targeted executive audiences around a defined ideal customer profile. What seniority and function do you need in the room?"
-      ]},
-      { "replies": [
-        "Good starting point — a defined universe of named accounts is usually what makes the rest of a program work. Roughly how many accounts are you thinking about?",
-        "Do you already have a target-account list, or is that something you'd want help building first?"
-      ]},
-      { "replies": [
-        "That's the foundation of most of our programs — understanding the market and the right decision-makers before any outreach starts. What are you trying to learn about your market right now?",
-        "Makes sense. That kind of intelligence usually shapes who we invite and how we frame the conversation. Which market is the focus?"
-      ]},
-      { "replies": [
-        "That's exactly what we specialise in. What does your ideal audience look like — industry, seniority, company size?",
-        "Good. Audience development works best with a tightly defined profile. Who specifically are you trying to reach?"
-      ]},
-      { "replies": [
-        "Engagement is where most programs succeed or fail — it has to feel relevant to the person, not just another outreach touch. What's the context you'd be engaging them around?",
-        "Right — meaningful engagement usually comes from a specific, relevant reason to talk. What's driving the conversation you want to start?"
-      ]},
-      { "replies": [
-        "That's the end goal for most of our programs — engagement that actually turns into pipeline. What's driving the push for growth — a new solution, a new market, or something else?",
-        "Understood. Turning conversations into real opportunity usually comes down to reaching the right person with the right relevance. Who's the buyer you're focused on?"
-      ]},
-      { "replies": [
-        "We design and fill executive roundtables and forums around real business priorities rather than just seat counts. What kind of format did you have in mind?",
-        "Is this a one-off event you're trying to fill, or something you'd want to run as an ongoing program?"
-      ]},
-      { "replies": [
-        "Good — we work across most technology-driven industries, from SaaS and cloud to AI, cybersecurity and digital transformation. What does your solution do?",
-        "Which part of the market are you focused on — enterprise buyers, mid-market, or a specific vertical?"
-      ]},
-      { "replies": [
-        "AI is one of the industries we're most active in right now — a lot of demand for reaching the right technical and business buyers. Is your solution more platform, application, or infrastructure-level?",
-        "AI buying committees tend to be broad. Are you targeting technical leaders, business leaders, or both?"
-      ]},
-      { "replies": [
-        "Cybersecurity is one of our core markets — CISOs and security leadership are exactly the kind of audience we build programs around. What's the specific use case or risk area?",
-        "Are you looking to reach security leadership at enterprise level, or a broader technical audience too?"
-      ]},
-      { "replies": [
-        "That's a strong theme across a lot of our programs right now. Is this aimed at IT leadership, operations, or both?",
-        "What's the specific angle — automation, infrastructure modernisation, or process transformation?"
-      ]},
-      { "replies": [
-        "Entering a new market usually starts with understanding who the right buyers actually are there. Which market are you looking at?",
-        "That's where account and market intelligence tends to matter most. Is this a new region, a new industry, or both?"
-      ]},
-      { "replies": [
-        "That's usually the first question worth answering properly. Tell me a bit about your solution and I can help figure out who the right audience actually is.",
-        "What does your ideal customer typically look like — company size, industry, role?"
-      ]},
-      { "replies": [
-        "Pricing really depends on the audience, format and scope of the program, so it's worth talking through specifics. What are you trying to achieve first?",
-        "That varies by program size and audience, so it's best discussed against your objective directly. What outcome are you aiming for?"
-      ]},
-      { "replies": [
-        "Of course — the contact form just below this chat is the fastest way to get a real conversation started with the team.",
-        "Happy to point you there. Pop your details into the contact form below and someone from the team will follow up directly."
-      ]},
-      { "replies": [
-        "Anytime. Anything else you'd like to dig into?",
-        "Glad that helps. Anything else about your audience or objective I can help with?"
-      ]},
-      { "replies": [
-        "Hey! What are you looking to achieve — reaching a specific group of decision-makers, generating qualified conversations, or exploring a new market?",
-        "Hi there. What's on your mind — audience, engagement, or something else?"
-      ]}
+      {
+        "replies": [
+          "Absolutely. We focus on the right accounts and decision-makers first, then build engagement around genuine commercial relevance rather than volume. Which market or solution are you looking to grow?",
+          "Got it — once that audience is defined, qualified conversations tend to follow naturally. What does your ideal customer normally look like?"
+        ]
+      },
+      {
+        "replies": [
+          "That makes sense. Are you looking to reach them within a specific industry, or across a broader technology market?",
+          "Understood — we build targeted executive audiences around a defined ideal customer profile. What seniority and function do you need in the room?"
+        ]
+      },
+      {
+        "replies": [
+          "Good starting point — a defined universe of named accounts is usually what makes the rest of a program work. Roughly how many accounts are you thinking about?",
+          "Do you already have a target-account list, or is that something you'd want help building first?"
+        ]
+      },
+      {
+        "replies": [
+          "That's the foundation of most of our programs — understanding the market and the right decision-makers before any outreach starts. What are you trying to learn about your market right now?",
+          "Makes sense. That kind of intelligence usually shapes who we invite and how we frame the conversation. Which market is the focus?"
+        ]
+      },
+      {
+        "replies": [
+          "That's exactly what we specialise in. What does your ideal audience look like — industry, seniority, company size?",
+          "Good. Audience development works best with a tightly defined profile. Who specifically are you trying to reach?"
+        ]
+      },
+      {
+        "replies": [
+          "Engagement is where most programs succeed or fail — it has to feel relevant to the person, not just another outreach touch. What's the context you'd be engaging them around?",
+          "Right — meaningful engagement usually comes from a specific, relevant reason to talk. What's driving the conversation you want to start?"
+        ]
+      },
+      {
+        "replies": [
+          "That's the end goal for most of our programs — engagement that actually turns into pipeline. What's driving the push for growth — a new solution, a new market, or something else?",
+          "Understood. Turning conversations into real opportunity usually comes down to reaching the right person with the right relevance. Who's the buyer you're focused on?"
+        ]
+      },
+      {
+        "replies": [
+          "We design and fill executive roundtables and forums around real business priorities rather than just seat counts. What kind of format did you have in mind?",
+          "Is this a one-off event you're trying to fill, or something you'd want to run as an ongoing program?"
+        ]
+      },
+      {
+        "replies": [
+          "Good — we work across most technology-driven industries, from SaaS and cloud to AI, cybersecurity and digital transformation. What does your solution do?",
+          "Which part of the market are you focused on — enterprise buyers, mid-market, or a specific vertical?"
+        ]
+      },
+      {
+        "replies": [
+          "AI is one of the industries we're most active in right now — a lot of demand for reaching the right technical and business buyers. Is your solution more platform, application, or infrastructure-level?",
+          "AI buying committees tend to be broad. Are you targeting technical leaders, business leaders, or both?"
+        ]
+      },
+      {
+        "replies": [
+          "Cybersecurity is one of our core markets — CISOs and security leadership are exactly the kind of audience we build programs around. What's the specific use case or risk area?",
+          "Are you looking to reach security leadership at enterprise level, or a broader technical audience too?"
+        ]
+      },
+      {
+        "replies": [
+          "That's a strong theme across a lot of our programs right now. Is this aimed at IT leadership, operations, or both?",
+          "What's the specific angle — automation, infrastructure modernisation, or process transformation?"
+        ]
+      },
+      {
+        "replies": [
+          "Entering a new market usually starts with understanding who the right buyers actually are there. Which market are you looking at?",
+          "That's where account and market intelligence tends to matter most. Is this a new region, a new industry, or both?"
+        ]
+      },
+      {
+        "replies": [
+          "That's usually the first question worth answering properly. Tell me a bit about your solution and I can help figure out who the right audience actually is.",
+          "What does your ideal customer typically look like — company size, industry, role?"
+        ]
+      },
+      {
+        "replies": [
+          "Pricing really depends on the audience, format and scope of the program, so it's worth talking through specifics. What are you trying to achieve first?",
+          "That varies by program size and audience, so it's best discussed against your objective directly. What outcome are you aiming for?"
+        ]
+      },
+      {
+        "replies": [
+          "Of course — the contact form just below this chat is the fastest way to get a real conversation started with the team.",
+          "Happy to point you there. Pop your details into the contact form below and someone from the team will follow up directly."
+        ]
+      },
+      {
+        "replies": [
+          "Anytime. Anything else you'd like to dig into?",
+          "Glad that helps. Anything else about your audience or objective I can help with?"
+        ]
+      },
+      {
+        "replies": [
+          "Hey! What are you looking to achieve — reaching a specific group of decision-makers, generating qualified conversations, or exploring a new market?",
+          "Hi there. What's on your mind — audience, engagement, or something else?"
+        ]
+      }
     ],
     "continuations": [
       "Good — the quickest next step from here is sharing a bit more detail through the contact form below, and the team can pick it up directly with you.",

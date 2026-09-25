@@ -13,21 +13,23 @@
     "whatWeDo": "Amit csinálunk",
     "solutions": "Megoldások",
     "executiveExperiences": "Vezetői élmények",
-    "approach": "Megközelítés",
-    "talkToConnexiba": "Beszéljen a Connexibával"
+    "talkToConnexiba": "Beszéljen a Connexibával",
+    "about": "Rólunk",
+    "experiences": "Élmények"
   },
   "hero": {
-    "h1": "Érje el a növekedéséhez fontos döntéshozókat.",
+    "h1": "Érje el a növekedéséhez fontos döntéshozókat",
+    "h1b": "Érje el a megfelelő embereket, ne csak több embert",
+    "h1c": "Alakítsa a megfelelő kapcsolatokat valódi lehetőségekké",
+    "h1d": "Építse fel a pipeline-t, amely a növekedését hajtja",
     "lead": "A Connexiba segít a megoldásszállítóknak célzott vezetői célközönséget építeni, tartalmas beszélgetéseket kezdeményezni, és a megfelelő kapcsolatokat üzleti lehetőséggé alakítani.",
     "ctaTalk": "Beszéljen a Connexibával",
-    "ctaApproach": "Fedezze fel a megközelítésünket",
-    "tagline": "Mi megtöltjük a termet. Ön megköti az üzletet.",
-    "scrollAria": "Görgessen az oldal felfedezéséhez",
-    "scroll": "Görgetés"
+    "tagline": "Mi megtöltjük a termet. Ön megköti az üzletet",
+    "scrollAria": "Görgessen az oldal felfedezéséhez"
   },
   "does": {
     "eyebrow": "Amit a Connexiba csinál",
-    "h2": "Jusson el a megfelelő emberekhez — ne csak több emberhez.",
+    "h2": "Precízen felépített célközönség, nem hosszabb listák",
     "p1": "Az Ön növekedése azon múlik, hogy eléri-e a megfelelő döntéshozókat.",
     "p2": "A Connexiba ötvözi az üzleti intelligenciát, a vezetői célközönség-fejlesztést, a célzott elköteleződést és a vezetői élményeket, hogy a megoldásszállítók releváns üzleti lehetőségeket teremtsenek.",
     "p3": "Minden program az Ön célpiaca, a döntéshozók szenioritása, földrajzi kiterjedése, iparága és üzleti céljai köré épül.",
@@ -36,168 +38,378 @@
     "statNum": "15+ év",
     "statLbl": "Kereskedelmi &amp; üzletfejlesztési tapasztalat áll a Connexiba mögött."
   },
-  "approach": {
-    "eyebrow": "A Connexiba megközelítése",
-    "h2": "Az intelligenciától a lehetőségig.",
-    "intro": "Folyamatos üzleti ciklus, nem egyszeri kampány. Vigye rá az egeret vagy fókuszálja egy szakaszra, hogy lássa, hogyan viszi előre a folyamatot.",
-    "cards": [
-      { "title": "Azonosítás", "desc": "Határozza meg azokat az embereket, vállalatokat, iparágakat és piacokat, amelyek fontosak a növekedéséhez." },
-      { "title": "Megszólítás", "desc": "Érje el a releváns döntéshozókat célzott, professzionális elköteleződéssel." },
-      { "title": "Kapcsolódás", "desc": "Teremtse meg a valódi vezetői beszélgetések feltételeit." },
-      { "title": "Minősítés", "desc": "Összpontosítson a relevanciára, az üzleti igényre és az illeszkedésre." },
-      { "title": "Aktiválás", "desc": "Alakítsa az elköteleződést strukturált találkozókká, eseményekké, kerekasztalokká és üzleti beszélgetésekké." },
-      { "title": "Mérés", "desc": "Kövesse nyomon a részvételt, az elköteleződést, a találkozókat és a megállapodott üzleti mutatókat — közvetlenül táplálva a következő ciklust." }
-    ]
-  },
-  "model": {
-    "eyebrow": "A Connexiba-modell",
-    "h2": "Intelligencia. Kapcsolat. Lehetőség.",
-    "items": [
-      { "title": "Intelligencia", "desc": "Ismerje meg piacát, célközönségét és üzleti prioritásait." },
-      { "title": "Kapcsolat", "desc": "Hozza össze a megfelelő embereket a megfelelő beszélgetésben." },
-      { "title": "Lehetőség", "desc": "Teremtse meg a kapcsolatok, találkozók és üzletfejlesztés feltételeit." }
-    ]
-  },
-  "why": {
-    "eyebrow": "Miért a Connexiba",
-    "h2": "Releváns emberek. Tartalmas beszélgetések. Üzleti fókusz.",
-    "items": [
-      { "title": "Releváns emberek.", "desc": "Olyan döntéshozókra összpontosítunk, akik illeszkednek az Ön célpiacához és céljaihoz." },
-      { "title": "Tartalmas beszélgetések.", "desc": "Tartalmas interakciókat teremtünk, nem csupán részvevői létszámot szállítunk." },
-      { "title": "Üzleti fókusz.", "desc": "Ismerje meg a programja által teremtett elköteleződést, találkozókat és lehetőségeket." }
-    ]
-  },
   "connect": {
     "eyebrow": "Kikkel kötünk kapcsolatot",
-    "h2": "Kapcsolódjon vezető döntéshozókhoz.",
+    "h2": "Kapcsolódjon vezető döntéshozókhoz",
     "intro": "A Connexiba programjai olyan vezetői célközönségek köré építhetők, mint például:",
     "cards": [
-      { "label": "CIO / CTO / CDO", "desc": "A technológiai stratégiáért, az architektúráért és a digitális prioritásokért felel." },
-      { "label": "CISO &amp; kiberbiztonsági vezetés", "desc": "A kockázatért, a biztonsági helyzetért és a megfelelőségi döntésekért felel." },
-      { "label": "IT &amp; digitális transzformáció", "desc": "Modernizációs, infrastrukturális és transzformációs programokat vezet." },
-      { "label": "Marketing- &amp; bevételi vezetés", "desc": "A növekedésért, a keresletgenerálásért és a bevételi stratégiáért felel." },
-      { "label": "Beszerzési &amp; kereskedelmi vezetés", "desc": "A beszállítóválasztásért, a költségvetésért és az üzleti feltételekért felel." },
-      { "label": "Innováció &amp; stratégia", "desc": "Új képességeket és a hosszú távú irányt kutatja." }
+      {
+        "label": "CIO / CTO / CDO",
+        "desc": "A technológiai stratégiáért, az architektúráért és a digitális prioritásokért felel."
+      },
+      {
+        "label": "CISO &amp; kiberbiztonsági vezetés",
+        "desc": "A kockázatért, a biztonsági helyzetért és a megfelelőségi döntésekért felel."
+      },
+      {
+        "label": "IT &amp; digitális transzformáció",
+        "desc": "Modernizációs, infrastrukturális és transzformációs programokat vezet."
+      },
+      {
+        "label": "Marketing- &amp; bevételi vezetés",
+        "desc": "A növekedésért, a keresletgenerálásért és a bevételi stratégiáért felel."
+      },
+      {
+        "label": "Beszerzési &amp; kereskedelmi vezetés",
+        "desc": "A beszállítóválasztásért, a költségvetésért és az üzleti feltételekért felel."
+      },
+      {
+        "label": "Innováció &amp; stratégia",
+        "desc": "Új képességeket és a hosszú távú irányt kutatja."
+      }
     ],
     "note": "A célközönség összetétele az Ön célpiacához, megoldásához és üzleti céljához igazodik."
+  },
+  "people": {
+    "eyebrow": "Vezetés",
+    "h2": "A Connexiba mögött álló emberek",
+    "viewBio": "Életrajz megtekintése",
+    "members": [
+      {
+        "role": "Társalapító",
+        "bio": "Raham vállalati pénzügyi, értékelési és üzleti stratégiai háttérrel alapította társalapítóként a Connexibát, technológiai és növekedési fázisban lévő vállalkozások számára. Tapasztalata kiterjed a pénzügyi modellezésre, a piacelemzésre és a vállalatok kísérésére a korai szakasztól a fenntartható növekedésig, szorosan együttműködve a vezetői csapatokkal a tőkeszerkezet, a stratégiai irány és a hosszú távú üzletépítés terén. A Connexibánál Raham ugyanezt a kereskedelmi fegyelmet hozza a vállalat növekedésébe — pénzügyi alaposságot ötvözve a piaci terjeszkedésre, a partnerségekre és azokra a stratégiai döntésekre való egyértelmű összpontosítással, amelyek segítik a technológiai és B2B vállalkozásokat magabiztos növekedésben.",
+        "alt": "Raham Madani — Társalapító"
+      },
+      {
+        "role": "Üzletfejlesztési vezető",
+        "bio": "Ali több mint tizenöt év nemzetközi üzletfejlesztési tapasztalatot hoz technológiai, SaaS és B2B üzleti környezetekből. Háttere a teljes kereskedelmi ciklust lefedi — a piaci lehetőségek azonosításától és a célzott megkeresés felépítésétől kezdve a vezető döntéshozókkal való kapcsolatépítésen át az új üzletek lezárásáig. A Connexibánál Ali arra összpontosít, hogy összekösse a megoldásszállítókat a növekedésük szempontjából legfontosabb vezetői célközönségekkel és üzleti lehetőségekkel, évek óta szerzett kapcsolatépítési tapasztalatára és nemzetközi technológiai, valamint B2B piacokon elért bevételnövelésre támaszkodva.",
+        "alt": "Ali Ebtekar — Üzletfejlesztési vezető"
+      },
+      {
+        "role": "Marketingvezető",
+        "bio": "Lana vezeti a marketinget a Connexibánál, és meghatározza, hogyan kommunikálja a vállalat a munkáját a technológiai és B2B célközönségek felé. Fókusza arra irányul, hogy a Connexiba üzleti szakértelmét világos, vezetők számára releváns üzenetekké alakítsa — a márkapozicionálástól és a tartalmaktól kezdve a célközönség-fejlesztést és elköteleződést támogató kampányokig. A tágabb csapattal szorosan együttműködve Lana segít biztosítani, hogy a Connexiba marketingje következetesen tükrözze üzleti fókuszát: a megfelelő döntéshozók elérését a megfelelő üzenettel, és a Connexiba megközelítésének olyan bemutatását, amely rezonál a technológia-vezérelt vállalkozásokkal és az általuk elérni kívánt vezetőkkel."
+      }
+    ]
   },
   "experience": {
     "eyebrow": "A Connexiba mögötti tapasztalat",
     "statNum": "15+",
     "statLbl": "év üzleti tapasztalat",
-    "p1": "A Connexiba több mint tizenöt év gyakorlati kereskedelmi és üzletfejlesztési tapasztalatára épül — lehetőségek azonosítása, beszélgetések elindítása és üzleti eredménnyé alakítása nemzetközi piacokon.",
-    "p2": "Ez a tapasztalat kiterjed a technológiai és SaaS-értékesítésre, a vezetői szintű elköteleződésre és a B2B üzletfejlesztésre globális üzleti környezetben, ami a Connexibának gyakorlati, üzletileg megalapozott rálátást ad arra, hogyan érnek el és nyernek el valójában üzletet a megoldásszállítók vezető döntéshozóknál.",
-    "p3": "Egy általános piacra lépési sablon helyett a megközelítés minden piac és üzleti cél részletes megértésére épül, majd a megoldásszállítók és az adott célhoz valóban releváns döntéshozók összekapcsolására."
+    "p1": "A Connexiba több mint tizenöt év gyakorlati kereskedelmi és üzletfejlesztési tapasztalatára épül a technológiai és SaaS-értékesítés, a vezetői szintű elköteleződés és a B2B üzletfejlesztés területén, nemzetközi piacokon — a megoldásszállítók és az üzleti céljukhoz valóban reléváns döntéshozók azonosítása és összekapcsolása."
   },
   "solutions": {
     "eyebrow": "Megoldások",
-    "h2": "Üzleti lehetőség köré tervezett megoldások.",
+    "h2": "Üzleti lehetőség köré tervezett megoldások",
     "nodes": [
-      { "title": "Célközönség-fejlesztés", "desc": "Építsen célzott vezetői célközönséget az ideális ügyfélprofilja, piaca és üzleti céljai köré." },
-      { "title": "Üzleti intelligencia", "desc": "Piaci és célközönség-betekintés, amely élesíti a célzást, az üzenetet és az elköteleződést." },
-      { "title": "Vezetői események", "desc": "Fókuszált kerekasztalok, fórumok és kurált vezetői élmények a tartalmas interakcióért." },
-      { "title": "Digitális elköteleződés", "desc": "Célzott kampányok és strukturált utánkövetés, amelyek kiterjesztik a vezetői programját." }
+      {
+        "title": "Célközönség-fejlesztés",
+        "desc": "Építsen célzott vezetői célközönséget az ideális ügyfélprofilja, piaca és üzleti céljai köré."
+      },
+      {
+        "title": "Üzleti intelligencia",
+        "desc": "Piaci és célközönség-betekintés, amely élesíti a célzást, az üzenetet és az elköteleződést."
+      },
+      {
+        "title": "Vezetői események",
+        "desc": "Fókuszált kerekasztalok, fórumok és kurált vezetői élmények a tartalmas interakcióért."
+      },
+      {
+        "title": "Digitális elköteleződés",
+        "desc": "Célzott kampányok és strukturált utánkövetés, amelyek kiterjesztik a vezetői programját."
+      }
     ]
   },
   "experiences": {
     "eyebrow": "Vezetői élmények",
-    "h2": "Tartalmas beszélgetésekre épített vezetői élmények.",
+    "h2": "Tartalmas beszélgetésekre épített vezetői élmények",
+    "featuresLabel": "Jellemzők",
+    "benefitsLabel": "Előnyök",
     "cards": [
-      { "alt": "Vezetők beszélgetnek egy asztal körül egy modern tárgyalóban", "tag": "Vezetői kerekasztal", "title": "Vezetői AI-kerekasztal", "desc": "Fókuszált környezet, ahol vezető szintű döntéshozók gyakorlati AI-prioritásokat, kihívásokat és lehetőségeket vitatnak meg." },
-      { "alt": "Elegánsan megterített hosszú asztal, egy vezetői rendezvényre készítve", "tag": "Fórum", "title": "Digitális transzformációs fórum", "desc": "Magas szintű fórum döntéshozóknak a transzformációról, a technológiáról és az üzleti hatásról." },
-      { "alt": "Sűrű városi látkép alkonyatkor, egy globális virtuális közönség jelképeként", "tag": "Virtuális fórum", "title": "Virtuális vezetői fórum", "desc": "Kurált digitális környezet a fókuszált vitához és a vezetői elköteleződéshez." }
+      {
+        "alt": "Vezetők beszélgetnek egy asztal körül egy modern tárgyalóban",
+        "tag": "Vezetői kerekasztal",
+        "title": "Vezetői AI-kerekasztal",
+        "desc": "Fókuszált környezet, ahol vezető szintű döntéshozók gyakorlati AI-prioritásokat, kihívásokat és lehetőségeket vitatnak meg.",
+        "features": [
+          "Kislétszámú vezetői megbeszélés",
+          "Gyakorlati AI-felhasználási esetek",
+          "Kölcsönös szakmai eszmecsere",
+          "Vezető szintű technológiai és üzleti döntéshozók"
+        ],
+        "benefits": [
+          "Pozicionálja szakértelmét a gyakorlati AI köré",
+          "Teremtsen tartalmas beszélgetéseket vezetőkkel",
+          "Ismerje meg az aktuális AI-prioritásokat és kihívásokat",
+          "Azonosítson releváns üzleti lehetőségeket"
+        ]
+      },
+      {
+        "alt": "Elegánsan megterített hosszú asztal, egy vezetői rendezvényre készítve",
+        "tag": "Fórum",
+        "title": "Digitális transzformációs fórum",
+        "desc": "Magas szintű fórum döntéshozóknak a transzformációról, a technológiáról és az üzleti hatásról.",
+        "features": [
+          "Vezető szintű transzformációs megbeszélés",
+          "Technológiai és üzleti nézőpontok",
+          "Szakértők által vezetett beszélgetés",
+          "Szakmai eszmecsere a transzformációs kihívásokról"
+        ],
+        "benefits": [
+          "Kapcsolódjon a transzformációs döntéshozókhoz",
+          "Mutassa meg szakértelmét a digitális transzformációban",
+          "Beszéljen valós üzleti és technológiai prioritásokról",
+          "Építsen releváns vezetői kapcsolatokat"
+        ]
+      },
+      {
+        "alt": "Sűrű városi látkép alkonyatkor, egy globális virtuális közönség jelképeként",
+        "tag": "Virtuális fórum",
+        "title": "Virtuális vezetői fórum",
+        "desc": "Kurált digitális környezet a fókuszált vitához és a vezetői elköteleződéshez.",
+        "features": [
+          "Kurált, online vezetői megbeszélés",
+          "Fókuszált, szakértők által vezetett foglalkozások",
+          "Vezető szintű digitális elköteleződés",
+          "Interaktív kérdés-válasz és megbeszélés"
+        ],
+        "benefits": [
+          "Érje el a vezetői célközönséget a fizikai rendezvényeken túl is",
+          "Ossza meg szakértelmét releváns döntéshozókkal",
+          "Generáljon fókuszált beszélgetéseket",
+          "Terjessze ki az elköteleződést több piacra is"
+        ]
+      }
     ],
     "cta": "Fedezze fel a vezetői élményeket"
   },
+  "sponsorship": {
+    "eyebrow": "Szponzorációs lehetőségek",
+    "h2": "Pontosan lássa, hol jelenhet meg márkája",
+    "introP1": "A hagyományos rendezvényszponzorációkkal ellentétben, ahol a láthatóság gyakran bizonytalan, a Connexiba pontos áttekintést ad az elérhető szponzorációs lehetőségekről — beleértve az egyes lehetőségekkel járó előnyöket is.",
+    "exploreLabel": "Felfedezés",
+    "cards": [
+      {
+        "title": "Vacsora",
+        "desc": "Vezetői láthatóság az asztal körül.",
+        "alt": "Connexiba vacsora szponzoráció",
+        "modalIntro": "Helyezze márkáját arra az asztalra, ahol a tartalmas beszélgetések zajlanak.",
+        "benefits": [
+          "Márkalátás a teljes vacsora során",
+          "Lehetőség a vendégek köszöntésére vagy megszólítására",
+          "Közvetlen interakció kiválasztott vezetőkkel",
+          "Márkajelenlét a rendezvény kiemelt érintkezési pontjain",
+          "Lehetőség tartalmas, személyes beszélgetésekre"
+        ]
+      },
+      {
+        "title": "Nyakpánt",
+        "desc": "Márkája minden résztvevővel együtt van jelen.",
+        "alt": "Connexiba nyakpánt szponzoráció",
+        "benefits": [
+          "Kiemelten látható márkajelenlét",
+          "Láthatóság a teljes rendezvény alatt",
+          "Márkára emlékezés a résztvevők körében",
+          "Kapcsolódás egy prémium rendezvényhez"
+        ]
+      },
+      {
+        "title": "Ebéd",
+        "desc": "Legyen része a beszélgetésnek.",
+        "alt": "Connexiba ebéd szponzoráció",
+        "benefits": [
+          "Márkalátás",
+          "Interakció vezetőkkel",
+          "Köszöntési lehetőség",
+          "Networking környezet"
+        ]
+      },
+      {
+        "title": "Mesterkurzus",
+        "desc": "Vezesse a beszélgetést szakértelmével.",
+        "alt": "Connexiba mesterkurzus szponzoráció",
+        "benefits": [
+          "Szakértői pozicionálás",
+          "Célzott vezetői célközönség",
+          "Oktató jellegű foglalkozás",
+          "Magas érdeklődésű beszélgetések"
+        ]
+      },
+      {
+        "title": "Virtuális",
+        "desc": "Hozza be márkáját a vezetői élménybe.",
+        "alt": "Connexiba virtuális szponzoráció",
+        "benefits": [
+          "Digitális márkalátás",
+          "Elérés a virtuális közönség körében",
+          "Bemutatkozási lehetőség",
+          "Betekintés az elköteleződésbe"
+        ]
+      },
+      {
+        "title": "Workshop",
+        "desc": "Alakítsa szakértelmét interakcióvá.",
+        "alt": "Connexiba workshop szponzoráció",
+        "benefits": [
+          "Interaktív vezetői foglalkozás",
+          "Üzleti kihívások megvitatása",
+          "A megoldás pozicionálása",
+          "Minősített beszélgetések"
+        ]
+      },
+      {
+        "title": "Koktél",
+        "desc": "Teremtsen kapcsolatokat, mielőtt a beszélgetés elkezdődik.",
+        "alt": "Connexiba koktél szponzoráció",
+        "benefits": [
+          "Informális networking vezetőkkel",
+          "Márkalátás",
+          "Közvetlen beszélgetések",
+          "Emlékezetes rendezvényélmény"
+        ]
+      },
+      {
+        "title": "Kiállítás",
+        "desc": "Mutassa be megoldását, és teremtsen közvetlen beszélgetéseket a releváns vezetőkkel egy dedikált kiállítási vagy bemutatóterületen keresztül.",
+        "alt": "Connexiba kiállítási szponzoráció",
+        "benefits": []
+      }
+    ],
+    "modalNote": "További szponzorációs lehetőségeket és vállalásokat az Ön céljai és rendezvénye alapján egyeztetünk.",
+    "applyTitle": "Szponzorációs részletek kérése",
+    "applyForPrefix": "Jelentkezés: ",
+    "sponsorshipSuffix": " szponzoráció",
+    "workEmailLabel": "Munkahelyi e-mail *",
+    "typeLabel": "Szponzoráció *",
+    "eventLocationLabel": "Rendezvény / Helyszín (opcionális)",
+    "confirmPrefix": "Köszönjük — érdeklődését a ",
+    "confirmSuffix": " szponzoráció iránt továbbítottuk csapatunknak. Közvetlenül jelentkezünk Önnél."
+  },
   "how": {
     "eyebrow": "Így működik",
-    "h2": "A stratégiától az elköteleződésig.",
+    "h2": "A stratégiától az elköteleződésig",
     "steps": [
-      { "title": "Felderítés", "desc": "Ismerje meg megoldását, ideális ügyfélprofilját, célvállalatait, piacát és üzleti célját." },
-      { "title": "Stratégia", "desc": "Tervezze meg a célközönséget, az üzenetet, a formátumot és az elköteleződési modellt." },
-      { "title": "Célzás", "desc": "Építse fel és aktiválja a releváns vezetői célközönséget." },
-      { "title": "Aktiválás", "desc": "Valósítsa meg a megállapodott eseményt, kampányt, találkozókat vagy elköteleződési programot." },
-      { "title": "Optimalizálás", "desc": "Kövesse nyomon a részvételt és az elköteleződést, és finomítsa a programot szükség esetén." },
-      { "title": "Mérés", "desc": "Számoljon be a megállapodott kampánycélokról." }
+      {
+        "title": "Felderítés",
+        "desc": "Ismerje meg megoldását, ideális ügyfélprofilját, célvállalatait, piacát és üzleti célját."
+      },
+      {
+        "title": "Célvállalatok kijelölése",
+        "desc": "Tervezze meg a célközönséget, az üzenetet és az elköteleződési modellt, majd építse fel és aktiválja a reléváns vezetői célközönséget."
+      },
+      {
+        "title": "Vezetők megszólítása",
+        "desc": "Valósítsa meg a megállapodott eseményt, kampányt, találkozókat vagy elköteleződési programot."
+      },
+      {
+        "title": "Lehetőségek teremtése",
+        "desc": "Kövesse nyomon az elköteleződést, finomítsa a programot szükség esetén, és számoljon be a megállapodott kampánycélokról."
+      }
     ]
   },
   "proof": {
     "eyebrow": "Üzleti kapcsolódás",
-    "h2": "Valódi bizonyíték. Valódi eredmények.",
-    "subhead": "Vezetői hozzáférés. Minősített beszélgetések. Üzleti lehetőség.",
-    "intro": "A Connexiba mérhető üzleti elköteleződésre épül: összeköti a megoldásszállítókat a megfelelő döntéshozókkal, minősített vezetői beszélgetéseket generál, és üzleti lehetőségeket teremt technológia-vezérelt piacokon — a kiberbiztonságtól és az AI-tól a SaaS-en, a felhőn, az IoT-n, az adatokon és az automatizáláson át a fintechig.",
+    "h2": "Ahol a szakértelem találkozik a megfelelő vezetői célközönséggel",
+    "subhead": "Vezetői hozzáférés. Minősített beszélgetések. Üzleti lehetőség",
     "industries": [
-      { "title": "Kiberbiztonság", "desc": "Vállalati biztonság, identitáskezelés, felhőbiztonság, infrastruktúra-védelem és kiber-ellenálló képesség." },
-      { "title": "AI &amp; gépi tanulás", "desc": "Vállalati AI, intelligens alkalmazások, automatizálás, kopilótok, AI-platformok és gépi tanulási megoldások." },
-      { "title": "SaaS &amp; vállalati szoftver", "desc": "Felhőalapú alkalmazások, üzleti platformok, ERP, CRM, produktivitási és vállalati szoftvermegoldások." },
-      { "title": "IT &amp; felhőtechnológia", "desc": "Felhőinfrastruktúra, hálózatok, IT-szolgáltatások, infrastruktúra-modernizáció és digitális transzformáció." },
-      { "title": "IoT &amp; összekapcsolt technológiák", "desc": "Ipari IoT, összekapcsolt eszközök, intelligens technológiák, edge computing és összekapcsolt üzemeltetés." },
-      { "title": "Adatok &amp; üzleti intelligencia", "desc": "Analitika, adatplatformok, üzleti intelligencia, döntéstámogató intelligencia és adatvezérelt megoldások." },
-      { "title": "Digitális transzformáció &amp; automatizálás", "desc": "Vállalati automatizálás, munkafolyamat-technológia, Ipar 4.0 és operatív transzformáció." },
-      { "title": "FinTech &amp; vállalati technológia", "desc": "Pénzügyi technológia, fizetési platformok, digitális banki szolgáltatások, vállalati platformok és technológia-vezérelt pénzügyi megoldások." }
-    ],
-    "diffH3": "Hogyan teremt a Connexiba üzleti lehetőséget",
-    "diffLead": "Ötvözzük a piaci intelligenciát, a célközönség-fejlesztést és a vezetői kapcsolódást, hogy a vállalatok elérjék az üzleti céljaik szempontjából legfontosabb embereket.",
-    "diffCards": [
-      { "title": "Üzleti intelligencia", "desc": "Azonosítsa a releváns piacokat, célvállalatokat és döntéshozókat." },
-      { "title": "Vezetői kapcsolódás", "desc": "Építsen tartalmas hozzáférést a vezető szintű érintettekhez és üzleti vezetőkhöz." },
-      { "title": "Célzott elköteleződés", "desc": "Hozzon létre releváns kampányokat, beszélgetéseket és élményeket a célközönség köré." },
-      { "title": "Üzleti lehetőség", "desc": "Alakítsa a minősített elköteleződést tartalmas üzleti beszélgetésekké és lehetőségekké." }
-    ],
-    "journeyEyebrow": "Megoldásszállítóknak",
-    "journeyH3": "Az intelligenciától a lehetőségig.",
-    "journeyLead": "Fókuszált üzleti út a megfelelő célközönség azonosításától a tartalmas elköteleződésig és a minősített lehetőségig.",
-    "journeyNodes": [
-      { "label": "Célvállalati intelligencia", "tip": "Azonosítsa és rangsorolja az üzleti célnak megfelelő vállalatokat és döntéshozókat." },
-      { "label": "Vezetői célközönség-fejlesztés", "tip": "Építsen releváns célközönséget a célpiac, a megoldás és az üzleti cél köré." },
-      { "label": "Vezetői elköteleződés", "tip": "Teremtsen tartalmas alkalmakat, ahol a vezető döntéshozók kapcsolódhatnak, kommunikálhatnak és részt vehetnek." },
-      { "label": "Minősített beszélgetések", "tip": "Összpontosítson a valódi relevanciára, érdeklődésre és üzleti potenciálra." },
-      { "label": "Értékesítési lehetőség", "tip": "Alakítsa a minősített beszélgetéseket egyértelműen meghatározott üzleti lehetőségekké." },
-      { "label": "Üzleti hatás", "tip": "Kövesse nyomon az elköteleződést az üzleti út mentén, és összpontosítson a mérhető eredményekre." }
+      {
+        "title": "Kiberbiztonság"
+      },
+      {
+        "title": "AI &amp; gépi tanulás"
+      },
+      {
+        "title": "SaaS &amp; vállalati szoftver"
+      },
+      {
+        "title": "IT &amp; felhőtechnológia"
+      },
+      {
+        "title": "IoT &amp; összekapcsolt technológiák"
+      },
+      {
+        "title": "Adatok &amp; üzleti intelligencia"
+      },
+      {
+        "title": "Digitális transzformáció &amp; automatizálás"
+      },
+      {
+        "title": "FinTech &amp; vállalati technológia"
+      }
     ]
   },
   "contact": {
     "eyebrow": "Beszéljen a Connexibával",
-    "h2": "Beszéljük meg az üzleti céljait.",
+    "h2": "Beszéljük meg az üzleti céljait",
     "linkedin": "LinkedIn →",
+    "formHoneypotLabel": "Hagyja üresen ezt a mezőt",
     "formNameLabel": "Név *",
-    "formCompanyLabel": "Cég",
-    "formTitleLabel": "Beosztás",
     "formEmailLabel": "E-mail *",
-    "formSolutionLabel": "Milyen megoldást kínál?",
-    "formMarketLabel": "Milyen piacot vagy célközönséget szeretne elérni?",
-    "formObjectiveLabel": "Mi az elsődleges célja?",
-    "formObjectiveOptions": [
-      "Döntéshozók elérése",
-      "Célzott vezetői célközönség kiépítése",
-      "Vezetői esemény megtöltése",
-      "Pipeline kiépítése",
-      "Belépés egy új piacra",
-      "Valami más"
+    "formCompanyLabel": "Cég *",
+    "formPhoneLabel": "Telefonszám",
+    "formEmployeesLabel": "Alkalmazottak száma",
+    "formSelectPlaceholder": "Válasszon egy lehetőséget",
+    "formEmployeesPreferNotToSay": "Nem szeretném megadni",
+    "formInterestLabel": "Mi érdekli? *",
+    "formInterestOptions": [
+      "Lead-generálás",
+      "B2B értékesítés",
+      "B2C értékesítés",
+      "Időpont-egyeztetés",
+      "Vezetői / döntéshozói kapcsolatok",
+      "Résztvevő-toborzás rendezvényekhez",
+      "Rendezvényszponzoráció &amp; üzleti partnerségek",
+      "Business Intelligence / piackutatás",
+      "Értékesítés kiszervezése",
+      "Partnerségfejlesztés",
+      "Egyéb (kérjük, adja meg)"
     ],
-    "formMessageLabel": "Meséljen bővebben az igényeiről.",
+    "formInterestOtherLabel": "Kérjük, írja le, mit keres.",
+    "formGoalLabel": "Mit szeretne elérni?",
+    "formGoalOptions": [
+      "Több minősített lead generálása",
+      "Több találkozó lefoglalása",
+      "Döntéshozók elérése",
+      "Belépés egy új piacra",
+      "Értékesítés növelése",
+      "Stratégiai partnerségek kiépítése",
+      "Rendezvény népszerűsítése",
+      "Szponzorok / partnerek keresése",
+      "Egyéb (kérjük, adja meg)"
+    ],
+    "formGoalOtherLabel": "Kérjük, írja le, mit szeretne elérni.",
+    "formSourceLabel": "Honnan hallott a Connexibáról?",
+    "formSourceOptions": [
+      "Google",
+      "LinkedIn",
+      "Konferencia / rendezvény",
+      "Ajánlás",
+      "E-mail hírlevél",
+      "Közösségi média",
+      "Egyéb (kérjük, adja meg)"
+    ],
+    "formSourceOtherLabel": "Kérjük, írja le, honnan hallott rólunk.",
+    "formMessageLabel": "További információk",
+    "formMessagePlaceholder": "Meséljen bővebben a projektjéről, rendezvényéről, célpiacáról vagy igényeiről.",
     "formSubmit": "Beszélgetés indítása",
     "formNote": "Közvetlenül a megadott e-mail-címre válaszolunk.",
     "formSending": "Küldés…",
     "formSuccessTitle": "Üzenet sikeresen elküldve",
     "formSuccessBody": "Köszönjük, hogy felvette a kapcsolatot a Connexibával. Üzenetét megkaptuk, csapatunk hamarosan jelentkezik.",
+    "formScheduleQuestion": "Szeretne egyeztetni egy Önnek megfelelő időpontot egy beszélgetéshez?",
+    "formScheduleBtn": "Beszélgetés egyeztetése",
+    "formNotNowBtn": "Most nem",
+    "formAlreadyReceivedTitle": "Megkeresését már megkaptuk.",
+    "formAlreadyReceivedBody": "Köszönjük, hogy felvette a kapcsolatot a Connexibával. Üzenetét megkaptuk, és hamarosan jelentkezünk.",
+    "formRateLimitTitle": "Kérjük, várjon egy pillanatot",
+    "formRateLimitBody": "Túl gyorsan küldi el az üzeneteket. Kérjük, várjon egy pillanatot, majd próbálja újra.",
+    "formValidationTitle": "Kérjük, ellenőrizze az űrlapot",
+    "formValidationBody": "Néhány kötelező mező hiányzik vagy érvénytelen. Kérjük, ellenőrizze adatait, majd próbálja újra.",
     "formErrorTitle": "Hiba történt",
     "formErrorBody": "Üzenetét jelenleg nem sikerült elküldeni. Kérjük, próbálja meg újra, vagy vegye fel velünk a kapcsolatot az info@connexiba.com címen.",
-    "formCloseButton": "Bezárás",
-    "mailtoUnnamed": "Weboldal kapcsolatfelvételi űrlap",
-    "mailtoSubjectPrefix": "Új megkeresés a connexiba.com oldalról: ",
-    "mailtoNameLabel": "Név: ",
-    "mailtoCompanyLabel": "Cég: ",
-    "mailtoTitleLabel": "Beosztás: ",
-    "mailtoEmailLabel": "E-mail: ",
-    "mailtoSolutionLabel": "Megoldás: ",
-    "mailtoMarketLabel": "Célpiac/célközönség: ",
-    "mailtoObjectiveLabel": "Elsődleges cél: ",
-    "mailtoMessageLabel": "Üzenet:",
-    "mailtoOpening": "Az e-mail kliens megnyitása, címzett: info@connexiba.com…"
+    "formCloseButton": "Bezárás"
   },
   "footer": {
-    "tagline": "Mi megtöltjük a termet. Ön megköti az üzletet.",
+    "tagline": "Mi megtöltjük a termet. Ön megköti az üzletet",
     "solutionsHeading": "Megoldások",
     "solutionsLinks": [
       "Vezetői célközönség-fejlesztés",
@@ -207,13 +419,14 @@
     ],
     "companyHeading": "Cég",
     "companyLinks": [
-      "Így működik",
-      "Vezetői élmények",
-      "Valódi bizonyíték. Valódi eredmények.",
+      "Amit csinálunk",
+      "Rólunk",
+      "Élmények",
       "Kapcsolat"
     ],
     "copyright": "© Connexiba. Minden jog fenntartva.",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "termsLink": "Általános Szerződési Feltételek"
   },
   "chat": {
     "launcherAria": "Chat megnyitása a Connexibával",
@@ -231,78 +444,114 @@
     "inputAria": "Írjon üzenetet",
     "sendAria": "Üzenet küldése",
     "intents": [
-      { "replies": [
-        "Természetesen. Először a megfelelő vállalatokra és döntéshozókra összpontosítunk, majd az elköteleződést a valódi üzleti relevanciára építjük, nem a mennyiségre. Melyik piacot vagy megoldást szeretné növelni?",
-        "Értem — ha ez a célközönség meghatározott, a minősített beszélgetések általában maguktól következnek. Milyen jellemzően az ideális ügyfele?"
-      ]},
-      { "replies": [
-        "Ennek van értelme. Egy adott iparágon belül szeretné elérni őket, vagy egy szélesebb technológiai piacon?",
-        "Értem — meghatározott ideális ügyfélprofil köré építünk célzott vezetői célközönséget. Milyen szenioritásra és funkcióra van szüksége a teremben?"
-      ]},
-      { "replies": [
-        "Jó kiindulópont — egy meghatározott, megnevezett célvállalati kör az, ami rendszerint működésbe hozza a program többi részét. Nagyjából hány vállalatra gondol?",
-        "Van már célvállalati listája, vagy ez olyasmi, aminek a felépítésében segítséget szeretne?"
-      ]},
-      { "replies": [
-        "Ez a legtöbb programunk alapja — a piac és a megfelelő döntéshozók megértése, mielőtt bármilyen megkeresés elindulna. Mit szeretne most megtudni a piacáról?",
-        "Ennek van értelme. Az ilyen jellegű intelligencia általában meghatározza, kit hívunk meg, és hogyan keretezzük a beszélgetést. Melyik piacra fókuszálnak?"
-      ]},
-      { "replies": [
-        "Pontosan erre specializálódtunk. Milyen az Ön ideális célközönsége — iparág, szenioritás, vállalatméret?",
-        "Rendben. A célközönség-fejlesztés egy szorosan meghatározott profillal működik a legjobban. Kit szeretne pontosan elérni?"
-      ]},
-      { "replies": [
-        "Az elköteleződés az, ahol a legtöbb program sikerrel jár vagy elbukik — relevánsnak kell éreznie az adott személynek, nem csak egy újabb megkeresésnek. Milyen kontextusban szólítaná meg őket?",
-        "Így van — a tartalmas elköteleződés általában egy konkrét, releváns beszélgetési okból ered. Mi hajtja azt a beszélgetést, amelyet el szeretne indítani?"
-      ]},
-      { "replies": [
-        "Ez a legtöbb programunk végső célja — olyan elköteleződés, amely ténylegesen pipeline-ná válik. Mi hajtja a növekedés iránti igényt — új megoldás, új piac, vagy valami más?",
-        "Értem. A beszélgetések valódi lehetőséggé alakítása általában azon múlik, hogy a megfelelő személyt éri-e el a megfelelő relevanciával. Ki a fókuszban lévő vevő?"
-      ]},
-      { "replies": [
-        "Valódi üzleti prioritások köré tervezünk és töltünk meg vezetői kerekasztalokat és fórumokat, nem csupán a férőhelyek száma alapján. Milyen formátumra gondolt?",
-        "Egyszeri eseményt szeretne megtölteni, vagy inkább folyamatos programként futtatná?"
-      ]},
-      { "replies": [
-        "Jó — a legtöbb technológia-vezérelt iparágban dolgozunk, a SaaS-től és a felhőtől az AI-n, a kiberbiztonságon át a digitális transzformációig. Mit csinál a megoldása?",
-        "A piac melyik részére fókuszál — vállalati vevők, mid-market, vagy egy adott szegmens?"
-      ]},
-      { "replies": [
-        "Az AI most az egyik legaktívabb iparágunk — nagy az igény a megfelelő technikai és üzleti vevők elérésére. A megoldása inkább platform, alkalmazás, vagy infrastruktúra szintű?",
-        "Az AI beszerzési bizottságok jellemzően szélesek. Technikai vezetőket, üzleti vezetőket, vagy mindkettőt célozza?"
-      ]},
-      { "replies": [
-        "A kiberbiztonság az egyik kulcspiacunk — a CISO-k és a biztonsági vezetés pontosan az a célközönség, amely köré programokat építünk. Mi a konkrét felhasználási vagy kockázati terület?",
-        "Vállalati szintű biztonsági vezetést szeretne elérni, vagy egy szélesebb technikai közönséget is?"
-      ]},
-      { "replies": [
-        "Ez most erős téma sok programunkban. Az IT-vezetést, az üzemeltetést, vagy mindkettőt célozza?",
-        "Mi a konkrét irány — automatizálás, infrastruktúra-modernizáció, vagy folyamattranszformáció?"
-      ]},
-      { "replies": [
-        "Egy új piacra lépés általában azzal kezdődik, hogy megértjük, kik ott ténylegesen a megfelelő vevők. Melyik piacot nézi?",
-        "Itt számít leginkább a vállalati és piaci intelligencia. Új régióról, új iparágról, vagy mindkettőről van szó?"
-      ]},
-      { "replies": [
-        "Ez általában az első kérdés, amit érdemes alaposan megválaszolni. Meséljen egy kicsit a megoldásáról, és segítek kideríteni, ki is valójában a megfelelő célközönség.",
-        "Milyen jellemzően az ideális ügyfele — vállalatméret, iparág, beosztás?"
-      ]},
-      { "replies": [
-        "Az árazás valóban a célközönségtől, a formátumtól és a program terjedelmétől függ, ezért érdemes ezt konkrétan megbeszélni. Mit szeretne először elérni?",
-        "Ez a program méretétől és a célközönségtől függően változik, és legjobb közvetlenül a céljához igazítva megbeszélni. Milyen eredményt szeretne elérni?"
-      ]},
-      { "replies": [
-        "Természetesen — a chat alatt közvetlenül található kapcsolatfelvételi űrlap a leggyorsabb módja annak, hogy valódi beszélgetést indítson a csapattal.",
-        "Szívesen irányítom oda. Adja meg adatait a lenti kapcsolatfelvételi űrlapon, és a csapat valamelyik tagja közvetlenül jelentkezik."
-      ]},
-      { "replies": [
-        "Szívesen. Van még valami, amit szeretne alaposabban átbeszélni?",
-        "Örülök, hogy segít. Van még valami a célközönségével vagy céljával kapcsolatban, amiben segíthetek?"
-      ]},
-      { "replies": [
-        "Üdvözlöm! Mit szeretne elérni — egy adott döntéshozói kört megszólítani, minősített beszélgetéseket generálni, vagy egy új piacot felfedezni?",
-        "Üdvözlöm. Mi jár a fejében — célközönség, elköteleződés, vagy valami más?"
-      ]}
+      {
+        "replies": [
+          "Természetesen. Először a megfelelő vállalatokra és döntéshozókra összpontosítunk, majd az elköteleződést a valódi üzleti relevanciára építjük, nem a mennyiségre. Melyik piacot vagy megoldást szeretné növelni?",
+          "Értem — ha ez a célközönség meghatározott, a minősített beszélgetések általában maguktól következnek. Milyen jellemzően az ideális ügyfele?"
+        ]
+      },
+      {
+        "replies": [
+          "Ennek van értelme. Egy adott iparágon belül szeretné elérni őket, vagy egy szélesebb technológiai piacon?",
+          "Értem — meghatározott ideális ügyfélprofil köré építünk célzott vezetői célközönséget. Milyen szenioritásra és funkcióra van szüksége a teremben?"
+        ]
+      },
+      {
+        "replies": [
+          "Jó kiindulópont — egy meghatározott, megnevezett célvállalati kör az, ami rendszerint működésbe hozza a program többi részét. Nagyjából hány vállalatra gondol?",
+          "Van már célvállalati listája, vagy ez olyasmi, aminek a felépítésében segítséget szeretne?"
+        ]
+      },
+      {
+        "replies": [
+          "Ez a legtöbb programunk alapja — a piac és a megfelelő döntéshozók megértése, mielőtt bármilyen megkeresés elindulna. Mit szeretne most megtudni a piacáról?",
+          "Ennek van értelme. Az ilyen jellegű intelligencia általában meghatározza, kit hívunk meg, és hogyan keretezzük a beszélgetést. Melyik piacra fókuszálnak?"
+        ]
+      },
+      {
+        "replies": [
+          "Pontosan erre specializálódtunk. Milyen az Ön ideális célközönsége — iparág, szenioritás, vállalatméret?",
+          "Rendben. A célközönség-fejlesztés egy szorosan meghatározott profillal működik a legjobban. Kit szeretne pontosan elérni?"
+        ]
+      },
+      {
+        "replies": [
+          "Az elköteleződés az, ahol a legtöbb program sikerrel jár vagy elbukik — relevánsnak kell éreznie az adott személynek, nem csak egy újabb megkeresésnek. Milyen kontextusban szólítaná meg őket?",
+          "Így van — a tartalmas elköteleződés általában egy konkrét, releváns beszélgetési okból ered. Mi hajtja azt a beszélgetést, amelyet el szeretne indítani?"
+        ]
+      },
+      {
+        "replies": [
+          "Ez a legtöbb programunk végső célja — olyan elköteleződés, amely ténylegesen pipeline-ná válik. Mi hajtja a növekedés iránti igényt — új megoldás, új piac, vagy valami más?",
+          "Értem. A beszélgetések valódi lehetőséggé alakítása általában azon múlik, hogy a megfelelő személyt éri-e el a megfelelő relevanciával. Ki a fókuszban lévő vevő?"
+        ]
+      },
+      {
+        "replies": [
+          "Valódi üzleti prioritások köré tervezünk és töltünk meg vezetői kerekasztalokat és fórumokat, nem csupán a férőhelyek száma alapján. Milyen formátumra gondolt?",
+          "Egyszeri eseményt szeretne megtölteni, vagy inkább folyamatos programként futtatná?"
+        ]
+      },
+      {
+        "replies": [
+          "Jó — a legtöbb technológia-vezérelt iparágban dolgozunk, a SaaS-től és a felhőtől az AI-n, a kiberbiztonságon át a digitális transzformációig. Mit csinál a megoldása?",
+          "A piac melyik részére fókuszál — vállalati vevők, mid-market, vagy egy adott szegmens?"
+        ]
+      },
+      {
+        "replies": [
+          "Az AI most az egyik legaktívabb iparágunk — nagy az igény a megfelelő technikai és üzleti vevők elérésére. A megoldása inkább platform, alkalmazás, vagy infrastruktúra szintű?",
+          "Az AI beszerzési bizottságok jellemzően szélesek. Technikai vezetőket, üzleti vezetőket, vagy mindkettőt célozza?"
+        ]
+      },
+      {
+        "replies": [
+          "A kiberbiztonság az egyik kulcspiacunk — a CISO-k és a biztonsági vezetés pontosan az a célközönség, amely köré programokat építünk. Mi a konkrét felhasználási vagy kockázati terület?",
+          "Vállalati szintű biztonsági vezetést szeretne elérni, vagy egy szélesebb technikai közönséget is?"
+        ]
+      },
+      {
+        "replies": [
+          "Ez most erős téma sok programunkban. Az IT-vezetést, az üzemeltetést, vagy mindkettőt célozza?",
+          "Mi a konkrét irány — automatizálás, infrastruktúra-modernizáció, vagy folyamattranszformáció?"
+        ]
+      },
+      {
+        "replies": [
+          "Egy új piacra lépés általában azzal kezdődik, hogy megértjük, kik ott ténylegesen a megfelelő vevők. Melyik piacot nézi?",
+          "Itt számít leginkább a vállalati és piaci intelligencia. Új régióról, új iparágról, vagy mindkettőről van szó?"
+        ]
+      },
+      {
+        "replies": [
+          "Ez általában az első kérdés, amit érdemes alaposan megválaszolni. Meséljen egy kicsit a megoldásáról, és segítek kideríteni, ki is valójában a megfelelő célközönség.",
+          "Milyen jellemzően az ideális ügyfele — vállalatméret, iparág, beosztás?"
+        ]
+      },
+      {
+        "replies": [
+          "Az árazás valóban a célközönségtől, a formátumtól és a program terjedelmétől függ, ezért érdemes ezt konkrétan megbeszélni. Mit szeretne először elérni?",
+          "Ez a program méretétől és a célközönségtől függően változik, és legjobb közvetlenül a céljához igazítva megbeszélni. Milyen eredményt szeretne elérni?"
+        ]
+      },
+      {
+        "replies": [
+          "Természetesen — a chat alatt közvetlenül található kapcsolatfelvételi űrlap a leggyorsabb módja annak, hogy valódi beszélgetést indítson a csapattal.",
+          "Szívesen irányítom oda. Adja meg adatait a lenti kapcsolatfelvételi űrlapon, és a csapat valamelyik tagja közvetlenül jelentkezik."
+        ]
+      },
+      {
+        "replies": [
+          "Szívesen. Van még valami, amit szeretne alaposabban átbeszélni?",
+          "Örülök, hogy segít. Van még valami a célközönségével vagy céljával kapcsolatban, amiben segíthetek?"
+        ]
+      },
+      {
+        "replies": [
+          "Üdvözlöm! Mit szeretne elérni — egy adott döntéshozói kört megszólítani, minősített beszélgetéseket generálni, vagy egy új piacot felfedezni?",
+          "Üdvözlöm. Mi jár a fejében — célközönség, elköteleződés, vagy valami más?"
+        ]
+      }
     ],
     "continuations": [
       "Rendben — innen a leggyorsabb következő lépés, ha megoszt néhány további részletet a lenti kapcsolatfelvételi űrlapon, és a csapat közvetlenül felveheti Önnel a kapcsolatot.",
