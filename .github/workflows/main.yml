@@ -21,7 +21,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           port: 21
-          server-dir: /public_html/
+          server-dir: /
           state-name: .ftp-deploy-sync-state-v2.json
           # AI CRM / AI Workforce project (app dir, config/secrets, and
           # governance/spec docs) is excluded below — added Phase 1,
