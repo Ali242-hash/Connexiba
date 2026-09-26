@@ -22,11 +22,15 @@ jobs:
           protocol: ftps
           port: 21
           server-dir: /
-          state-name: .ftp-deploy-sync-state-v2.json
-          # TEMPORARY diagnostic (Phase 1) - dry-run makes zero server
-          # changes; verbose surfaces per-file upload/skip/delete decisions.
-          # Revert both once the deployment gap is understood/fixed.
-          dry-run: true
+          # Phase 1 dry-run confirmed the old state file (v2) made the
+          # action believe every file already matched the server and
+          # upload 0 files. Renamed to v3 so it re-evaluates every
+          # included file fresh, without dangerous-clean-slate - normal
+          # exclude/state-based scope only, nothing outside this repo's
+          # tracked files is touched.
+          state-name: .ftp-deploy-sync-state-v3.json
+          dangerous-clean-slate: false
+          dry-run: false
           log-level: verbose
           # AI CRM / AI Workforce project (app dir, config/secrets, and
           # governance/spec docs) is excluded below — added Phase 1,
