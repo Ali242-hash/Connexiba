@@ -4,16 +4,18 @@
 
 # ---------------------------------------------------------------------
 # 0. Root -> /en/ redirect, at the HTTP level, before any HTML is sent.
-#    Matches ONLY the bare domain root ("/") — a direct "/index.html"
-#    request is intentionally NOT matched, nor is any other URL
-#    (/en/, /de/, /assets/..., etc.). 301 (permanent) since
-#    English-as-default is a fixed, long-term routing decision, not a
-#    temporary one.
+#    Matches the bare domain root ("/") and a direct "/index.html"
+#    request (added so both resolve the same way instead of leaving
+#    /index.html live as a second, unredirected entry point) — no
+#    other URL is matched (/en/, /de/, /assets/..., etc.). 301
+#    (permanent) since English-as-default is a fixed, long-term
+#    routing decision, not a temporary one.
 # ---------------------------------------------------------------------
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
   RewriteRule ^$ en/ [R=301,L]
+  RewriteRule ^index\.html$ en/ [R=301,L]
 </IfModule>
 
 # ---------------------------------------------------------------------

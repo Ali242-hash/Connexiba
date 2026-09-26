@@ -44,3 +44,27 @@ jobs:
             **/.env.*
             **/config.php
             **/vendor/**
+            **/CLAUDE.md
+            **/.impeccable/**
+            **/.agents/**
+            **/.claude/**
+            **/skills-lock.json
+            **/logo-check.txt
+            **/start-crm.bat
+            **/template.html
+            **/terms.template.html
+            **/locales/**
+            **/build-i18n.js
+            **/build-report.json
+            **/prototype/**
+            **/reference/**
+            **/staging/**
+            **/_production-backup-before-prototype-migration/**
+            **/motionsites-connexiba-preview.html
+            **/motionsites-cta-preview.html
+            **/assets/*.msi
+            **/assets/*.zip
+            **/assets/nssm-2.24-101-g897c7ad/**
+            **/assets/*.docx
+            **/assets/index*.html
+            **/assets/connexiba.com-source-beautified.txt

@@ -94,7 +94,7 @@
      language for browsers/search engines regardless. -->
 <meta name="google" content="notranslate">
 <title>Connexiba : Atteignez les décideurs qui comptent pour votre croissance</title>
-<meta name="description" content="Connexiba aide les fournisseurs de solutions à construire des audiences exécutives ciblées, à créer des conversations pertinentes et à transformer les bons contacts en opportunités commerciales, sur les marchés B2B et B2C mondiaux.">
+<meta name="description" content="Connexiba aide les fournisseurs de solutions à construire des audiences exécutives ciblées, à créer des conversations pertinentes et à transformer les contacts en opportunités commerciales, sur les marchés B2B et B2C mondiaux.">
 <link rel="canonical" href="https://connexiba.com/fr/">
 <link rel="alternate" hreflang="en" href="https://connexiba.com/en/">
 <link rel="alternate" hreflang="de" href="https://connexiba.com/de/">
@@ -114,6 +114,14 @@
 <meta property="og:url" content="https://connexiba.com/fr/">
 <meta property="og:title" content="Connexiba — Atteignez les décideurs qui comptent pour votre croissance">
 <meta property="og:description" content="Nous aidons les fournisseurs de solutions à atteindre les décideurs qui comptent, sur les marchés B2B et B2C mondiaux.">
+<meta property="og:image" content="https://connexiba.com/assets/gathering.webp">
+<meta property="og:image:alt" content="Executives in conversation around a table at a Connexiba engagement">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Connexiba — Atteignez les décideurs qui comptent pour votre croissance">
+<meta name="twitter:description" content="Nous aidons les fournisseurs de solutions à atteindre les décideurs qui comptent, sur les marchés B2B et B2C mondiaux.">
+<meta name="twitter:image" content="https://connexiba.com/assets/gathering.webp">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Connexiba","url":"https://connexiba.com/","logo":"https://connexiba.com/assets/newlogo1-wordmark.png","sameAs":["https://www.linkedin.com/company/connexiba"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Connexiba","url":"https://connexiba.com/fr/","inLanguage":"fr"}</script>
 
 <!-- ================================================================
      GOOGLE CONSENT MODE v2 + GA4 (G-7FHEREY512)
@@ -1108,6 +1116,12 @@
   footer{background:#04070F;padding:64px 0 32px;border-top:1px solid var(--line);position:relative;}
   footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg, transparent, rgba(59,130,246,0.3) 35%, rgba(34,211,238,0.3) 65%, transparent);}
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:44px;}
+  /* Scoped to the first (logo) column only — Solutions/Entreprise columns
+     are untouched. Centers the logo + tagline as a column so the
+     tagline sits directly under the logo rather than under the whole
+     (much wider) 1.4fr grid track; holds at every width, no separate
+     mobile rule needed. */
+  .foot-grid > .foot-col:first-child{display:flex;flex-direction:column;align-items:center;text-align:center;}
   .foot-col .logo-mark{margin-bottom:14px;}
   /* .foot-col a below sets display:block at a higher specificity, which
      stretched the logo anchor to the full column width; .logo-c-tint is
@@ -1120,7 +1134,9 @@
      .logo-mark img sizing (height:95px / width:auto, and the <=600px
      media query) so header and footer render the logo at exactly the
      same displayed size at every breakpoint. */
-  .foot-col .tag{color:var(--muted);font-size:0.88rem;max-width:280px;line-height:1.6;}
+  /* #00A9FC — the logo X's own top-edge color (see .logo-c-tint above,
+     which repaints the C with this same measured gradient stop). */
+  .foot-col .tag{color:#00A9FC;font-size:0.88rem;max-width:280px;line-height:1.6;}
   .foot-col h4{font-size:0.82rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--text);margin-bottom:16px;}
   .foot-col a{display:block;color:var(--muted);font-size:0.9rem;margin-bottom:10px;transition:color .2s;}
   .foot-col a:hover{color:var(--cyan);}
@@ -1402,7 +1418,7 @@
           </details>
         </div>
         <div class="people-card reveal stagger">
-          <div class="people-portrait people-portrait-sm" aria-hidden="true"><span>LB</span></div>
+          <div class="people-portrait people-portrait-sm"><img src="../assets/lana1.webp" alt="Lana Bennett — Responsable Marketing" loading="lazy" decoding="async"></div>
           <h3>Lana Bennett</h3>
           <p class="people-role">Responsable Marketing</p>
           <details class="people-bio-toggle">
@@ -1825,6 +1841,7 @@
       <span>© Connexiba. Tous droits réservés.</span>
       <span class="links mono">
         <a href="terms.html">Conditions générales</a>
+        <a href="https://connexiba.com/sitemap.xml">Sitemap</a>
         <a href="https://www.linkedin.com/company/connexiba" target="_blank" rel="noopener" class="foot-linkedin-link" aria-label="LinkedIn"><svg class="foot-linkedin-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8" cy="8.5" r="0.9" fill="currentColor" stroke="none"/><path d="M8 11v6"/><path d="M12 17v-4.5a2 2 0 0 1 4 0V17"/><path d="M12 12.5V17"/></svg></a>
       </span>
     </div>

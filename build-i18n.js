@@ -25,6 +25,13 @@ const SOURCE_HTML = path.join(ROOT, 'template.html');
 const TERMS_SOURCE_HTML = path.join(ROOT, 'terms.template.html');
 const LOCALES_DIR = path.join(ROOT, 'locales');
 const SITE_URL = 'https://connexiba.com';
+// Existing, already-approved assets reused for social-share previews and
+// JSON-LD (Phase 1 SEO — no new image/asset introduced; the alt text below
+// matches the alt already used on this image at the top of the page).
+const OG_IMAGE_URL = `${SITE_URL}/assets/gathering.webp`;
+const OG_IMAGE_ALT = 'Executives in conversation around a table at a Connexiba engagement';
+const ORG_LOGO_URL = `${SITE_URL}/assets/newlogo1-wordmark.png`;
+const ORG_SAME_AS = ['https://www.linkedin.com/company/connexiba']; // from the site's own footer link
 
 const LANGS = [
   { code: 'en', name: 'English', ogLocale: 'en_US' },
@@ -98,6 +105,27 @@ function buildSeoHead(lang, t, page) {
     `<meta property="og:url" content="${canonical}">`,
     `<meta property="og:title" content="${escapeAttr(t.meta.ogTitle)}">`,
     `<meta property="og:description" content="${escapeAttr(t.meta.ogDescription)}">`,
+    `<meta property="og:image" content="${OG_IMAGE_URL}">`,
+    `<meta property="og:image:alt" content="${escapeAttr(OG_IMAGE_ALT)}">`,
+    `<meta name="twitter:card" content="summary_large_image">`,
+    `<meta name="twitter:title" content="${escapeAttr(t.meta.ogTitle)}">`,
+    `<meta name="twitter:description" content="${escapeAttr(t.meta.ogDescription)}">`,
+    `<meta name="twitter:image" content="${OG_IMAGE_URL}">`,
+    `<script type="application/ld+json">${JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Connexiba',
+      url: `${SITE_URL}/`,
+      logo: ORG_LOGO_URL,
+      sameAs: ORG_SAME_AS,
+    })}</script>`,
+    `<script type="application/ld+json">${JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Connexiba',
+      url: canonical,
+      inLanguage: lang.code,
+    })}</script>`,
   ].join('\n');
 }
 
