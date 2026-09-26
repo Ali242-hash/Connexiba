@@ -670,6 +670,11 @@
      the bug: a much taller image column was vertically centering the
      shorter text column against it, pushing the heading down.) */
   .does-layout{display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:start;}
+  /* Eyebrow only, centered within the copy column — paragraphs, the
+     h2 and the CTA below stay left-aligned exactly as before. Scoped
+     to #does so the shared .eyebrow rule (left-aligned everywhere
+     else on the page) is untouched. */
+  #does .eyebrow{display:flex;width:fit-content;margin-left:auto;margin-right:auto;}
   .does-copy p{color:var(--muted);font-size:1rem;line-height:1.75;margin-bottom:18px;}
   .does-copy h2{font-size:clamp(1.9rem,3.2vw,2.5rem);margin-bottom:20px;line-height:1.16;}
   /* Image and stat are two stacked blocks in one visual column, not one
@@ -791,6 +796,11 @@
      .does-layout already does, instead of centering the shorter one
      against the taller and splitting the leftover space top+bottom. */
   .exp-copy{max-width:620px;padding:38px 40px;position:relative;background:rgba(11,23,48,0.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-color:rgba(255,255,255,0.08);display:flex;flex-direction:column;justify-content:center;}
+  /* Eyebrow only, centered on the cross-axis of this column flex
+     container — the stat row and paragraph below keep their own
+     (unchanged) alignment. Scoped to #experience so the shared
+     .eyebrow rule elsewhere on the page is untouched. */
+  #experience .eyebrow{align-self:center;}
   .exp-copy::before{content:'';position:absolute;inset:-18px;z-index:-1;border-radius:36px;background:linear-gradient(135deg, rgba(59,130,246,0.2), rgba(34,211,238,0.1) 55%, transparent 80%);filter:blur(24px);opacity:.55;pointer-events:none;}
   .exp-stat{display:flex;align-items:baseline;gap:16px;margin-bottom:22px;}
   .exp-stat .num{font-family:'Fraunces',serif;font-size:clamp(2.2rem,4vw,2.9rem);color:var(--cyan);line-height:1;}
