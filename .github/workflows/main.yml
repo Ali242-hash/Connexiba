@@ -23,6 +23,11 @@ jobs:
           port: 21
           server-dir: /
           state-name: .ftp-deploy-sync-state-v2.json
+          # TEMPORARY diagnostic (Phase 1) - dry-run makes zero server
+          # changes; verbose surfaces per-file upload/skip/delete decisions.
+          # Revert both once the deployment gap is understood/fixed.
+          dry-run: true
+          log-level: verbose
           # AI CRM / AI Workforce project (app dir, config/secrets, and
           # governance/spec docs) is excluded below — added Phase 1,
           # Segment 1 (deployment safety). None of it is marketing-site
