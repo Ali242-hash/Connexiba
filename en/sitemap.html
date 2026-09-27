@@ -178,16 +178,11 @@
      as one connected word on a single line. */
   .logo-mark{position:relative;display:inline-flex;align-items:center;flex-shrink:0;isolation:isolate;transition:transform .25s ease, filter .25s ease;}
   a.logo-mark:hover,a.logo-mark:focus-visible{transform:translateY(-1px);filter:drop-shadow(0 0 14px rgba(34,211,238,0.3));}
-  .logo-mark img{height:34px;width:auto;display:block;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.4));}
-  /* Explicit width alongside height (matching the image's own 1703:521
-     ratio, rounded to a whole pixel) instead of relying on width:auto
-     inside this flex container: auto-sizing a flex item from height
-     alone can resolve to a fractional CSS-pixel width (34px height →
-     ~111.15px; 27px → ~88.26px), which some mobile browsers/DPRs
-     rasterize slightly softly. Pinning both dimensions keeps the box
-     an integer size so the logo stays crisp; visual size is unchanged
-     (88px is the same ~88.26px auto would have produced, just rounded). */
-  @media(max-width:600px){.logo-mark img{height:27px;width:88px;}}
+  .logo-mark img{height:95px;width:auto;display:block;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.4));}
+  /* Matches en/index.html's current logo treatment (95px desktop). Below
+     600px, pin both dimensions (not just height) to keep the box an
+     integer pixel size so the logo stays crisp on mobile DPRs. */
+  @media(max-width:600px){.logo-mark img{height:34px;width:111px;}}
   /* Recolor just the "C" to exactly match the X's own color. The X is
      baked into the source artwork with a top-to-bottom cyan→blue
      gradient (not a flat color — measured directly from
@@ -1056,13 +1051,16 @@
   footer{background:#04070F;padding:64px 0 32px;border-top:1px solid var(--line);position:relative;}
   footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg, transparent, rgba(59,130,246,0.3) 35%, rgba(34,211,238,0.3) 65%, transparent);}
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:44px;}
+  /* Centers the logo + tagline as their own column, matching the
+     current en/index.html footer treatment. */
+  .foot-grid > .foot-col:first-child{display:flex;flex-direction:column;align-items:center;text-align:center;}
   .foot-col .logo-mark{margin-bottom:14px;}
   /* .foot-col a below sets display:block at a higher specificity, which
      would stretch the logo anchor to the full column width; restore the
      shared .logo-mark inline-flex so the footer logo renders exactly
      like the header one (same fix already used on en/index.html). */
   .foot-col a.logo-mark{display:inline-flex;}
-  .foot-col .tag{color:var(--muted);font-size:0.88rem;max-width:280px;line-height:1.6;}
+  .foot-col .tag{color:#00A9FC;font-size:0.88rem;max-width:280px;line-height:1.6;}
   .foot-col h4{font-size:0.82rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--text);margin-bottom:16px;}
   .foot-col a{display:block;color:var(--muted);font-size:0.9rem;margin-bottom:10px;transition:color .2s;}
   .foot-col a:hover{color:var(--cyan);}
