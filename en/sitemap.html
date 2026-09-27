@@ -1057,11 +1057,17 @@
   footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg, transparent, rgba(59,130,246,0.3) 35%, rgba(34,211,238,0.3) 65%, transparent);}
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:44px;}
   .foot-col .logo-mark{margin-bottom:14px;}
-  .foot-col .logo-mark img{width:496px;height:auto;}
+  /* .foot-col a below sets display:block at a higher specificity, which
+     would stretch the logo anchor to the full column width; restore the
+     shared .logo-mark inline-flex so the footer logo renders exactly
+     like the header one (same fix already used on en/index.html). */
+  .foot-col a.logo-mark{display:inline-flex;}
   .foot-col .tag{color:var(--muted);font-size:0.88rem;max-width:280px;line-height:1.6;}
   .foot-col h4{font-size:0.82rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--text);margin-bottom:16px;}
   .foot-col a{display:block;color:var(--muted);font-size:0.9rem;margin-bottom:10px;transition:color .2s;}
   .foot-col a:hover{color:var(--cyan);}
+  .foot-col a.foot-contact-link{display:inline-flex;align-items:center;gap:6px;}
+  .foot-icon{width:15px;height:15px;flex-shrink:0;}
   .foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:28px;border-top:1px solid var(--line);font-size:0.82rem;color:var(--muted);}
   .foot-bottom .links{display:flex;gap:18px;}
   @media(max-width:760px){.foot-grid{grid-template-columns:1fr;gap:28px;}}
@@ -1122,12 +1128,22 @@
      animations are introduced. */
   .sitemap-doc{max-width:900px;margin:0 auto;}
   .sitemap-doc h1{font-size:clamp(2.2rem,4vw,3rem);line-height:1.15;letter-spacing:-0.015em;margin-bottom:14px;}
-  .sitemap-doc>.wrap>p{color:var(--muted);line-height:1.7;max-width:560px;margin-bottom:48px;}
-  .sitemap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px;}
+  .sitemap-doc>.wrap>p{color:var(--muted);line-height:1.7;max-width:560px;margin-bottom:40px;}
+
+  .sitemap-langs{margin-bottom:56px;}
+  .sitemap-langs-label{display:block;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;}
+  .sitemap-lang-row{display:flex;flex-wrap:wrap;gap:14px;}
+  .sitemap-lang{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,0.03);font-size:0.9rem;font-weight:500;color:var(--muted);line-height:1;transition:border-color .2s ease, color .2s ease, background .2s ease;}
+  a.sitemap-lang:hover{border-color:rgba(34,211,238,0.4);color:var(--cyan);background:rgba(34,211,238,0.07);}
+  .sitemap-lang.current{color:var(--text);border-color:var(--cyan);background:rgba(34,211,238,0.12);box-shadow:0 0 0 1px rgba(34,211,238,0.25);}
+  .sitemap-lang-tag{display:inline-flex;align-items:center;margin-left:2px;padding:3px 10px;border-radius:999px;background:var(--cyan);font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:0.04em;text-transform:uppercase;color:#07111F;font-weight:600;line-height:1.4;}
+
+  .sitemap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;}
   .sitemap-group{padding:30px 28px;}
   .sitemap-group h2{font-family:'IBM Plex Mono',monospace;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:18px;}
-  .sitemap-group a{display:block;color:var(--muted);font-size:0.96rem;line-height:2;transition:color .2s ease;}
+  .sitemap-group a{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:0.96rem;line-height:2;transition:color .2s ease;}
   .sitemap-group a:hover{color:var(--cyan);}
+  .sitemap-idx{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--muted);opacity:.6;flex-shrink:0;}
 </style>
 </head>
 <body>
@@ -1176,28 +1192,31 @@
       <h1>Sitemap</h1>
       <p>The pages and sections of the Connexiba website, and its available language versions.</p>
 
+      <div class="sitemap-langs">
+        <span class="sitemap-langs-label">Languages</span>
+        <div class="sitemap-lang-row">
+          <span class="sitemap-lang current" lang="en">EN — English<span class="sitemap-lang-tag">Current</span></span>
+          <a class="sitemap-lang" href="../de/index.html" hreflang="de" lang="de">DE — Deutsch</a>
+          <a class="sitemap-lang" href="../fr/index.html" hreflang="fr" lang="fr">FR — Français</a>
+          <a class="sitemap-lang" href="../es/index.html" hreflang="es" lang="es">ES — Español</a>
+          <a class="sitemap-lang" href="../it/index.html" hreflang="it" lang="it">IT — Italiano</a>
+          <a class="sitemap-lang" href="../hu/index.html" hreflang="hu" lang="hu">HU — Magyar</a>
+        </div>
+      </div>
+
       <div class="sitemap-grid">
         <div class="sitemap-group glass-card">
           <h2>Main</h2>
-          <a href="index.html#top">Home</a>
-          <a href="index.html#does">What We Do</a>
-          <a href="index.html#experience">About</a>
-          <a href="index.html#solutions">Solutions</a>
-          <a href="index.html#experiences">Experiences</a>
-          <a href="index.html#contact">Contact</a>
+          <a href="index.html#top"><span class="sitemap-idx">01</span>Home</a>
+          <a href="index.html#does"><span class="sitemap-idx">02</span>What We Do</a>
+          <a href="index.html#experience"><span class="sitemap-idx">03</span>About</a>
+          <a href="index.html#solutions"><span class="sitemap-idx">04</span>Solutions</a>
+          <a href="index.html#experiences"><span class="sitemap-idx">05</span>Experiences</a>
+          <a href="index.html#contact"><span class="sitemap-idx">06</span>Contact</a>
         </div>
         <div class="sitemap-group glass-card">
           <h2>Legal</h2>
-          <a href="terms.html">Terms &amp; Conditions</a>
-        </div>
-        <div class="sitemap-group glass-card">
-          <h2>Languages</h2>
-          <a href="index.html" hreflang="en" lang="en">EN — English</a>
-          <a href="../de/index.html" hreflang="de" lang="de">DE — Deutsch</a>
-          <a href="../fr/index.html" hreflang="fr" lang="fr">FR — Français</a>
-          <a href="../es/index.html" hreflang="es" lang="es">ES — Español</a>
-          <a href="../it/index.html" hreflang="it" lang="it">IT — Italiano</a>
-          <a href="../hu/index.html" hreflang="hu" lang="hu">HU — Magyar</a>
+          <a href="terms.html"><span class="sitemap-idx">01</span>Terms &amp; Conditions</a>
         </div>
       </div>
     </div>
